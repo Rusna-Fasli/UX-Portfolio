@@ -20,6 +20,9 @@ uploads/*
 !uploads/Dialog Case Study/
 !uploads/pasted-1790078*.png
 
+# GitHub Pages build output (scripts/build-pages.sh)
+_site/
+
 # Local tooling
 .claude/settings.local.json
 node_modules/
