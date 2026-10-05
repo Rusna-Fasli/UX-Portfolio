@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./link-map.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#f6f5f4;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{font-family:'Inter',system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}a:hover{color:inherit}@keyframes btnspin{to{transform:rotate(360deg)}}
+    input,textarea{font-family:inherit}
+    input::placeholder,textarea::placeholder{color:#a39e98}
+    ::selection{background:#cfe3f8;color:#000}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+  <script src="./reveal.js"></script>
+  <script src="./touch.js"></script>
+</helmet>
+<template id="__bundler_thumbnail" data-bg-color="#f6f5f4"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#f6f5f4"></rect><rect x="480" y="280" width="240" height="240" rx="48" fill="#000"></rect><text x="600" y="440" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="110" font-weight="700" fill="#fff">RF</text></svg></template>
+
+
+<div style="{{ rootStyle }}">
+  <dc-import name="SiteHeader" active="contact" isLight="{{ isLight }}" onToggleTheme="{{ toggleTheme }}" style="position:sticky;top:0;z-index:50;display:block" hint-size="100%,72px"></dc-import>
+
+  <main>
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(20px,6vw,112px) clamp(32px,5vw,48px)" data-screen-label="contact-hero">
+      <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">Contact</span>
+      <h1 style="font-size:clamp(40px,6.2vw,64px);line-height:1.0;font-weight:700;letter-spacing:-2.125px;margin:20px 0 0">Hey, Hi <span aria-hidden="true" style="display:inline-block">👋</span></h1>
+      <p style="font-size:20px;line-height:1.4;letter-spacing:-0.125px;color:var(--ink-muted);max-width:600px;margin:24px 0 0;text-wrap:pretty">Hope you’re doing well. I’d love to collaborate on creating seamless digital experiences, solving interesting design challenges, or simply explore how I can support your next project.&nbsp;Fill in the details below and let’s talk.</p>
+    </section>
+
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(16px,3vw,24px) clamp(20px,6vw,112px) clamp(64px,10vw,120px)" data-screen-label="contact-body">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px;align-items:start">
+        <form onSubmit="{{ onSubmit }}" style="grid-column:span 1;background:var(--surface);border:1px solid var(--hairline);border-radius:16px;box-shadow:var(--shadow-1);padding:clamp(24px,4vw,32px);display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="cf-name" style="font-size:14px;font-weight:500;color:var(--ink-2)">Name</label>
+            <input id="cf-name" name="name" type="text" required="" placeholder="Your name" style="{{ inputStyle }}" style-hover="{{ inputHover }}" style-focus="{{ inputFocus }}">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="cf-email" style="font-size:14px;font-weight:500;color:var(--ink-2)">Email</label>
+            <input id="cf-email" name="email" type="email" required="" placeholder="you@email.com" style="{{ inputStyle }}" style-hover="{{ inputHover }}" style-focus="{{ inputFocus }}">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="cf-message" style="font-size:14px;font-weight:500;color:var(--ink-2)">Message</label>
+            <textarea id="cf-message" name="message" required="" rows="5" placeholder="Tell me a little about your project" style="{{ textareaStyle }}" style-hover="{{ inputHover }}" style-focus="{{ inputFocus }}"></textarea>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:4px">
+            <dc-import name="Button" variant="primary" type="submit" label="Send message" loadingLabel="Sending…" loading="{{ sending }}" hint-size="150px,44px"></dc-import>
+            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+              <span role="status" style="font-size:14px;color:var(--ink-muted)">Thanks, your message has been sent. I’ll get back to you soon.</span>
+            </sc-if>
+            <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
+              <span role="alert" style="font-size:14px;color:var(--ink-muted)">Something went wrong. Please email rusnafasli@outlook.com directly.</span>
+            </sc-if>
+          </div>
+        </form>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:6px;position:relative">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:6px">Direct</span>
+            <sc-for list="{{ direct }}" as="d" hint-placeholder-count="2">
+              <div onMouseEnter="{{ d.onEnter }}" onMouseLeave="{{ d.onLeave }}" onFocus="{{ d.onEnter }}" onBlur="{{ d.onLeave }}" style="display:flex;align-items:center;gap:8px;min-width:0">
+                <a href="{{ d.href }}" style="font-size:20px;line-height:1.4;font-weight:600;letter-spacing:-0.125px;color:var(--ink);min-width:0;overflow-wrap:anywhere" style-hover="{{ linkHover }}">{{ d.value }}</a>
+                <span style="{{ d.revealStyle }}"><dc-import name="Button" variant="icon" size="sm" icon="{{ d.icon }}" ariaLabel="{{ d.aria }}" onClick="{{ d.onCopy }}" hint-size="36px,36px"></dc-import></span>
+              </div>
+            </sc-for>
+            <span role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ copyStatus }}</span>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:2px">Elsewhere</span>
+            <dc-import name="Button" variant="text" label="LinkedIn" icon="external" href="#" hint-size="90px,24px"></dc-import>
+            <dc-import name="Button" variant="text" label="Behance" icon="external" href="#" hint-size="90px,24px"></dc-import>
+          </div>
+          <span style="font-size:14px;color:var(--ink-muted);padding:0 4px">Available worldwide</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="SiteFooter" hint-size="100%,84px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}}">
+class Component extends DCLogic {
+  state = { light: (function(){ try { return localStorage.getItem('site-theme-v2') !== 'dark'; } catch(e){ return true; } })(), scrolled: false, sent: false, sending: false, hoverKey: null, copiedKey: null, canHover: (typeof window !== 'undefined' && window.matchMedia) ? window.matchMedia('(hover: hover)').matches : true };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > 8;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  renderVals() {
+    const accent = '#ff6b3d';
+    const light = this.state.light;
+    const mVal = null;
+    const T = light ? {
+      '--bg': '#f6f5f4', '--surface': '#ffffff', '--surface-hover': '#fbfaf9',
+      '--ink': 'rgba(0,0,0,0.95)', '--ink-2': '#31302e', '--ink-muted': '#615d59', '--ink-faint': '#a39e98',
+      '--hairline': '#e6e6e6', '--hairline-strong': '#dddddd', '--tint': 'rgba(0,0,0,0.05)', '--tint-2': 'rgba(0,0,0,0.03)',
+      '--primary': '#0075de', '--primary-hover': '#0068c7', '--primary-active': '#005bab', '--primary-tint': '#e8f2fc',
+      '--shadow-1': 'rgba(0,0,0,0.01) 0 0.175px 1.041px, rgba(0,0,0,0.02) 0 0.8px 2.925px, rgba(0,0,0,0.027) 0 2.025px 7.847px, rgba(0,0,0,0.04) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.01) 0 1px 3px, rgba(0,0,0,0.02) 0 3px 7px, rgba(0,0,0,0.02) 0 7px 15px, rgba(0,0,0,0.04) 0 14px 28px, rgba(0,0,0,0.05) 0 23px 52px'
+    } : {
+      '--bg': '#191919', '--surface': '#202020', '--surface-hover': '#262626',
+      '--ink': 'rgba(255,255,255,0.92)', '--ink-2': '#d3d1cd', '--ink-muted': '#9b9a97', '--ink-faint': '#6f6e69',
+      '--hairline': '#2f2f2f', '--hairline-strong': '#3a3a3a', '--tint': 'rgba(255,255,255,0.07)', '--tint-2': 'rgba(255,255,255,0.04)',
+      '--primary': '#2f8ae6', '--primary-hover': '#459aee', '--primary-active': '#1f6fc0', '--primary-tint': 'rgba(47,138,230,0.14)',
+      '--shadow-1': 'rgba(0,0,0,0.2) 0 1px 3px, rgba(0,0,0,0.25) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.3) 0 8px 24px, rgba(0,0,0,0.35) 0 23px 52px'
+    };
+    const rootStyle = {
+      minHeight: '100vh', overflowX: 'clip', fontFamily: "'Inter',-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif",
+      fontFeatureSettings: "'lnum','locl'", fontSize: 16, lineHeight: 1.5,
+      background: 'var(--bg)', color: 'var(--ink)', ...T,
+      '--text': 'var(--ink)', '--card-bg': 'var(--surface)', '--accent-a': 'var(--primary)', '--scrim': 'var(--surface)',
+      '--m10': 'var(--hairline)', '--m18': 'var(--hairline)', '--m20': 'var(--hairline-strong)',
+      '--m30': 'var(--ink-faint)', '--m35': 'var(--ink-faint)', '--m40': 'var(--ink-muted)', '--m45': 'var(--ink-muted)',
+      '--m50': 'var(--ink-muted)', '--m55': 'var(--ink-muted)', '--m60': 'var(--ink-muted)',
+      '--m70': 'var(--ink-2)', '--m75': 'var(--ink-2)', '--m85': 'var(--ink-2)'
+    };
+    const toggleTheme = () => {
+      const next = !this.state.light;
+      this.setState({ light: next });
+      try { localStorage.setItem('site-theme-v2', next ? 'light' : 'dark'); } catch (e) {}
+    };
+
+    return {
+      rootStyle, toggleTheme, isLight: light, isDark: !light,
+      inputStyle: { width: '100%', height: 44, boxSizing: 'border-box', background: 'var(--surface)', border: '1px solid var(--hairline-strong)', borderRadius: 4, padding: '0 12px', color: 'var(--ink)', fontSize: 15, lineHeight: 1.33, outline: 'none', transition: 'border-color 160ms ease, box-shadow 160ms ease' },
+      textareaStyle: { width: '100%', minHeight: 132, boxSizing: 'border-box', background: 'var(--surface)', border: '1px solid var(--hairline-strong)', borderRadius: 4, padding: '10px 12px', color: 'var(--ink)', fontSize: 15, lineHeight: 1.5, outline: 'none', resize: 'vertical', transition: 'border-color 160ms ease, box-shadow 160ms ease' },
+      inputHover: { borderColor: 'var(--ink-faint)' },
+      inputFocus: { borderColor: 'var(--primary)', boxShadow: 'var(--shadow-1), 0 0 0 3px var(--primary-tint)' },
+      linkHover: { color: 'var(--primary)' },
+      copyStatus: this.state.copiedKey ? 'Copied to clipboard' : '',
+      direct: [
+        { key: 'email', value: 'rusnafasli@outlook.com', href: 'mailto:rusnafasli@outlook.com', label: 'email address' },
+        { key: 'phone', value: '+974 5045 2028', href: 'tel:+97450452028', label: 'phone number' }
+      ].map(d => {
+        const copied = this.state.copiedKey === d.key;
+        const show = copied || this.state.hoverKey === d.key || !this.state.canHover;
+        return { ...d, icon: copied ? 'check' : 'copy', aria: copied ? 'Copied' : 'Copy ' + d.label,
+          onEnter: () => this.setState({ hoverKey: d.key }),
+          onLeave: () => this.setState({ hoverKey: null }),
+          onCopy: () => {
+            const done = () => { this.setState({ copiedKey: d.key }); clearTimeout(this._ct); this._ct = setTimeout(() => this.setState({ copiedKey: null }), 1600); };
+            const fallback = () => { const t = document.createElement('textarea'); t.value = d.value; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); done(); };
+            if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(d.value).then(done, fallback); else fallback();
+          },
+          revealStyle: { display: 'inline-flex', flex: '0 0 auto', opacity: show ? 1 : 0, transition: 'opacity 160ms ease' }
+        };
+      }),
+      sending: this.state.sending, sent: this.state.sent, failed: !!this.state.failed,
+      navHover: { color: 'var(--text)' },
+      navFocus: { outline: '1px solid ' + accent, outlineOffset: 3, borderRadius: 2 },
+      iconBtnHover: { borderColor: 'var(--m50)' },
+      solidBtnHover: { opacity: 0.85 },
+      onSubmit: (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        this.setState({ sending: true, sent: false, failed: false });
+        fetch('https://formsubmit.co/ajax/rusnafasli@outlook.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            name: data.get('name'), email: data.get('email'), message: data.get('message'),
+            _subject: 'Portfolio inquiry from ' + (data.get('name') || ''), _replyto: data.get('email'), _template: 'table', _captcha: 'false'
+          })
+        }).then(r => r.json()).then(j => {
+          if (j && (j.success === true || j.success === 'true')) { form.reset(); this.setState({ sending: false, sent: true }); }
+          else throw new Error('fail');
+        }).catch(() => this.setState({ sending: false, failed: true }));
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./link-map.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <script src="./reveal.js"></script>
+  <script src="./touch.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#f6f5f4;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{font-family:'Inter',system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}a:hover{color:inherit}@keyframes btnspin{to{transform:rotate(360deg)}}
+    a:hover{color:var(--primary)}
+    button{font-family:inherit}
+    ::selection{background:#cfe3f8;color:#000}
+  </style>
+<style>#benchmark summary::-webkit-details-marker{display:none}#benchmark details[open]>summary>span:last-child{transform:rotate(45deg)}#benchmark summary>span:last-child{transition:transform .2s}#benchmark details>summary+*{margin-bottom:8px}</style>
+<link rel="stylesheet" href="assets/fig-leaders/fig-assets.css">
+<link rel="stylesheet" href="assets/fig-federation/fig-assets.css">
+<link rel="stylesheet" href="assets/fig-federation/fig-tokens.css">
+<link rel="stylesheet" href="assets/fig-president/fig-assets.css">
+<link rel="stylesheet" href="assets/fig-strategy/fig-assets.css">
+</helmet>
+<template id="__bundler_thumbnail" data-bg-color="#f6f5f4"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#f6f5f4"></rect><rect x="480" y="280" width="240" height="240" rx="48" fill="#000"></rect><text x="600" y="440" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="110" font-weight="700" fill="#fff">RF</text></svg></template>
+
+<div style="{{ rootStyle }}">
+
+  <dc-import name="SiteHeader" active="work" isLight="{{ isLight }}" onToggleTheme="{{ toggleTheme }}" style="position:sticky;top:0;z-index:50;display:block" hint-size="100%,72px"></dc-import>
+
+  <div style="{{ splitStyle }}">
+
+  <aside style="{{ railStyle }}" data-screen-label="project rail">
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,30px)">
+      <div><dc-import name="Button" variant="text" label="Back" icon="back" href="./Work.dc.html" hint-size="70px,24px"></dc-import></div>
+      <div>
+        <h1 style="font-size:clamp(26px,2.4vw,32px);line-height:1.1;font-weight:700;letter-spacing:-0.75px;margin:0">QOC Website Revamp</h1>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--ink);margin:0">Digital flagship for the 2036 Olympic vision</p>
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:6px">Role</div>
+        <div style="font-size:16px;line-height:1.5;color:var(--ink)">UX Specialist&nbsp;</div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:6px">Timeline</div>
+        <div style="font-size:16px;line-height:1.5;color:var(--ink)">7 Months</div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:6px">Client</div>
+        <div style="font-size:16px;line-height:1.5;color:var(--ink)">Qatar Olympic Committee</div>
+      </div>
+
+      <div><dc-import name="Button" variant="utility" size="sm" label="Visit site" icon="external" href="https://www.olympic.qa" target="_blank" hint-size="112px,36px"></dc-import></div>
+    </div>
+  </aside>
+
+  <main style="{{ mainColStyle }}">
+
+    <section style="padding:clamp(28px,4vw,56px) clamp(20px,3vw,40px) clamp(28px,4vw,48px)" data-screen-label="01 hero">
+      <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">Case study / 02</span>
+      <div style="margin-top:20px">
+        <div style="aspect-ratio:6143/4096;width:100%;overflow:hidden;border-radius:16px;background:radial-gradient(ellipse 80% 95% at 28% 105%, rgb(254,173,60) 0%, rgb(254,173,60) 28%, rgb(253,94,20) 52%, rgb(46,18,6) 82%, rgb(4,5,16) 108%), rgb(8,16,22)">
+          <img src="assets/qoc-cover-desktop.png" alt="QOC redesigned homepage — One Team. One Dream. Together for Glory. — shown on a desktop monitor" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="brief" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="02 brief">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,3vw,36px);align-items:start">
+        <div>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">PROJECT BRIEF</span>
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:16px 0 0;max-width:none"><p><strong>Qatar to shine with pride and passion, inspiring the world as a visionary host of the 2036 Olympic Games.</strong></p></h2>
+        </div>
+        <div style="max-width:none">
+          <p style="font-size:clamp(16px,1.5vw,20px);line-height:1.5;color:var(--m70);margin:0">A fully fledged, centralized digital sports hub — high-tech, user first, built with purpose, speed and precision.</p>
+          
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="stakeholders" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="04 stakeholder map">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Stakeholder Map</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">RESEARCH</span>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:48ch;margin:20px 0 0">Who the hub serves, who feeds it, and who signs it off.</p>
+      <div ref="{{ smRef }}" style="margin-top:clamp(24px,4vw,44px);background:var(--surface);border:1px solid var(--hairline);border-radius:12px;overflow:hidden">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:16px clamp(16px,2.4vw,24px);border-bottom:1px solid var(--hairline)">
+          <div role="tablist" aria-label="Stakeholder tiers" style="display:flex;gap:2px;padding:3px;border-radius:8px;background:var(--tint)">
+            <sc-for list="{{ smTabs }}" as="tb" hint-placeholder-count="3">
+              <dc-import name="Button" variant="segment" size="sm" label="{{ tb.label }}" active="{{ tb.active }}" onClick="{{ tb.onClick }}" style="{{ smSegH }}" hint-size="96px,32px"></dc-import>
+            </sc-for>
+          </div>
+          
+        </div>
+        <sc-if value="{{ smDiagram }}" hint-placeholder-val="{{ true }}">
+          <div role="img" aria-label="Stakeholder map: primary, secondary and tertiary stakeholders arranged in rings around the QOC website" style="position:relative;width:100%;aspect-ratio:1/0.66;overflow:hidden;container-type:inline-size">
+            <div style="position:absolute;left:50%;top:80%;width:88%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px dashed var(--hairline-strong);background:var(--tint-2)"></div>
+            <div style="position:absolute;left:50%;top:80%;width:62%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px dashed var(--hairline-strong);background:var(--surface)"></div>
+            <div style="position:absolute;left:50%;top:80%;width:36%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px dashed var(--hairline-strong);background:var(--tint-2)"></div>
+            <div style="position:absolute;left:50%;top:80%;width:16%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:#ffffff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;box-shadow:var(--shadow-2)">
+              <span style="font-size:clamp(10px,1.7cqw,16px);line-height:1.2;font-weight:600">QOC Website</span>
+              <span style="font-size:clamp(9px,1.2cqw,12px);line-height:1.3;opacity:0.85">Digital hub</span>
+            </div>
+            <sc-for list="{{ smPills }}" as="sp" hint-placeholder-count="12">
+              <div style="{{ sp.style }}">
+                <span style="{{ sp.dotStyle }}"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"></circle><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></span>
+                <span>{{ sp.name }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ smCompact }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;gap:20px;padding:20px">
+            <sc-for list="{{ smActiveTiers }}" as="tr" hint-placeholder-count="1">
+              <div style="display:grid;gap:10px">
+                <span style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)"><span style="{{ tr.swatch }}"></span>{{ tr.label }}</span>
+                <div style="display:flex;flex-wrap:wrap;gap:8px">
+                  <sc-for list="{{ tr.items }}" as="it" hint-placeholder-count="4">
+                    <span style="display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);box-shadow:var(--shadow-1);font-size:13px;font-weight:500;line-height:1.33;color:var(--ink)"><span style="{{ tr.dotStyle }}"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"></circle><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></span>{{ it }}</span>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+    <section id="personas" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="05 personas">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));background:var(--surface);border:1px solid var(--hairline);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-1)">
+        <div style="padding:clamp(28px,4.5vw,56px);display:flex;flex-direction:column;gap:clamp(24px,3vw,36px);min-width:0">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">RESEARCH</span>
+            <h2 style="font-size:clamp(34px,4.4vw,56px);line-height:1.02;font-weight:700;letter-spacing:-1.8px;margin:0;text-wrap:balance">Primary User <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.08em">Personas</span></h2>
+          </div>
+          <div role="tablist" aria-label="Personas" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.6vw,20px)">
+            <sc-for list="{{ personaTabs }}" as="t" hint-placeholder-count="4">
+              <button type="button" role="tab" aria-selected="{{ t.active }}" onClick="{{ t.onClick }}" style="{{ t.btn }}">
+                <span style="{{ t.ring }}"><img src="{{ t.img }}" alt="{{ t.name }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+                
+              </button>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--hairline);padding-top:clamp(20px,2.4vw,28px)">
+            <span style="font-size:clamp(22px,2.2vw,28px);line-height:1.2;font-weight:700;letter-spacing:-0.5px">{{ persona.name }}</span>
+            <span style="font-size:15px;color:var(--m50)">{{ persona.role }}</span>
+            <p style="font-size:17px;line-height:1.55;color:var(--text);margin:14px 0 0;text-wrap:pretty;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(20px,1.8vw,24px);line-height:1.35">{{ persona.quote }}</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;background:var(--primary-tint);border-radius:8px;padding:16px 18px;margin-top:auto">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">BIGGEST CONSTRAINT</span>
+            <span style="font-size:16px;line-height:1.45;font-weight:600;color:var(--ink)">{{ persona.constraint }}</span>
+          </div>
+        </div>
+        <div style="background:var(--tint-2);border-left:1px solid var(--hairline);padding:clamp(28px,4.5vw,56px);display:flex;flex-direction:column;gap:clamp(28px,3.4vw,44px);min-width:0">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">EXPECTATIONS ON REVAMP WEBSITE</span>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:10px">
+              <sc-for list="{{ persona.needs }}" as="n" hint-placeholder-count="7">
+                <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0">
+                  <span style="font-size:clamp(20px,1.8vw,24px);line-height:1.15;font-weight:700;letter-spacing:-0.5px;color:var(--ink);overflow-wrap:anywhere">{{ n.v }}</span>
+                  <span style="font-size:13.5px;line-height:1.45;color:var(--m60);text-wrap:pretty">{{ n.l }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">PAIN POINTS</span>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ persona.pains }}" as="p" hint-placeholder-count="5">
+                <span style="font-size:14px;line-height:1.4;color:var(--ink-2);background:var(--surface);border:1px solid var(--hairline);border-radius:9999px;padding:7px 14px">{{ p }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="swot" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="06 swot">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">SWOT Analysis</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">EVALUATE</span>
+      </div>
+      <div style="{{ swotFrame }}">
+        <sc-if value="{{ swotAxes }}" hint-placeholder-val="{{ true }}">
+          <span></span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)"><span style="flex:1 1 auto;height:1px;background:var(--hairline)"></span>HELPFUL<span style="flex:1 1 auto;height:1px;background:var(--hairline)"></span></span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)"><span style="flex:1 1 auto;height:1px;background:var(--hairline)"></span>HARMFUL<span style="flex:1 1 auto;height:1px;background:var(--hairline)"></span></span>
+          <span style="grid-row:2;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)"><span style="flex:1 1 auto;width:1px;background:var(--hairline)"></span><span style="writing-mode:vertical-rl;transform:rotate(180deg)">INTERNAL</span><span style="flex:1 1 auto;width:1px;background:var(--hairline)"></span></span>
+          <span style="grid-row:3;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)"><span style="flex:1 1 auto;width:1px;background:var(--hairline)"></span><span style="writing-mode:vertical-rl;transform:rotate(180deg)">EXTERNAL</span><span style="flex:1 1 auto;width:1px;background:var(--hairline)"></span></span>
+        </sc-if>
+        <div style="{{ swotQuadWrap }}">
+          <sc-for list="{{ swot }}" as="q" hint-placeholder-count="4">
+            <div style="{{ q.cellStyle }}">
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px">
+                <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+                  <span style="{{ q.letterStyle }}">{{ q.mark }}</span>
+                  <h3 style="font-size:20px;line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;color:var(--ink)">{{ q.name }}</h3>
+                </div>
+                
+              </div>
+              <div style="display:grid;margin-top:16px">
+                <sc-for list="{{ q.rows }}" as="it" hint-placeholder-count="4">
+                  <div style="{{ it.rowStyle }}">
+                    <span style="{{ q.numStyle }}">{{ it.num }}</span>
+                    <span style="font-size:15px;line-height:1.4;color:var(--ink-2)">{{ it.text }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+          <sc-if value="{{ swotAxes }}" hint-placeholder-val="{{ true }}">
+            <div aria-hidden="true" style="{{ swotHub }}">
+              <div style="width:72%;height:72%;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;letter-spacing:0.08em;color:var(--ink)">SWOT</div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+
+    <section id="hotjar" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="07 hotjar">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Hot-jar Analysis</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">OVERVIEW STATISTICS</span>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:clamp(24px,4vw,44px);align-items:stretch">
+        <p style="flex:1 1 100%;font-size:16px;line-height:1.5;color:var(--ink-muted);margin:0;max-width:44ch;text-wrap:pretty">Engagement metrics and top pages from Jun – Aug show what matters most to the audience.</p>
+        <div style="flex:1 1 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">
+          <sc-for list="{{ hjStatCards }}" as="s" hint-placeholder-count="3">
+            <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;min-width:0">
+              <span style="{{ s.iconStyle }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="{{ s.icon }}" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+              <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:14px;line-height:1.33;color:var(--ink-2)">{{ s.label }}</span>
+                <span style="font-size:24px;line-height:1.1;font-weight:700;letter-spacing:-0.5px;color:var(--ink)">{{ s.value }}</span>
+                
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;align-items:stretch">
+        <div style="flex:1.4 1 420px;min-width:0;background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px">
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)">TOP PERFORMING PAGES</span>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--ink-muted);margin-top:18px;padding-bottom:10px;border-bottom:1px solid var(--hairline)"><span>Page</span><span>Engagement</span></div>
+          <sc-for list="{{ hjPageRows }}" as="p" hint-placeholder-count="5">
+            <div style="{{ p.rowStyle }}">
+              
+              <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:15px;line-height:1.33;font-weight:600;color:var(--ink)">{{ p.name }}</span>
+                <span style="font-size:13px;line-height:1.33;color:var(--ink-muted);overflow-wrap:anywhere">{{ p.path }}</span>
+                <div style="height:6px;border-radius:9999px;background:var(--tint);overflow:hidden;margin-top:6px">
+                  <div style="{{ p.barStyle }}"></div>
+                </div>
+              </div>
+              <span style="font-size:17px;line-height:1;font-weight:600;letter-spacing:-0.25px;color:var(--ink);font-variant-numeric:tabular-nums;align-self:flex-end;min-width:48px;text-align:right">{{ p.value }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:16px">
+          <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)">ENGAGEMENT</span><span style="font-size:13px;color:var(--ink-muted)">How visitors interact</span></div>
+            <sc-for list="{{ hjEng }}" as="e" hint-placeholder-count="3">
+              <div style="{{ e.rowStyle }}">
+                <span style="{{ e.iconStyle }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="{{ e.icon }}" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:4px">
+                  <span style="font-size:14px;line-height:1.33;color:var(--ink-2)">{{ e.label }}</span>
+                  <span style="font-size:24px;line-height:1.1;font-weight:700;letter-spacing:-0.5px;color:var(--ink)">{{ e.value }}</span>
+                  <div style="height:6px;border-radius:9999px;background:var(--tint);overflow:hidden;margin-top:8px">
+                    <div style="{{ e.barStyle }}"></div>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;flex:1 1 auto;position:relative;overflow:hidden">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)">VISITOR TYPE</span>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px">
+              <sc-for list="{{ hjVisitors }}" as="v" hint-placeholder-count="2">
+                <div style="{{ v.colStyle }}">
+                  <span style="{{ v.iconStyle }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="{{ v.icon }}" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                  <span style="{{ v.valueStyle }}">{{ v.value }}</span>
+                  <span style="font-size:15px;line-height:1.33;font-weight:500;color:var(--ink);margin-top:-4px">{{ v.label }}</span>
+                  <div style="height:8px;border-radius:9999px;background:var(--tint);overflow:hidden;margin-top:auto">
+                    <div style="{{ v.barStyle }}"></div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:clamp(34px,5vw,64px);border-top:1px solid var(--m10);padding-top:22px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px">
+          <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0">Mouse-move heat map</h3>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">SCROLL-THROUGH</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.4vw,32px);align-items:flex-start;margin-top:clamp(24px,3vw,40px)">
+        <div style="position:relative;flex:2 1 420px;min-width:0;margin-bottom:110px">
+          <img src="assets/qoc-heat-move.jpg" alt="Hotjar mouse-movement heat map of the full homepage" loading="lazy" style="width:min(100%,62%);height:auto;display:block;margin:0 auto;border:1px solid var(--m10)">
+          <sc-for list="{{ heatmaps }}" as="hm" hint-placeholder-count="5">
+            <span style="{{ hm.ringStyle }}" aria-hidden="true"></span>
+          </sc-for>
+          <sc-for list="{{ heatmaps }}" as="hm" hint-placeholder-count="5">
+            <span style="{{ hm.pillStyle }}">{{ hm.note }}</span>
+          </sc-for>
+        </div>
+        <div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:clamp(12px,1.6vw,18px);align-self:stretch;position:relative" ref="{{ galleryColRef }}">
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/qoc-final-hero.png" alt="Redesigned homepage hero — One Nation. One Dream. Infinite Victories." loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Redesigned hero — navigation and language toggle kept front and centre</figcaption>
+          </figure>
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/qoc-final-menu.png" alt="Redesigned mega menu with About QOC expanded" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Mega menu — About QOC expanded</figcaption>
+          </figure>
+          <figure style="{{ galleryFigStyle }}">
+            <img src="assets/qoc-final-gallery.png" alt="Redesigned Gallery section with thumbnail rail" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Gallery — reworked from a static grid into an interactive thumbnail rail</figcaption>
+          </figure>
+        </div>
+        </div>
+        <p style="font-size:14px;color:var(--m40);margin:12px 0 0;text-align:center">Movement on desktop — full homepage, Sep 2025.</p>
+      </div>
+
+      <div style="margin-top:clamp(34px,5vw,64px);border-top:1px solid var(--m10);padding-top:22px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px">
+          <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0">Scroll Heat Map</h3>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">DEPTH &amp; DROP-OFF</span>
+        </div>
+        
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,40px);align-items:flex-start;margin-top:clamp(22px,3vw,36px)">
+        <div style="{{ scrollHeatStyle }}">
+          <img src="assets/qoc-heat-scroll.jpg" alt="Scroll depth heat map of the homepage" loading="lazy" style="width:100%;min-width:150px;height:auto;display:block;border:1px solid var(--m10)">
+          <sc-for list="{{ folds }}" as="f" hint-placeholder-count="4">
+            <span style="{{ f.lineStyle }}" aria-hidden="true"></span>
+          </sc-for>
+          <sc-for list="{{ folds }}" as="f" hint-placeholder-count="4">
+            <span style="{{ f.arrowStyle }}" aria-hidden="true"></span>
+          </sc-for>
+          <sc-for list="{{ folds }}" as="f" hint-placeholder-count="4">
+            <div style="{{ f.labelStyle }}">
+              <span style="font-size:17px;letter-spacing:-0.01em;color:var(--text)">{{ f.value }}</span>
+              <span style="font-size:15px;line-height:1.5;color:var(--m60);display:block;margin-top:3px">{{ f.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ scrollColStyle }}" ref="{{ scrollColRef }}">
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/qoc-final-sports.png" alt="Redesigned Olympic Sports section with sport selector" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Olympic Sports —<span style="color: rgba(11, 10, 9, 0.7); font-size: 13.5px;">Dynamic storytelling triggered by&nbsp;</span><span style="color: rgb(138, 21, 56); font-size: 13.5px; letter-spacing: 0.135px;">Micro-Animations</span></figcaption>
+          </figure>
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/qoc-final-news.png" alt="Redesigned Latest News carousel with newsletter signup" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Latest News — moved higher, with newsletter signup alongside contributing to&nbsp;<span style="color: rgb(138, 21, 56); font-size: 13.5px; letter-spacing: 0.135px;">Contextual CTAs</span></figcaption>
+          </figure>
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/qoc-final-spotlight.png" alt="Spotlight Athletes section" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)"><span style="color: rgba(11, 10, 9, 0.7); font-size: 13.5px;"><span style="color: rgb(138, 21, 56); letter-spacing: 0.135px;">Serial Position Effect&nbsp;</span>Reorder content to put high-value items at the start and end.</span></figcaption>
+          </figure>
+        </div>
+        </div>
+        </div>
+      </section>
+    
+
+    <section id="benchmark" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="08 benchmark">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Benchmark Activity</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">Competitor Analysis</span>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:52ch;margin:20px 0 0">Six national committee sites, read for what each does better — and the return it earns.</p>
+
+      <div style="display:grid;gap:clamp(20px,2.6vw,32px);margin-top:clamp(24px,3.4vw,44px)">
+        <details open="{{ true }}" style="border-top:1px solid var(--m10);padding-top:18px">
+          <summary style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer;list-style:none">
+            <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;white-space:nowrap">Team UAE</h3>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">REGIONAL</span>
+          <span style="margin-left:auto;font-size:18px;line-height:1;color:var(--m60)">+</span></summary>
+          <div style="display:grid;gap:clamp(14px,2vw,24px);margin-top:16px">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/368.jpg" alt="Team UAE — Smart gallery — hover and the story unfolds" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:20%;top:13%;width:65%;height:75%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Smart gallery — hover and the story unfolds</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Keeps users engaged and informed</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row-reverse">
+              <div style="flex:2 1 260px;min-width:0">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/367.jpg" alt="Team UAE — Favorite moments, powered by Instagram — likes and comments included" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:8%;top:2%;width:86%;height:32%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:left">
+                <div>
+                  
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Favorite moments, powered by Instagram — likes and comments included</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Boosting interaction and audience insight</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-start">
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/369.jpg" alt="Team UAE — Header leads with what matters: initiatives upfront" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:30%;top:4%;width:34%;height:38%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Header leads with what matters: initiatives upfront</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Clear communication of priorities, conversion &amp; action boost, perceived credibility &amp; leadership</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details style="border-top:1px solid var(--m10);padding-top:18px">
+          <summary style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer;list-style:none">
+            <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;white-space:nowrap">Team Saudi</h3>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">REGIONAL</span>
+          <span style="margin-left:auto;font-size:18px;line-height:1;color:var(--m60)">+</span></summary>
+          <div style="display:grid;grid-template-columns:minmax(0,26fr) minmax(0,34fr) minmax(0,40fr);grid-template-rows:auto auto;column-gap:clamp(14px,2.2vw,32px);row-gap:clamp(16px,2vw,28px);margin-top:16px;align-items:end">
+              <div style="position:relative;grid-column:1;grid-row:1 / 3;min-width:0"><img src="assets/bench-jpg/366.jpg" alt="Team Saudi — Games page spotlights hosted events — showcasing legacy and impact" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:2%;top:27%;width:64%;height:60%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              <div style="grid-column:2 / 4;grid-row:1;align-self:start;padding-top:clamp(8px,2vw,28px)">
+              <div style="display:grid;gap:7px;max-width:34ch">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0;text-wrap:pretty">Games page spotlights hosted events — showcasing legacy and impact</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:0;text-wrap:pretty">ROI · Highlighting the committee's legacy, emphasizes value at a glance</p>
+                <div style="display:flex;align-items:center;margin-top:3px">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+              </div>
+              <div style="position:relative;grid-column:2;grid-row:2;min-width:0"><img src="assets/bench-jpg/93.jpg" alt="Team Saudi — Gallery connected, shareable, and active across all social channels" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:8%;top:3%;width:86%;height:18%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              <div style="grid-column:3;grid-row:2;align-self:center">
+              <div style="display:grid;gap:7px;max-width:34ch">
+                <div>
+                  
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0;text-wrap:pretty">Gallery connected, shareable, and active across all social channels</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:0;text-wrap:pretty">ROI · Maximizes engagement and extends reach</p>
+                <div style="display:flex;align-items:center;margin-top:3px">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+              </div>
+          </div>
+        </details>
+        <details style="border-top:1px solid var(--m10);padding-top:18px">
+          <summary style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer;list-style:none">
+            <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;white-space:nowrap">Team USA</h3>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">INTERNATIONAL</span>
+          <span style="margin-left:auto;font-size:18px;line-height:1;color:var(--m60)">+</span></summary>
+          <div style="display:grid;gap:clamp(14px,2vw,24px);margin-top:16px">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/12.jpg" alt="Team USA — Showcasing the human side — highlighting consistency &amp; sacrifice, mental resilience of athletes &amp; the constant support of the country" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:21%;top:32%;width:44%;height:66%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Showcasing the human side — highlighting consistency &amp; sacrifice, mental resilience of athletes &amp; the constant support of the country</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Increased time on site, higher repeat visits &amp; stronger fan engagement</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row-reverse">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/356.jpg" alt="Team USA — Dynamic, connected content instead of static galleries" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:0%;top:0%;width:75%;height:22%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:left">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Dynamic, connected content instead of static galleries</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Increased time on site, higher repeat visits &amp; stronger fan engagement</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-start">
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/357.jpg" alt="Team USA — Well structured contact page — right support effortlessly" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:1%;top:17%;width:80%;height:38%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Well structured contact page — right support effortlessly</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Higher conversion rates, improved user satisfaction &amp; retention, reduced support costs</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row-reverse">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/13.jpg" alt="Team USA — Press updates, social buzz, media requests — handled effortlessly" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:3%;top:36%;width:92%;height:52%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/14.jpg" alt="Team USA — Press updates, social buzz, media requests — handled effortlessly" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:3%;top:34%;width:95%;height:56%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:left">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Press updates, social buzz, media requests — handled effortlessly</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Boost visibility and simplify press engagement</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-start">
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/11.jpg" alt="Team USA — Position committee as a catalyst for national progress and community growth" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:11%;top:17%;width:50%;height:22%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/370.jpg" alt="Team USA — Position committee as a catalyst for national progress and community growth" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:4%;top:40%;width:46%;height:26%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Position committee as a catalyst for national progress and community growth</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Boosts national impact and community engagement, maximizing the committee's ROI</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row-reverse">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/364.jpg" alt="Team USA — Enhance fan interaction with engaging activities" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:9%;top:56%;width:46%;height:24%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/363.jpg" alt="Team USA — Enhance fan interaction with engaging activities" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:8%;top:26%;width:86%;height:56%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:left">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Enhance fan interaction with engaging activities</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Boost popularity &amp; attract more users</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-start">
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details style="border-top:1px solid var(--m10);padding-top:18px">
+          <summary style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer;list-style:none">
+            <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;white-space:nowrap">Team Australia</h3>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">INTERNATIONAL</span>
+          <span style="margin-left:auto;font-size:18px;line-height:1;color:var(--m60)">+</span></summary>
+          <div style="display:grid;gap:clamp(14px,2vw,24px);margin-top:16px">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/60.jpg" alt="Team Australia — Embedding the partners contextually to create real impact" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:62%;top:3%;width:36%;height:20%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Embedding the partners contextually to create real impact</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Create visibility &amp; boost popularity</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:minmax(0,24fr) minmax(0,60fr) minmax(0,16fr);grid-template-rows:auto 1fr;column-gap:clamp(12px,1.8vw,24px);row-gap:clamp(14px,1.8vw,22px)">
+              <div style="position:relative;grid-column:1;grid-row:1 / 3;min-width:0"><img src="assets/bench-jpg/63.jpg" alt="Team Australia — Incorporate fan engagement activities" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:4%;top:32%;width:87%;height:60%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              <div style="position:relative;grid-column:2 / 4;grid-row:1;min-width:0"><img src="assets/bench-jpg/62.jpg" alt="Team Australia — Incorporate fan engagement activities" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:4%;top:20%;width:48%;height:74%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              <div style="grid-column:2 / 4;grid-row:2;align-self:start;max-width:40ch">
+                <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Incorporate fan engagement activities</p>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Boost popularity &amp; attract more users</p>
+                <div style="display:flex;align-items:center;margin-top:10px">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/92.jpg" alt="Team Australia — Segregation by sports type &amp; federation proximity" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:8%;top:55%;width:86%;height:34%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/91.jpg" alt="Team Australia — Segregation by sports type &amp; federation proximity" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:52%;top:72%;width:30%;height:16%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Segregation by sports type &amp; federation proximity</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Reduces search effort, saves time &amp; high visibility</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row-reverse">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/17.jpg" alt="Team Australia — Expressing fandom through apparel, collectibles, and accessories" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:5%;top:56%;width:90%;height:42%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:left">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Expressing fandom through apparel, collectibles, and accessories</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Revenue generation, fan engagement, brand visibility, community building</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-start">
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/16.jpg" alt="Team Australia — Latest to upcoming Olympic Games — a quick heads-up on what's happening now and what's next" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:41%;top:52%;width:42%;height:44%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Latest to upcoming Olympic Games — a quick heads-up on what's happening now and what's next</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · User engagement &amp; retention, time-saving value, content discoverability</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details style="border-top:1px solid var(--m10);padding-top:18px">
+          <summary style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer;list-style:none">
+            <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;white-space:nowrap">Team New Zealand</h3>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">INTERNATIONAL</span>
+          <span style="margin-left:auto;font-size:18px;line-height:1;color:var(--m60)">+</span></summary>
+          <div style="display:grid;gap:clamp(14px,2vw,24px);margin-top:16px">
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <img src="assets/bench-jpg/21.jpg" alt="Team New Zealand — Smart structure, zero confusion — effortless navigation with powerful filters" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/89.jpg" alt="Team New Zealand — Smart structure, zero confusion — effortless navigation with powerful filters" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:15%;top:12%;width:52%;height:62%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/88.jpg" alt="Team New Zealand — Smart structure, zero confusion — effortless navigation with powerful filters" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:2%;top:4%;width:52%;height:32%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:right">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Smart structure, zero confusion — effortless navigation with powerful filters</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Reduces bounce rates, boosts engagement, increases conversions, enhances user satisfaction</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-end">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,24px);align-items:center;flex-direction:row-reverse">
+              <div style="flex:2 1 260px;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(8px,1vw,12px);align-items:start">
+                <div style="position:relative;min-width:0"><img src="assets/bench-jpg/371.jpg" alt="Team New Zealand — Story telling through images — inspire young athletes, students, and fans to explore Qatar's sporting journey" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:75%;top:18%;width:24%;height:58%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              </div>
+              <div style="flex:1 1 150px;min-width:140px;text-align:left">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0">Story telling through images — inspire young athletes, students, and fans to explore Qatar's sporting journey</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:7px 0 0">ROI · Boosts engagement and inspires the next generation</p>
+                <div style="display:flex;align-items:center;margin-top:10px;justify-content:flex-start">
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid var(--m40)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details style="border-top:1px solid var(--m10);padding-top:18px">
+          <summary style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer;list-style:none">
+            <h3 style="font-size:clamp(18px,1.8vw,22px);line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0;white-space:nowrap">Team Uzbekistan</h3>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--accent)">INTERNATIONAL</span>
+          <span style="margin-left:auto;font-size:18px;line-height:1;color:var(--m60)">+</span></summary>
+          <div style="display:grid;grid-template-columns:minmax(0,26fr) minmax(0,34fr) minmax(0,40fr);grid-template-rows:auto auto;column-gap:clamp(14px,2.2vw,32px);row-gap:clamp(16px,2vw,28px);margin-top:16px;align-items:end">
+              <div style="position:relative;grid-column:1;grid-row:1 / 3;min-width:0"><img src="assets/bench-jpg/365.jpg" alt="Team Uzbekistan — Smart news hub — easy to print, share, and filter for what matters most" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:2%;top:58%;width:96%;height:11%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              <div style="grid-column:2 / 4;grid-row:1;align-self:start;padding-top:clamp(8px,2vw,28px)">
+              <div style="display:grid;gap:7px;max-width:34ch">
+                <div>
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0;text-wrap:pretty">Smart news hub — easy to print, share, and filter for what matters most</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:0;text-wrap:pretty">ROI · Boosts content reach and visibility, high user engagement</p>
+                <div style="display:flex;align-items:center;margin-top:3px">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+              </div>
+              <div style="position:relative;grid-column:2;grid-row:2;min-width:0"><img src="assets/bench-jpg/372.jpg" alt="Team Uzbekistan — Smart gallery — hover and the story unfolds" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)"><span aria-hidden="true" style="position:absolute;left:26%;top:40%;width:26%;height:38%;border:2px solid var(--accent);border-radius:50%;pointer-events:none"></span></div>
+              <div style="grid-column:3;grid-row:2;align-self:center">
+              <div style="display:grid;gap:7px;max-width:34ch">
+                <div>
+                  
+                  <p style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text);margin:0;text-wrap:pretty">Smart gallery — hover and the story unfolds</p>
+                </div>
+                <p style="font-size:15px;line-height:1.55;color:var(--m60);margin:0;text-wrap:pretty">ROI · Keeps users engaged and informed</p>
+                <div style="display:flex;align-items:center;margin-top:3px">
+                  <span style="width:0;height:0;flex:0 0 auto;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:7px solid var(--m40)"></span>
+                  <span style="flex:1 1 auto;max-width:90px;height:1px;background:var(--m40)"></span>
+                </div>
+              </div>
+              </div>
+          
+          </div>
+        </details>
+      </div>
+    
+    </section>
+
+    <section id="references" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="10 references">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Design References</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">MOODBOARD</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,628fr) minmax(0,1432fr);gap:clamp(12px,1.8vw,24px);margin-top:clamp(28px,4vw,52px);align-items:start">
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/ref-other-sports.png" alt="Other Sports — Olympic sports listing and details references" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Other Sports — UX refrences<br></figcaption>
+          </figure>
+          <figure style="margin:0;display:grid;gap:8px">
+            <img src="assets/ref-ui-design.png" alt="UI design references by section" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+            <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">UI design references — by section</figcaption>
+          </figure>
+        </div>
+      
+    </section>
+
+    <section id="lofi" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="11 lo-fi wireframes">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Lo-fi Wireframes</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">STRUCTURE</span>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:62ch;margin:20px 0 0;text-wrap:pretty">Covered the complete website structure, with low-fidelity wireframes developed for all pages to establish the overall information architecture, content hierarchy, and user flow.</p>
+      <div style="display:flex;gap:clamp(14px,1.8vw,24px);align-items:flex-start;overflow-x:auto;margin-top:clamp(28px,4vw,52px);padding-bottom:12px">
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:858px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="TheQOC" from="./assets/lofi/Components.bundle.js" hint-size="1440px,5146px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">The QOC — Our Story</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:858px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="LeadershipGovernance" from="./assets/lofi/Components.bundle.js" hint-size="1440px,5146px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Leadership &amp; Governance</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:594px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="LeadershipDetailedPage" from="./assets/lofi/Components.bundle.js" hint-size="1440px,3566px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Leadership — Detail</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:488px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="ProgramsInitiatives" from="./assets/lofi/Components.bundle.js" hint-size="1440px,2927px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Programs &amp; Initiatives</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:537px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="MajorEventsDetails" from="./assets/lofi/Components.bundle.js" hint-size="1440px,3223px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Major Events — Detail</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:526px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="OlympicGDetails" from="./assets/lofi/Components.bundle.js" hint-size="1440px,3154px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Olympic Games — Detail</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:584px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="Partner" from="./assets/lofi/Components.bundle.js" hint-size="1440px,3505px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Partners</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:537px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="PartnerDetailed" from="./assets/lofi/Components.bundle.js" hint-size="1440px,3223px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Partner — Detail</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:452px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="Awards" from="./assets/lofi/Components.bundle.js" hint-size="1440px,2713px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Awards</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:505px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="Policies" from="./assets/lofi/Components.bundle.js" hint-size="1440px,3028px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Policies</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:308px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="Policies2" from="./assets/lofi/Components.bundle.js" hint-size="1440px,1848px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Policies (alt)</figcaption>
+        </figure>
+        <figure style="flex:0 0 auto;width:240px;margin:0;display:grid;gap:10px;align-content:start">
+          <div style="width:240px;height:488px;overflow:hidden;background:#fff;border:1px solid var(--m10)">
+            <div style="width:1440px;zoom:0.16667;pointer-events:none">
+              <x-import component-from-global-scope="Screen" from="./assets/lofi/Components.bundle.js" hint-size="1440px,2927px"></x-import>
+            </div>
+          </div>
+          <figcaption style="font-size:15px;line-height:1.55;color:var(--m60)">Sports Facilities</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="final" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="12 final screens">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Inner Pages UI</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">UI DESIGN</span>
+      </div>
+      <div style="position:relative;overflow:hidden;aspect-ratio:16/11;margin-top:clamp(28px,4vw,52px);background:color-mix(in oklch, var(--accent) 10%, var(--bg))">
+        <div style="position:absolute;left:50%;top:50%;width:150%;display:flex;align-items:flex-start;gap:clamp(14px,2vw,28px);transform:translate(-50%,-50%) rotate(30deg)">
+          <div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(14px,2vw,28px);padding-top:0">
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <img src="assets/qoc-inner-our-story.png" alt="Our Story page — history overview, presidents, milestones and Olympic glory" loading="lazy" style="width:100%;height:auto;display:block;border:0">
+              </figure>
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <img src="assets/qoc-inner-sport-detail.png" alt="Sport detail — Basketball, with medals, federation contact and team accordion" loading="lazy" style="width:100%;height:auto;display:block;border:0">
+              </figure>
+          </div>
+          <div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(14px,2vw,28px);padding-top:18%">
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <div data-fit-frame="1920" style="width:100%;aspect-ratio:1920/6680;overflow:hidden;background:#fff;border:0">
+                  <div data-fit-inner="1" style="width:1920px;zoom:0.15;pointer-events:none">
+                    <x-import component-from-global-scope="AboutQOC" from="./assets/fig-strategy/Components.bundle.js" hint-size="1920px,8491px"></x-import>
+                  </div>
+                </div>
+              </figure>
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <img src="assets/qoc-inner-major-events.png" alt="Major Events listing with countdown and upcoming/past filter" loading="lazy" style="width:100%;height:auto;display:block;border:0">
+              </figure>
+          </div>
+          <div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(14px,2vw,28px);padding-top:6%">
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <div data-fit-frame="1920" style="width:100%;aspect-ratio:1920/7036;overflow:hidden;background:#fff;border:0">
+                  <div data-fit-inner="1" style="width:1920px;zoom:0.15;pointer-events:none">
+                    <x-import component-from-global-scope="MeetOurLeadersQOCTeam" from="./assets/fig-leaders/Components.bundle.js" hint-size="1920px,7036px"></x-import>
+                  </div>
+                </div>
+              </figure>
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <img src="assets/qoc-inner-sports-commissions.png" alt="Sports &amp; Commissions page with summer and winter sport cards" loading="lazy" style="width:100%;height:auto;display:block;border:0">
+              </figure>
+          </div>
+          <div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(14px,2vw,28px);padding-top:24%">
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <div data-fit-frame="1920" style="width:100%;aspect-ratio:1920/5000;overflow:hidden;background:#fff;border:0">
+                  <div data-fit-inner="1" style="width:1920px;zoom:0.15;pointer-events:none">
+                    <x-import component-from-global-scope="MessageFromThePresident" from="./assets/fig-president/Components.bundle.js" hint-size="1920px,5000px"></x-import>
+                  </div>
+                </div>
+              </figure>
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <img src="assets/qoc-inner-awards.png" alt="Awards page with featured award hero and latest awards list" loading="lazy" style="width:100%;height:auto;display:block;border:0">
+              </figure>
+          </div>
+          <div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(14px,2vw,28px);padding-top:10%">
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <img src="assets/qoc-inner-athletes.png" alt="Meet Our Athletes listing with sport and gender filters" loading="lazy" style="width:100%;height:auto;display:block;border:0">
+              </figure>
+              <figure style="margin:0;min-width:0;box-shadow:0 18px 40px rgba(0,0,0,0.12)">
+                <div data-fit-frame="1920" style="width:100%;aspect-ratio:1920/4393;overflow:hidden;background:#fff;border:0">
+                  <div data-fit-inner="1" style="width:1920px;zoom:0.15;pointer-events:none">
+                    <x-import component-from-global-scope="NationalFederationsDetails" from="./assets/fig-federation/Components.bundle.js" hint-size="1920px,4393px"></x-import>
+                  </div>
+                </div>
+              </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="landscape" style="padding:clamp(28px,4vw,48px) clamp(20px,5vw,64px)" data-screen-label="09 landscape">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Competitor Landscape</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">POSITIONING</span>
+      </div>
+      <figure style="margin:clamp(28px,4vw,52px) auto 0;max-width:760px">
+        <img src="assets/competitor-landscape.png" alt="Competitor landscape — national Olympic committees mapped from Traditional to Modern and Constrains to Accessible, with QOC moving from traditional and constrained toward modern and accessible" loading="lazy" style="width:100%;height:auto;display:block">
+      </figure>
+    </section>
+
+    
+
+    <nav aria-label="Project navigation" data-screen-label="project-nav" style="margin-top:clamp(32px,4vw,48px);padding:0 clamp(20px,5vw,64px) clamp(56px,8vw,96px)">
+    <a href="./Dialog-Axiata.dc.html" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:24px 0;border-top:1px solid var(--hairline);color:var(--ink-2)" style-hover="{{ nextHover }}">
+      <span style="font-size:15px;line-height:1.33;color:var(--ink-muted)">Next project</span>
+      <span style="font-size:clamp(20px,2vw,26px);line-height:1.23;font-weight:500;letter-spacing:-0.4px;display:inline-flex;align-items:center;gap:10px">Dialog Axiata PLC<svg width="26" height="14" viewBox="0 0 26 14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    </a>
+  </nav>
+  </main>
+  </div>
+
+    
+  <dc-import name="SiteFooter" hint-size="100%,84px"></dc-import>
+
+
+</div></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { light: (function(){ try { return localStorage.getItem('site-theme-v2') !== 'dark'; } catch(e){ return true; } })(), scrolled: false, wide: true, smCompact: false, smTab: 0 };
+
+  componentDidMount() {
+    this._fit = () => document.querySelectorAll('[data-fit-frame]').forEach(f => { const i = f.querySelector('[data-fit-inner]'); if (i) i.style.zoom = f.clientWidth / Number(f.dataset.fitFrame); });
+    this._fitRO = new ResizeObserver(this._fit);
+    document.querySelectorAll('[data-fit-frame]').forEach(f => this._fitRO.observe(f));
+    this._fit();
+    try {
+      const t = localStorage.getItem('site-theme-v2');
+      if (t) this.setState({ light: t === 'light' });
+    } catch (e) {}
+    this._onScroll = () => {
+      const s = window.scrollY > 10;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    this._onResize = () => {
+      const w = window.innerWidth >= 900;
+      if (w !== this.state.wide) this.setState({ wide: w });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+    const smMeasure = () => { const el = this._smRef && this._smRef.current; if (!el) return; const c = el.getBoundingClientRect().width < 620; if (c !== this.state.smCompact) this.setState({ smCompact: c }); };
+    smMeasure(); requestAnimationFrame(smMeasure);
+    if (typeof ResizeObserver !== 'undefined' && this._smRef && this._smRef.current) { this._smRO = new ResizeObserver(smMeasure); this._smRO.observe(this._smRef.current); }
+    else { this._smFallback = smMeasure; window.addEventListener('resize', smMeasure); }
+    const checkGal = () => {
+      const col = this._galColRef && this._galColRef.current;
+      const heat = col && col.previousElementSibling;
+      const side = !!(col && heat && Math.abs(col.offsetTop - heat.offsetTop) < 4);
+      if (side !== this.state.galSide) this.setState({ galSide: side });
+    };
+    const fitScroll = () => {
+      const col = this._scColRef && this._scColRef.current;
+      const heat = col && col.previousElementSibling;
+      if (!col || !heat) return;
+      const img = heat.querySelector('img');
+      const row = col.parentElement;
+      const W = row.clientWidth, G = parseFloat(getComputedStyle(row).columnGap) || 30;
+      const r = img && img.naturalWidth ? img.naturalHeight / img.naturalWidth : 3;
+      if (W < 640) { if (this.state.scW) this.setState({ scW: 0, hw: 0 }); return; }
+      const caps = [...col.querySelectorAll('figcaption')].reduce((t, c) => t + c.offsetHeight + 8, 0) + 28;
+      const k = 27 / 16;
+      const hw = Math.floor((k * (W - 180 - G) + caps) / (r + k));
+      const c = Math.floor(W - hw - 180 - G - 1);
+      if (Math.abs(c - (this.state.scW || 0)) > 2 || Math.abs(hw - (this.state.hw || 0)) > 2) this.setState({ scW: c, hw });
+    };
+    this._scRO = new ResizeObserver(() => requestAnimationFrame(fitScroll));
+    setTimeout(() => { const c = this._scColRef && this._scColRef.current; if (c) { this._scRO.observe(c.parentElement); const im = c.previousElementSibling.querySelector('img'); im && im.addEventListener('load', fitScroll); } fitScroll(); }, 0);
+    this._galRO = new ResizeObserver(checkGal);
+    setTimeout(() => { const c = this._galColRef && this._galColRef.current; if (c && c.parentElement) this._galRO.observe(c.parentElement); checkGal(); }, 0);
+  }
+
+  componentWillUnmount() {
+    this._fitRO && this._fitRO.disconnect();
+    this._galRO && this._galRO.disconnect();
+    this._scRO && this._scRO.disconnect();
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onResize);
+    this._smRO && this._smRO.disconnect();
+    this._smFallback && window.removeEventListener('resize', this._smFallback);
+  }
+
+  renderVals() {
+    const light = this.state.light;
+    const wide = this.state.wide;
+    const SMT = [
+      { label: 'Primary', desc: 'Use the hub daily and depend on it directly.', color: 'var(--accent)', items: [['Fans & residents',32.2,76.2],['Athletes',35.3,64.4],['National federations',48.4,52.8],['QOC content team',63.2,61.4]] },
+      { label: 'Secondary', desc: 'Draw on the hub\u2019s content and amplify it.', color: 'var(--ink-2)', items: [['Media & journalists',30.1,44],['Sponsors & partners',66.4,40.2],['Volunteers',73.7,49.8],['Schools & academies',80.5,71.8]] },
+      { label: 'Tertiary', desc: 'Shape its direction or are reached indirectly.', color: 'var(--ink-faint)', items: [['International Olympic Committee',18.3,33.7],['Ministry of Sports & Youth',26.7,23.5],['International visitors',62.1,15.9],['Venue & event operators',75.2,25.4]] }
+    ];
+    const smDot = (c, sz) => ({ flex: '0 0 auto', width: sz, height: sz, borderRadius: '50%', background: c, color: 'var(--surface)', display: 'flex', alignItems: 'center', justifyContent: 'center' });
+    const smPills = [];
+    const smTab = this.state.smTab || 0;
+    SMT.forEach((t, ti) => t.items.forEach(([name, x, y], k) => { const on = ti === smTab; smPills.push({ name,
+      style: { position: 'absolute', left: x + '%', top: y + '%', transform: on ? 'translate(-50%,-50%) scale(1)' : 'translate(-50%,-30%) scale(0.92)', opacity: on ? 1 : 0, pointerEvents: on ? 'auto' : 'none', transition: 'opacity 240ms ease ' + (on ? k * 50 : 0) + 'ms, transform 240ms ease ' + (on ? k * 50 : 0) + 'ms', display: 'inline-flex', alignItems: 'center', gap: '0.8cqw', padding: '0.5cqw 1.3cqw 0.5cqw 0.5cqw', borderRadius: 9999, background: 'var(--surface)', border: '1px solid var(--hairline)', boxShadow: 'var(--shadow-1)', whiteSpace: 'nowrap', fontSize: 'clamp(10px,1.55cqw,15px)', fontWeight: 500, lineHeight: 1.33, color: 'var(--ink)' },
+      dotStyle: smDot(t.color, 'clamp(18px,2.9cqw,28px)') }); }));
+    const smTiers = SMT.map(t => ({ label: t.label, desc: t.desc, items: t.items.map(i => i[0]), dotStyle: smDot(t.color, 22), swatch: { width: 10, height: 10, borderRadius: '50%', background: t.color, flex: '0 0 auto' } }));
+    if (!this._smRef) this._smRef = React.createRef();
+    const A = light ? '#8a1538' : '#e8567f';
+    const mVal = null;
+    const T = light ? {
+      '--bg': '#f6f5f4', '--surface': '#ffffff', '--surface-hover': '#fbfaf9',
+      '--ink': 'rgba(0,0,0,0.95)', '--ink-2': '#31302e', '--ink-muted': '#615d59', '--ink-faint': '#a39e98',
+      '--hairline': '#e6e6e6', '--hairline-strong': '#dddddd', '--tint': 'rgba(0,0,0,0.05)', '--tint-2': 'rgba(0,0,0,0.03)',
+      '--primary': '#0075de', '--primary-hover': '#0068c7', '--primary-active': '#005bab', '--primary-tint': '#e8f2fc',
+      '--shadow-1': 'rgba(0,0,0,0.01) 0 0.175px 1.041px, rgba(0,0,0,0.02) 0 0.8px 2.925px, rgba(0,0,0,0.027) 0 2.025px 7.847px, rgba(0,0,0,0.04) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.01) 0 1px 3px, rgba(0,0,0,0.02) 0 3px 7px, rgba(0,0,0,0.02) 0 7px 15px, rgba(0,0,0,0.04) 0 14px 28px, rgba(0,0,0,0.05) 0 23px 52px'
+    } : {
+      '--bg': '#191919', '--surface': '#202020', '--surface-hover': '#262626',
+      '--ink': 'rgba(255,255,255,0.92)', '--ink-2': '#d3d1cd', '--ink-muted': '#9b9a97', '--ink-faint': '#6f6e69',
+      '--hairline': '#2f2f2f', '--hairline-strong': '#3a3a3a', '--tint': 'rgba(255,255,255,0.07)', '--tint-2': 'rgba(255,255,255,0.04)',
+      '--primary': '#2f8ae6', '--primary-hover': '#459aee', '--primary-active': '#1f6fc0', '--primary-tint': 'rgba(47,138,230,0.14)',
+      '--shadow-1': 'rgba(0,0,0,0.2) 0 1px 3px, rgba(0,0,0,0.25) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.3) 0 8px 24px, rgba(0,0,0,0.35) 0 23px 52px'
+    };
+    const rootStyle = {
+      minHeight: '100vh', overflowX: 'clip', fontFamily: "'Inter',-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif",
+      fontFeatureSettings: "'lnum','locl'", fontSize: 16, lineHeight: 1.5,
+      background: 'var(--bg)', color: 'var(--ink)', ...T,
+      '--text': 'var(--ink)', '--card-bg': 'var(--surface)', '--accent-a': 'var(--primary)', '--scrim': 'var(--surface)',
+      '--m10': 'var(--hairline)', '--m18': 'var(--hairline)', '--m20': 'var(--hairline-strong)',
+      '--m30': 'var(--ink-faint)', '--m35': 'var(--ink-faint)', '--m40': 'var(--ink-muted)', '--m45': 'var(--ink-muted)',
+      '--m50': 'var(--ink-muted)', '--m55': 'var(--ink-muted)', '--m60': 'var(--ink-muted)',
+      '--m70': 'var(--ink-2)', '--m75': 'var(--ink-2)', '--m85': 'var(--ink-2)', '--accent': 'var(--primary)'
+    };
+
+    const stepList = [
+      ['Understanding on Client Expectation (Goals & Objectives)', false],
+      ['Stakeholder Map', true],
+      ['Primary User Personas', true],
+      ['Heuristic Evaluation', false],
+      ['SWOT Analysis', false],
+      ['Hot-jar Analysis', false],
+      ['User Interview Insights', false],
+      ['Empathy Map', false],
+      ['User Journeys', false],
+      ['Define (De-brief) — Problem Statement & Pain Points', false],
+      ['User Requirements', false],
+      ['Opportunities', false]
+    ];
+
+    const steps = stepList.map(([label, done], i) => ({
+      label,
+      num: String(i + 1).padStart(2, '0'),
+      style: {
+        display: 'flex', gap: 12, alignItems: 'flex-start',
+        padding: 'clamp(12px,1.4vw,16px)',
+        background: done ? 'var(--card-bg)' : 'transparent',
+        border: '1px solid ' + (done ? A : 'var(--m10)')
+      },
+      labelStyle: {
+        fontSize: 14, lineHeight: 1.55,
+        color: done ? A : 'var(--m75)',
+        fontWeight: done ? 500 : 400
+      }
+    }));
+
+    const swot = [
+      { mark: 'S', title: 'STRENGTH', items: ['Trusted & Secure Platform', 'Bilingual Design with Accessibility Controls', 'Integrated Media Center', 'Dynamic Event Countdown'] },
+      { mark: 'W', title: 'WEAKNESS', items: ['Content Depth Gaps', 'Limited Multimedia Engagement', 'User Experience on Mobile', 'Fragmented Resources', 'Search & Filter Limitations'] },
+      { mark: 'O', title: 'OPPORTUNITIES', items: ['Enhance Storytelling', 'Improve Accessibility', 'Consolidate Platform', 'SEO & Analytics', 'Interactive Event Features', 'Leverage Upcoming Mega-Events'] },
+      { mark: 'T', title: 'THREAT', items: ['High User Expectations', 'Content Stagnation Risk', 'Competition from Social Media', 'Technical Risks'] }
+    ].map((q, qi) => {
+      const col = [A, '#e0b43a', light ? '#4f6d7a' : '#7fb0c4', light ? '#31302e' : '#d3d1cd'][qi];
+      const name = ['Strengths', 'Weaknesses', 'Opportunities', 'Threats'][qi];
+      return { ...q, name, count: q.items.length + ' factors',
+        rows: q.items.map((text, i) => ({ text, num: String(i + 1).padStart(2, '0'), rowStyle: { display: 'grid', gridTemplateColumns: '28px minmax(0,1fr)', gap: 10, alignItems: 'baseline', padding: '10px 0', borderTop: '1px solid var(--hairline)' } })),
+        cellStyle: { position: 'relative', background: 'var(--surface)', border: '1px solid var(--hairline)', borderRadius: 12, padding: 'clamp(20px,2.4vw,28px)', paddingTop: 'clamp(20px,2.4vw,28px)', boxShadow: 'inset 0 3px 0 ' + col, minWidth: 0, overflow: 'hidden' },
+        letterStyle: { fontSize: 'clamp(44px,4.6vw,64px)', lineHeight: 0.9, fontWeight: 700, letterSpacing: '-2px', color: col },
+        countStyle: { fontSize: 12, fontWeight: 600, letterSpacing: '0.125px', color: col === A ? A : 'var(--ink-muted)', background: 'color-mix(in oklch, ' + col + ' 14%, transparent)', borderRadius: 9999, padding: '4px 10px', whiteSpace: 'nowrap' },
+        numStyle: { fontSize: 12, fontWeight: 600, letterSpacing: '0.125px', color: col, fontVariantNumeric: 'tabular-nums' }
+      };
+    });
+    const swotCols = swot.map(q => q.letterStyle.color);
+    const swotAxes = wide;
+    const swotFrame = swotAxes
+      ? { display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) minmax(0,1fr)', gridTemplateRows: 'auto auto auto', gap: 16, marginTop: 'clamp(24px,4vw,44px)' }
+      : { display: 'grid', marginTop: 'clamp(24px,4vw,44px)' };
+    const swotQuadWrap = swotAxes
+      ? { gridColumn: '2 / 4', gridRow: '2 / 4', display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gridTemplateRows: '1fr 1fr', gap: 16, position: 'relative' }
+      : { display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 16 };
+    const swotHub = { position: 'absolute', left: '50%', top: '50%', width: 'clamp(72px,8vw,104px)', aspectRatio: '1', transform: 'translate(-50%,-50%)', borderRadius: '50%', background: 'conic-gradient(from -90deg, ' + swotCols[0] + ' 0 25%, ' + swotCols[1] + ' 25% 50%, ' + swotCols[3] + ' 50% 75%, ' + swotCols[2] + ' 75% 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 0 8px var(--bg), var(--shadow-2)', zIndex: 2 };
+
+    const hjStats = [
+      { label: 'Total Session', value: '5.8k', period: 'JUN – AUG' },
+      { label: 'Avg. pages', value: '3.3', period: 'JUN – AUG' },
+      { label: 'Avg. time on page', value: '3.08M', period: 'JUN – AUG' }
+    ];
+
+    const hjPages = [
+      ['www.olympic.qa/', 100],
+      ['www.olympic.qa/events', 68],
+      ['…rab-cup-football-championship', 58],
+      ['www.olympic.qa/ar', 51],
+      ['www.olympic.qa/webform/careers', 37]
+    ].map(([url, w]) => ({
+      url, barStyle: { width: w + '%', height: '100%', background: A }
+    }));
+
+    const donut = (pct, color) => ({
+      width: '100%', aspectRatio: '1', borderRadius: '50%',
+      background: 'conic-gradient(' + color + ' 0 ' + pct + '%, var(--m10) ' + pct + '% 100%)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center'
+    });
+    const hole = {
+      width: '62%', height: '62%', borderRadius: '50%', background: 'var(--bg)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontSize: 13, lineHeight: 1.25, textAlign: 'center', color: 'var(--text)'
+    };
+
+    const hjRates = [
+      ['Scroll', 52.4, 60, '#f2c94c'],
+      ['Bounce', 36.4, 47, A],
+      ['Drop-off', 18.1, 34, light ? '#4f6d7a' : '#7fb0c4']
+    ].map(([label, v, r, color]) => {
+      const c = 2 * Math.PI * r;
+      return {
+        label, value: v + '%', r, color,
+        dash: (c * v / 100).toFixed(1) + ' ' + c.toFixed(1),
+        swatchStyle: { width: 10, height: 10, borderRadius: '50%', background: color, flex: '0 0 auto' }
+      };
+    });
+
+    const hjTint = (c) => 'color-mix(in oklch, ' + c + ' 14%, transparent)';
+    const hjIconBox = (c, sz) => ({ width: sz, height: sz, borderRadius: '50%', background: hjTint(c), color: c, display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 auto' });
+    const HJY = '#e0b43a', HJB = light ? '#4f6d7a' : '#7fb0c4';
+    const hjVisitors = [
+      { value: '68.2%', label: 'Returning visitors', color: A, icon: 'M9 11a4 4 0 100-8 4 4 0 000 8zM3 21v-1a6 6 0 0112 0v1M16 3.5a4 4 0 010 7M21 21v-1a6 6 0 00-4-5.6', pct: 68.2 },
+      { value: '31.8%', label: 'New visitors', color: HJB, icon: 'M12 11a4 4 0 100-8 4 4 0 000 8zM5 21v-1a7 7 0 0114 0v1', pct: 31.8 }
+    ].map((v, i) => ({ ...v,
+      colStyle: { display: 'flex', flexDirection: 'column', gap: 12, minWidth: 0, paddingLeft: i ? 16 : 0, borderLeft: i ? '1px solid var(--hairline)' : 'none' },
+      iconStyle: hjIconBox(v.color === A ? HJY : HJB, 44),
+      valueStyle: { fontSize: 'clamp(30px,2.8vw,40px)', lineHeight: 1, fontWeight: 700, letterSpacing: '-1px', color: i ? 'var(--ink)' : A, marginTop: 4 },
+      barStyle: { width: v.pct + '%', height: '100%', borderRadius: 9999, background: v.color }
+    }));
+    const hjBarColors = [A, HJY, HJB, A, HJB];
+    const hjPageRows = [
+      ['Homepage', '/', 100], ['Events', '/events', 68], ['Arab Cup Football Championship', '/arab-cup-football-championship', 58], ['Arabic Homepage', '/ar', 51], ['Careers', '/webform/careers', 37]
+    ].map(([name, path, v], i) => ({ name, path, value: v + '%', rank: String(i + 1).padStart(2, '0'),
+      rowStyle: { display: 'flex', alignItems: 'center', gap: 16, padding: '16px 0', borderTop: i ? '1px solid var(--hairline)' : 'none' },
+      rankStyle: { width: 44, height: 44, borderRadius: 8, background: hjTint(hjBarColors[i]), color: hjBarColors[i], display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 600, flex: '0 0 auto' },
+      barStyle: { width: v + '%', height: '100%', borderRadius: 9999, background: hjBarColors[i], opacity: i === 3 ? 0.7 : i === 4 ? 0.7 : 1 } }));
+    const hjEng = [
+      ['Scroll', 52.4, HJY, 'M12 5v14M6 13l6 6 6-6'],
+      ['Bounce', 36.4, A, 'M4 16c2-6 6-9 8-9s4 2 5 5M17 7v5h-5M4 20h16'],
+      ['Drop-off', 18.1, HJB, 'M10 4H6a2 2 0 00-2 2v12a2 2 0 002 2h4M15 8l4 4-4 4M19 12H9']
+    ].map(([label, v, c, icon], i) => ({ label, value: v + '%', icon,
+      rowStyle: { display: 'flex', gap: 16, alignItems: 'flex-start', padding: '18px 0', borderTop: i ? '1px solid var(--hairline)' : 'none', marginTop: i ? 0 : 6 },
+      iconStyle: hjIconBox(c, 48),
+      barStyle: { width: v + '%', height: '100%', borderRadius: 9999, background: c } }));
+    const hjBulbStyle = hjIconBox(A, 40);
+    const hjStatIcons = [[A, 'M3 12h4l3-8 4 16 3-8h4'], [HJY, 'M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5'], [HJB, 'M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z']];
+    const hjStatCards = hjStats.map((st, i) => ({ ...st, icon: hjStatIcons[i][1], iconStyle: hjIconBox(hjStatIcons[i][0], 48) }));
+    const gaugeStyle = {
+      position: 'relative', width: 150, height: 78, flex: '0 0 auto', overflow: 'hidden',
+      background: 'conic-gradient(from 270deg, #f2c94c 0 34.1%, ' + A + ' 34.1% 50%, transparent 50%)',
+      borderRadius: '150px 150px 0 0'
+    };
+    const gaugeMaskStyle = {
+      position: 'absolute', left: '50%', bottom: 0, transform: 'translateX(-50%)',
+      width: 96, height: 48, background: 'var(--bg)', borderRadius: '96px 96px 0 0'
+    };
+
+    const heatmaps = [
+      ['uploads/pasted-1790078592198-0.png', 'HERO & NAVIGATION', 'Navigation is a key priority — About Us and the language toggle run hottest.'],
+      ['uploads/pasted-1790078607188-0.png', 'EVENT & OLYMPIC SPORTS', 'Clusters of activity around the upcoming event. Mouse focus is strong on navigating into specific sports.'],
+      ['uploads/pasted-1790078625248-0.png', 'LATEST NEWS', 'High demand for news — users prioritise the main featured story, and "View all" pulls attention.'],
+      ['uploads/pasted-1790078644527-0.png', 'EXPLORE GALLERY', 'Unpopular due to a static experience.'],
+      ['uploads/pasted-1790078658875-0.png', 'FOOTER', 'Noticeable activity on Quick Links, About Us and the sponsor logo. X icon traction signals demand for live updates.']
+    ].map(([src, zone, note], i) => {
+      // ring geometry in image coordinates: x%, y%, w%, h%
+      const g = [
+        [50, 2.2, 74, 3.4],
+        [50, 30, 62, 9],
+        [36, 56, 46, 13],
+        [48, 78, 74, 15],
+        [56, 95, 64, 8]
+      ][i];
+      const IMG_W = 62, IMG_L = 19;
+      const cx = IMG_L + g[0] * (IMG_W / 100);
+      const rw = g[2] * (IMG_W / 100);
+      const onLeft = i % 2 === 1;
+      return {
+        src, zone, note,
+        num: String(i + 1).padStart(2, '0'),
+        ringStyle: {
+          position: 'absolute', left: cx + '%', top: g[1] + '%',
+          transform: 'translate(-50%,-50%)',
+          width: rw + '%', height: g[3] + '%',
+          border: '2px solid #f2c94c', borderRadius: '50%', zIndex: 3, pointerEvents: 'none'
+        },
+        pillStyle: {
+          position: 'absolute', top: 'calc(' + (g[1] + g[3] / 2) + '% + 6px)',
+          left: onLeft ? 'auto' : Math.min(cx + rw / 2 - 4, 62) + '%',
+          right: onLeft ? Math.min(100 - (cx - rw / 2 + 4), 62) + '%' : 'auto',
+          transform: 'none',
+          maxWidth: '38%', width: 'max-content', textAlign: 'center', zIndex: 4,
+          padding: '7px 12px', borderRadius: 999,
+          background: '#1c1a18', color: '#f2c94c',
+          fontSize: 12, lineHeight: 1.4, letterSpacing: '0.01em',
+          border: '1px solid rgba(242,201,76,0.35)',
+          boxShadow: '0 10px 24px -14px rgba(0,0,0,0.6)'
+        }
+      };
+    });
+
+    const scrollIdeas = [
+      { title: 'Serial Position Effect', body: 'Reorder content to put high-value items at the start and end.' },
+      { title: 'Contextual CTAs', body: 'Relevant actions (volunteer, shop, join) placed mid-scroll.' },
+      { title: 'Micro-Animations', body: 'Dynamic storytelling triggered by scroll.' }
+    ];
+
+    const folds = [
+      ['84.6%', 'Average fold', 14],
+      ['58%', 'Scrolled this far', 27],
+      ['30%', 'Came up to News', 70],
+      ['18%', 'Viewed the full stretch', 98]
+    ].map(([value, label, top]) => ({
+      value, label,
+      lineStyle: {
+        position: 'absolute', left: 0, right: 180, top: Math.min(top, 96) + '%',
+        height: 2, background: '#0b0a09', zIndex: 2
+      },
+      arrowStyle: {
+        position: 'absolute', right: 174, top: Math.min(top, 96) + '%',
+        transform: 'translateY(-50%)', width: 0, height: 0, zIndex: 3,
+        borderTop: '5px solid transparent', borderBottom: '5px solid transparent',
+        borderLeft: '8px solid #0b0a09'
+      },
+      labelStyle: {
+        position: 'absolute', right: 0, width: 168,
+        top: Math.min(top, 96) + '%', transform: 'translateY(-50%)'
+      }
+    }));
+
+    const BENCH_IMG = [["Smart gallery — hover and the story unfolds",["368"]],["Favorite moments, powered by Instagram — likes and comments included",["367"]],["Header leads with what matters: initiatives upfront",["369"]],["Games page spotlights hosted events — showcasing legacy and impact",["366"]],["Gallery connected, shareable, and active across all social channels",["93"]],["Showcasing the human side",["12"]],["Dynamic, connected content instead of static galleries",["356"]],["Well structured contact page — right support effortlessly",["357"]],["Press updates, social buzz, media requests — handled effortlessly",["13","14"]],["Position committee as a catalyst for national progress and community growth",["11","370"]],["Enhance fan interaction with engaging activities",["364","363"]],["Embedding the partners contextually to create real impact",["60"]],["Incorporate fan engagement activities",["62","63"]],["Segregation by sports type & federation proximity",["92","91"]],["Expressing fandom through apparel, collectibles, and accessories",["17"]],["Latest to upcoming Olympic Games",["16"]],["Smart structure, zero confusion",["21","89","88"]],["Story telling through images",["371"]],["Smart news hub — easy to print, share, and filter for what matters most",["365"]],["Smart gallery — hover and the story unfolds",["372"]]];
+    const pickImgs = (team, finding) => {
+      const hit = BENCH_IMG.find(([key], i) => finding.indexOf(key) === 0 && !(team === 'Team Uzbekistan' && i === 0));
+      const nums = hit ? hit[1] : [];
+      return nums.map(n => 'uploads/Dialog%20Case%20Study/image%20' + n + '.png');
+    };
+    const benchmarks = [
+      { team: 'Team UAE', scope: 'REGIONAL', items: [
+        { finding: 'Smart gallery — hover and the story unfolds', roi: 'Keeps users engaged and informed' },
+        { finding: 'Favorite moments, powered by Instagram — likes and comments included', roi: 'Boosting interaction and audience insight' },
+        { finding: 'Header leads with what matters: initiatives upfront', roi: 'Clear communication of priorities, conversion & action boost, perceived credibility & leadership' }
+      ] },
+      { team: 'Team Saudi', scope: 'REGIONAL', items: [
+        { finding: 'Games page spotlights hosted events — showcasing legacy and impact', roi: "Highlighting the committee's legacy, emphasizes value at a glance" },
+        { finding: 'Gallery connected, shareable, and active across all social channels', roi: 'Maximizes engagement and extends reach' }
+      ] },
+      { team: 'Team USA', scope: 'INTERNATIONAL', items: [
+        { finding: 'Showcasing the human side — highlighting consistency & sacrifice, mental resilience of athletes & the constant support of the country', roi: 'Increased time on site, higher repeat visits & stronger fan engagement' },
+        { finding: 'Dynamic, connected content instead of static galleries', roi: 'Increased time on site, higher repeat visits & stronger fan engagement' },
+        { finding: 'Well structured contact page — right support effortlessly', roi: 'Higher conversion rates, improved user satisfaction & retention, reduced support costs' },
+        { finding: 'Press updates, social buzz, media requests — handled effortlessly', roi: 'Boost visibility and simplify press engagement' },
+        { finding: 'Position committee as a catalyst for national progress and community growth', roi: "Boosts national impact and community engagement, maximizing the committee's ROI" },
+        { finding: 'Enhance fan interaction with engaging activities', roi: 'Boost popularity & attract more users' }
+      ] },
+      { team: 'Team Australia', scope: 'INTERNATIONAL', items: [
+        { finding: 'Embedding the partners contextually to create real impact', roi: 'Create visibility & boost popularity' },
+        { finding: 'Incorporate fan engagement activities', roi: 'Boost popularity & attract more users' },
+        { finding: 'Segregation by sports type & federation proximity', roi: 'Reduces search effort, saves time & high visibility' },
+        { finding: 'Expressing fandom through apparel, collectibles, and accessories', roi: 'Revenue generation, fan engagement, brand visibility, community building' },
+        { finding: "Latest to upcoming Olympic Games — a quick heads-up on what's happening now and what's next", roi: 'User engagement & retention, time-saving value, content discoverability' }
+      ] },
+      { team: 'Team New Zealand', scope: 'INTERNATIONAL', items: [
+        { finding: 'Smart structure, zero confusion — effortless navigation with powerful filters', roi: 'Reduces bounce rates, boosts engagement, increases conversions, enhances user satisfaction' },
+        { finding: "Story telling through images — inspire young athletes, students, and fans to explore Qatar's sporting journey", roi: 'Boosts engagement and inspires the next generation' }
+      ] },
+      { team: 'Team Uzbekistan', scope: 'INTERNATIONAL', items: [
+        { finding: 'Smart news hub — easy to print, share, and filter for what matters most', roi: 'Boosts content reach and visibility, high user engagement' },
+        { finding: 'Smart gallery — hover and the story unfolds', roi: 'Keeps users engaged and informed' }
+      ] }
+    ].map((b, bi) => ({
+      ...b,
+      items: b.items.map((it, ii) => {
+        const ratios = ['4/3', '3/4', '1/1', '4/3', '16/10', '3/4'];
+        const offsets = [0, 26, -14, 18, 0, 22];
+        return {
+          ...it,
+          num: String(ii + 1).padStart(2, '0'),
+          slotId: 'qoc-bench-' + (bi + 1) + '-' + (ii + 1),
+          slotHint: 'Drop ' + b.team + ' screenshot ' + (ii + 1),
+          tileStyle: {
+            position: 'relative', margin: 0, overflow: 'hidden',
+            marginTop: offsets[ii % offsets.length],
+            border: '1px solid var(--bg)'
+          },
+          slotStyle: { width: '100%', aspectRatio: ratios[ii % ratios.length] }
+        };
+      })
+    })).map(b => {
+      const ratios = ['4/3', '3/4', '1/1', '16/10'];
+      const pairs = b.items.map((it, ii) => {
+        const flip = ii % 2 === 1;
+        const imgs = pickImgs(b.team, it.finding);
+        return {
+          num: it.num, finding: it.finding, roi: it.roi,
+          rowStyle: {
+            display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px,1.8vw,24px)',
+            alignItems: 'center', flexDirection: flip ? 'row-reverse' : 'row'
+          },
+          shotsStyle: {
+            flex: '2 1 260px', minWidth: 0,
+            display: 'grid',
+            gridTemplateColumns: imgs.length > 1 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)',
+            gap: 0
+          },
+          noteStyle: { flex: '1 1 150px', minWidth: 140, textAlign: flip ? 'left' : 'right' },
+          headAlign: flip ? '' : 'justify-content:flex-end',
+          arrowRowStyle: {
+            display: 'flex', alignItems: 'center', marginTop: 10,
+            justifyContent: flip ? 'flex-start' : 'flex-end'
+          },
+          arrowHeadLeft: flip ? { display: 'none' } : {
+            width: 0, height: 0, flex: '0 0 auto',
+            borderTop: '4px solid transparent', borderBottom: '4px solid transparent',
+            borderRight: '7px solid var(--m40)'
+          },
+          arrowHeadRight: flip ? {
+            width: 0, height: 0, flex: '0 0 auto',
+            borderTop: '4px solid transparent', borderBottom: '4px solid transparent',
+            borderLeft: '7px solid var(--m40)'
+          } : { display: 'none' },
+          tiles: imgs.map((src, k) => ({
+            src, alt: b.team + ' — ' + it.finding,
+            imgStyle: {
+              width: '100%', height: 'auto', maxHeight: imgs.length > 1 ? 210 : 260,
+              objectFit: 'contain', objectPosition: 'top center', display: 'block', background: 'transparent'
+            },
+            tileStyle: {
+              position: 'relative', margin: 0, overflow: 'hidden',
+              marginTop: k === 1 ? 'clamp(10px,2vw,22px)' : 0,
+              border: '1px solid var(--bg)'
+            }
+          }))
+        };
+      });
+      return { ...b, pairs };
+    });
+
+    const PERSONAS = [
+      { name: 'Ahmed', role: 'Media Personal', img: 'assets/personas/ahmed.png', tint: 'rgba(255,100,120,0.14)',
+        quote: '“I manage press relations and official communications for the Qatar Olympic Committee, ensuring accurate and timely media coverage.”', constraint: 'Scattered Information',
+        needs: [['7/10', 'News room'], ['90%', 'Requests Stats of Athletes'], ['10x', 'Online Registration saves time'], ['24/7', 'access to media accreditation info'], ['<3 sec', 'Search for athlete, event, or news'], ['jpg, mp4, pdf', 'Assets downloadable in multiple formats'], ['1-click', 'Access to event & athlete profiles']],
+        pains: ['No press contact directory', 'Lack of clear media accreditation guidelines', 'Difficult to find archived material', 'Lack of centralized media hub', 'No central multimedia gallery with tagging by event/sport.', 'No centralized calendar with filters for media planning'] },
+      { name: 'Saeed Hasan', role: 'Elite Athlete', img: 'assets/personas/saeed.png', tint: 'rgba(98,174,240,0.16)',
+        quote: '“I’m an elite athlete driven by discipline and passion, proud to represent Qatar, and always pushing beyond limits to inspire others.”', constraint: 'Achievement are not showcased',
+        needs: [['Visible', 'Post retirement opportunities'], ['100%', 'up-to-date rosters, results, and schedules'], ['Alerts', 'for breaking news or schedule changes'], ['High', 'Visibility on achievement'], ['<3 sec', 'Search for athlete, event, or news'], ['Filtration', 'for sport type, event date'], ['Instant', 'contact links to media relations or press officers'], ['Responsive Design', 'access on mobile, tablet, and desktop']],
+        pains: ['No personalized Athletes Portal', 'Lack of athlete feedback/support space', 'Lack of transparency on sponsorship opportunities', 'Unclear selection criteria, qualifications, and performance targets', 'No segregation between public and athlete-only info'] },
+      { name: 'Zakir', role: 'Junior Athlete', img: 'assets/personas/zakir.png', tint: 'rgba(255,170,60,0.16)',
+        quote: '“I manage press relations and official communications for the Qatar Olympic Committee, ensuring accurate and timely media coverage.”', constraint: 'Less motivation & guidance',
+        needs: [['Network', 'with athletes, mentors'], ['90%', 'Requests to provide Talent Identification and Pathways'], ['10/10', 'Tracking achievements & recognition'], ['Detailed', 'access to selection criteria'], ['Information', 'on anti-doping, fair play etc..'], ['Scholarship', 'Access to Scholarships and Financial Support'], ['Resources', 'coaching, facilities, and sports science support.']],
+        pains: ['Difficult to find youth-specific programs', 'Limited coverage of junior and emerging athletes', 'The website structure isn’t tailored for quick access', 'No info on available scholarships or support schemes.'] },
+      { name: 'Thalal', role: 'Fan', img: 'assets/personas/thalal.png', tint: 'rgba(138,21,56,0.12)',
+        quote: '“I’m a huge fan of Qatari athletes and always follow our Olympic teams closely”', constraint: 'struggle to find updates, results, and athlete-related content quickly',
+        needs: [['Up-to date', 'Qatar’s athletes, their achievements, and upcoming competitions.'], ['Live Results', 'Access live results, news, and medal updates.'], ['History', 'Qatar’s history in Olympic sports'], ['Updates', 'Real-time updates'], ['Shareable', 'content for social media.'], ['Olympic Community', 'Gain access to events, ticketing information, and exclusive experiences.'], ['Mobile UI', 'Mobile-friendly design for quick browsing.']],
+        pains: ['Absence of live updates', 'Lack of personalized content of Athletes', 'Minimal fan interaction', 'Difficulty in purchasing event tickets', 'Limited historical or archive info', 'No central multimedia gallery with tagging by event/sport.', 'Weak social media integration'] }
+    ];
+    const pIdx = this.state.personaIdx || 0;
+    const pSel = PERSONAS[pIdx];
+    const persona = { ...pSel, needs: pSel.needs.map(([v, l]) => ({ v, l })) };
+    const personaTabs = PERSONAS.map((p, i) => { const on = i === pIdx; return { name: p.name, role: p.role, img: p.img, active: on ? 'true' : 'false', onClick: () => this.setState({ personaIdx: i }),
+      btn: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, padding: 0, border: 'none', background: 'none', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'center', minWidth: 0, opacity: on ? 1 : 0.6, transition: 'opacity 200ms ease' },
+      ring: { width: '100%', maxWidth: 104, aspectRatio: '1/1', borderRadius: 9999, background: p.tint, overflow: 'hidden', display: 'block', boxShadow: on ? '0 0 0 2px var(--surface), 0 0 0 4px var(--accent)' : 'none', transform: on ? 'scale(1.14)' : 'scale(0.94)', transformOrigin: 'center bottom', transition: 'box-shadow 200ms ease, transform 300ms cubic-bezier(.22,1,.36,1)' } }; });
+
+    return {
+      persona, personaTabs,
+      smRef: this._smRef, smPills, smTiers, smDiagram: !this.state.smCompact, smCompact: !!this.state.smCompact,
+      smTabs: SMT.map((t, i) => ({ label: t.label, active: i === (this.state.smTab || 0), onClick: () => this.setState({ smTab: i }) })),
+      smActiveDesc: SMT[this.state.smTab || 0].desc, smActiveTiers: [smTiers[this.state.smTab || 0]], smSegH: { height: 32 },
+      scrollHeatStyle: this.state.hw
+        ? { position: 'relative', flex: '0 0 ' + (this.state.hw + 180) + 'px', boxSizing: 'border-box', paddingRight: 180, margin: 0 }
+        : { position: 'relative', flex: '1 1 360px', maxWidth: 420, minWidth: 'min(100%,330px)', margin: 0, paddingRight: 180 },
+      scrollColRef: this._scColRef || (this._scColRef = React.createRef()),
+      scrollColStyle: this.state.scW
+        ? { flex: '0 0 ' + this.state.scW + 'px', minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 14 }
+        : { flex: '1.4 1 320px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 'clamp(12px,1.6vw,18px)' },
+      galleryColRef: this._galColRef || (this._galColRef = React.createRef()),
+      galleryFigStyle: this.state.galSide
+        ? { margin: 0, display: 'grid', gap: 8, position: 'absolute', left: 0, right: 0, top: 'calc(78% - 86px)', transform: 'translateY(-50%)' }
+        : { margin: 0, display: 'grid', gap: 8 },
+      rootStyle, steps, swot, scrollIdeas, folds, benchmarks, hjStats, hjPages, hjRates, hjVisitors, hjPageRows, hjEng, hjBulbStyle, hjStatCards, swotAxes, swotFrame, swotQuadWrap, swotHub, gaugeStyle, gaugeMaskStyle, heatmaps, accent: A,
+      isLight: light, isDark: !light,
+      toggleTheme: () => {
+        const next = !light;
+        this.setState({ light: next });
+        try { localStorage.setItem('site-theme-v2', next ? 'light' : 'dark'); } catch (e) {}
+      },
+      headerStyle: {
+        position: 'sticky', top: 0, zIndex: 50, display: 'flex', alignItems: 'center',
+        justifyContent: 'space-between', gap: 20, padding: '22px clamp(20px,5vw,64px)',
+        background: this.state.scrolled ? 'var(--scrim)' : 'var(--bg)',
+        backdropFilter: this.state.scrolled ? 'blur(10px)' : 'none',
+        borderBottom: '1px solid var(--m10)', transition: 'background 400ms ease'
+      },
+      splitStyle: { display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start' },
+      railStyle: {
+        flex: '1 1 260px', maxWidth: wide ? 'calc(300px + clamp(20px,6vw,112px))' : 'none', minWidth: 240,
+        padding: wide ? '48px 40px 48px clamp(20px,6vw,112px)' : '32px clamp(20px,6vw,112px)',
+        borderRight: wide ? '1px solid var(--hairline)' : 'none',
+        borderBottom: wide ? 'none' : '1px solid var(--hairline)',
+        background: 'var(--surface)',
+        position: wide ? 'sticky' : 'static', top: wide ? 72 : 'auto', minHeight: wide ? 'calc(100vh - 72px)' : 'auto',
+        alignSelf: 'flex-start'
+      },
+      mainColStyle: { flex: '1 1 560px', minWidth: 0 },
+      nextHover: { color: 'var(--primary)' },
+      navCardHover: { boxShadow: 'var(--shadow-2)', transform: 'translateY(-2px)' },
+      overlayBtnPos: { position: 'absolute', top: 14, right: 14, zIndex: 20 },
+      closeBtnPos: { position: 'fixed', top: 18, right: 20, zIndex: 2 }
+    };
+  }
+}
+</script>
+</body>
+</html>

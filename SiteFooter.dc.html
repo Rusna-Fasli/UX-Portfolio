@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<footer style="background:var(--bg);border-top:1px solid var(--hairline)" data-screen-label="footer">
+  <div style="max-width:2000px;margin:0 auto;padding:24px clamp(20px,6vw,112px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:14px;color:var(--ink-muted)">
+    <span>© 2026 Rusna Mohamed Fasli</span>
+    <div style="display:flex;gap:8px">
+      <dc-import name="Button" variant="icon" size="sm" icon="linkedin" ariaLabel="LinkedIn" href="#" target="_blank" hint-size="36px,36px"></dc-import>
+      <dc-import name="Button" variant="icon" size="sm" icon="behance" ariaLabel="Behance" href="#" target="_blank" hint-size="36px,36px"></dc-import>
+      <dc-import name="Button" variant="icon" size="sm" icon="mail" ariaLabel="Email rusnafasli@outlook.com" href="mailto:rusnafasli@outlook.com" hint-size="36px,36px"></dc-import>
+    </div>
+    <span>UI/UX Portfolio</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:320}}">
+class Component extends DCLogic {
+  renderVals() { return { linkHover: { color: 'var(--primary)' } }; }
+}
+</script>
+</body>
+</html>

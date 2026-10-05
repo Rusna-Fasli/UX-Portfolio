@@ -1,0 +1,27 @@
+# Working folders and test output
+tmp/
+debug/
+screenshots/
+downloads/
+scratch_full.png
+/pasted-*.png
+
+# Old bundled exports (superseded by site/)
+portfolio/
+portfolio.html
+portfolio-src.html
+/index.html
+Combined.html
+Combined-standalone.html
+
+# Reference uploads: keep only the files the designs use
+uploads/*
+!uploads/DESIGN-notion.md
+!uploads/Dialog Case Study/
+!uploads/pasted-1790078*.png
+
+# Local tooling
+.claude/settings.local.json
+node_modules/
+.DS_Store
+Thumbs.db

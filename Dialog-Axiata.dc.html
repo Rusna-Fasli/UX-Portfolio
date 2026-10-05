@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./link-map.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <script src="./touch.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#f6f5f4;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{font-family:'Inter',system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}a:hover{color:inherit}@keyframes btnspin{to{transform:rotate(360deg)}}
+    a:hover{color:var(--primary)}
+    button{font-family:inherit}
+    ::selection{background:#cfe3f8;color:#000}
+    [data-reveal].armed{opacity:0;transform:translateY(22px);transition:opacity 900ms cubic-bezier(.16,1,.3,1),transform 900ms cubic-bezier(.16,1,.3,1)}
+    [data-reveal].armed.in{opacity:1;transform:none}
+    .rail::-webkit-scrollbar{height:6px}
+    .rail::-webkit-scrollbar-thumb{background:rgba(255,107,61,0.45);border-radius:3px}
+  #showcase-row::-webkit-scrollbar{width:0;height:0;display:none}
+  </style>
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-53.webp" data-resource-id="r_assets_dlg_j_ps_53_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-group-366.webp" data-resource-id="r_assets_dlg_j_group_366_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-identity.webp" data-resource-id="r_assets_dlg_j_identity_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps.webp" data-resource-id="r_assets_dlg_j_ps_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-1.webp" data-resource-id="r_assets_dlg_j_ps_1_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-2.webp" data-resource-id="r_assets_dlg_j_ps_2_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-3.webp" data-resource-id="r_assets_dlg_j_ps_3_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-4.webp" data-resource-id="r_assets_dlg_j_ps_4_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-5.webp" data-resource-id="r_assets_dlg_j_ps_5_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-6.webp" data-resource-id="r_assets_dlg_j_ps_6_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-7.webp" data-resource-id="r_assets_dlg_j_ps_7_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-8.webp" data-resource-id="r_assets_dlg_j_ps_8_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-11.webp" data-resource-id="r_assets_dlg_j_ps_11_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-12.webp" data-resource-id="r_assets_dlg_j_ps_12_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-13.webp" data-resource-id="r_assets_dlg_j_ps_13_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-14.webp" data-resource-id="r_assets_dlg_j_ps_14_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-15.webp" data-resource-id="r_assets_dlg_j_ps_15_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-16.webp" data-resource-id="r_assets_dlg_j_ps_16_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-17.webp" data-resource-id="r_assets_dlg_j_ps_17_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-18.webp" data-resource-id="r_assets_dlg_j_ps_18_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-20.webp" data-resource-id="r_assets_dlg_j_ps_20_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-21.webp" data-resource-id="r_assets_dlg_j_ps_21_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-22.webp" data-resource-id="r_assets_dlg_j_ps_22_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-24.webp" data-resource-id="r_assets_dlg_j_ps_24_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-25.webp" data-resource-id="r_assets_dlg_j_ps_25_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-26.webp" data-resource-id="r_assets_dlg_j_ps_26_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-27.webp" data-resource-id="r_assets_dlg_j_ps_27_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-28.webp" data-resource-id="r_assets_dlg_j_ps_28_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-32.webp" data-resource-id="r_assets_dlg_j_ps_32_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-34.webp" data-resource-id="r_assets_dlg_j_ps_34_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-35.webp" data-resource-id="r_assets_dlg_j_ps_35_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-36.webp" data-resource-id="r_assets_dlg_j_ps_36_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-40.webp" data-resource-id="r_assets_dlg_j_ps_40_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-52.webp" data-resource-id="r_assets_dlg_j_ps_52_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-ps-54.webp" data-resource-id="r_assets_dlg_j_ps_54_jpg">
+  <meta name="ext-resource-dependency" content="./assets/opt/dlg-select-offer.webp" data-resource-id="r_assets_dlg_j_select_offer_jpg">
+</helmet>
+<template id="__bundler_thumbnail" data-bg-color="#f6f5f4"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#f6f5f4"></rect><rect x="480" y="280" width="240" height="240" rx="48" fill="#000"></rect><text x="600" y="440" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="110" font-weight="700" fill="#fff">RF</text></svg></template>
+
+
+<div style="{{ rootStyle }}">
+
+  <dc-import name="SiteHeader" active="work" isLight="{{ isLight }}" onToggleTheme="{{ toggleTheme }}" style="position:sticky;top:0;z-index:50;display:block" hint-size="100%,72px"></dc-import>
+
+  <div style="{{ splitStyle }}">
+
+  <aside style="{{ railStyle }}" data-screen-label="project rail">
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,30px)">
+      <div><dc-import name="Button" variant="text" label="Back" icon="back" href="./Work.dc.html" hint-size="70px,24px"></dc-import></div>
+      <div>
+        <h1 style="font-size:clamp(26px,2.4vw,32px);line-height:1.1;font-weight:700;letter-spacing:-0.75px;margin:0">Dialog.lk <br>SIM Ordering</h1>
+      </div>
+      <p style="font-size:15px;line-height:1.5;color:var(--ink-2);margin:0">Reworking a SIM number-selection flow around the way people actually move through it — from homepage entry to checkout.</p>
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:6px">Role</div>
+        <div style="font-size:16px;line-height:1.5;color:var(--ink)">UX / UI Designer</div>
+      </div>
+      
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted);margin-bottom:6px">Client</div>
+        <div style="font-size:16px;line-height:1.5;color:var(--ink)">Dialog Axiata PLC</div>
+      </div>
+      
+      <div><dc-import name="Button" variant="utility" size="sm" label="Visit site" icon="external" href="https://www.dialog.lk" target="_blank" hint-size="112px,36px"></dc-import></div>
+    </div>
+  </aside>
+
+  <main style="{{ mainColStyle }}">
+
+    <section style="padding:clamp(28px,4vw,56px) clamp(20px,3vw,40px) clamp(40px,6vw,80px)" data-screen-label="01 hero">
+      <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">Case study / 01</span>
+      <div style="position:relative;overflow:hidden;background:var(--surface);aspect-ratio:16/9;margin-top:20px;border-radius:16px;border:1px solid var(--hairline)">
+        <div style="position:absolute;inset:0;background-image:url('./assets/dialog-landing.png');background-size:cover;background-position:top center"></div>
+      </div>
+      <p style="font-size:14px;color:var(--ink-muted);margin:12px 2px 0">The live Dialog homepage — where the number-selection journey begins.</p>
+      
+    </section>
+
+    <section id="context" style="padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px)" data-reveal="" data-screen-label="02 context">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,3vw,36px);align-items:start">
+        <div>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">01-PROJECT BRIEF</span>
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:16px 0 0;max-width:none">Making SIM purchase simpler, starting with the number.</h2>
+        </div>
+        <div style="max-width:none">
+          <p style="font-size:clamp(16px,1.5vw,20px);line-height:1.5;color:var(--m70);margin:0">The SIM-buying journey is one of the platform’s key flows. The goal was to rethink the experience into a logical, easy-to-follow journey — helping customers choose a number, verify their details, select a package, and complete the purchase with minimal friction.</p>
+          
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="flow" style="{{ flowBandStyle }}" data-screen-label="06 flow">
+      <div style="padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px) clamp(20px,3vw,32px)">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:rgba(244,239,232,0.35)">Empathize</span>
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:16px 0 0;color:#f4efe8;max-width:18ch">Existing User Flow</h2>
+        <p style="font-size:16px;line-height:1.5;color:rgba(244,239,232,0.55);max-width:52ch;margin:16px 0 0">Verification splits into five outcomes — one exact match, several exact matches, one partial, several partials, or none. The no-match path falls back to search. Everything reconverges at the age check.</p>
+      </div>
+      <div style="padding:0 clamp(20px,5vw,64px) clamp(28px,4vw,48px)">
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:rgba(244,239,232,0.35);margin-bottom:12px">DIAGRAM</div>
+        <div id="journey-pdf" style="position:relative;border:1px solid rgba(244,239,232,0.14);background:#f7f7f8;padding:14px;cursor:zoom-in">
+          <div style="padding:28px;font-size:12px;color:#6a6f7b">Loading diagram…</div>
+        </div>
+        <p style="font-size:14px;color:rgba(244,239,232,0.4);margin:10px 0 0">The journey mapped end to end, before it was broken into screens. <a id="journey-expand" href="#flow" style="color:#62aef0">View full size</a></p>
+      </div>
+      <div style="padding:0 clamp(20px,5vw,64px) clamp(40px,7vw,90px)">
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:rgba(244,239,232,0.35);margin-bottom:12px">UI SCREENS</div>
+        <div id="flow-frame" style="position:relative;border:1px solid rgba(244,239,232,0.14);background:#f7f7f8;height:clamp(460px,74vh,780px);overflow:hidden;cursor:zoom-in">
+          <iframe src="./assets/dialog/user-flow.html" title="Dialog user flow with UI screens" style="width:100%;height:100%;border:0;display:block;pointer-events:none"></iframe>
+          <div aria-hidden="true" style="position:absolute;top:0;right:0;width:300px;height:66px;background:#f7f7f8;pointer-events:none"></div>
+          <div aria-hidden="true" style="position:absolute;left:0;bottom:0;width:360px;height:46px;background:#f7f7f8;pointer-events:none"></div>
+        </div>
+        <p style="font-size:14px;color:rgba(244,239,232,0.4);margin:10px 0 0">Pan, zoom and click a screen to trace its path in full size. <a id="flow-expand" href="#flow" style="color:#62aef0">View full size</a></p>
+      </div>
+    </section>
+
+    <section id="audit" style="padding:clamp(24px,4vw,40px) 0 0" data-screen-label="04 audit">
+      <div style="padding:0 clamp(20px,5vw,64px)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">What the audit found</h2>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">UX/UI Evaluation</span>
+        </div>
+      </div>
+      <div style="{{ collageStyle }}">
+        <sc-for list="{{ findings }}" as="f" hint-placeholder-count="0">
+          <div style="{{ f.tileStyle }}">
+            <div style="position:relative;width:100%">
+              <div style="{{ f.shotImgStyle }}" role="img" aria-label="{{ f.principle }}"></div>
+              <div style="{{ f.boxStyle }}"></div>
+              <div style="{{ f.pinStyle }}">{{ f.label }}</div>
+            </div>
+            <div style="padding:12px 2px 0">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px">
+                
+                
+                <span style="font-size:11px;color:var(--m35)">{{ f.principle }}</span>
+              </div>
+              <p style="font-size:15.5px;line-height:1.4;color:var(--text);margin:0;letter-spacing:-0.01em">{{ f.observation }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      
+    </section>
+
+    <section id="users" style="padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px)" data-reveal="" data-screen-label="05 personas">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Primary User Personas</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">USER RESEARCH</span>
+      </div>
+      
+      <div style="display:flex;gap:clamp(16px,2vw,24px);margin-top:clamp(28px,5vw,56px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 clamp(20px,5vw,64px);margin-left:calc(-1 * clamp(20px,5vw,64px));margin-right:calc(-1 * clamp(20px,5vw,64px));padding:0 clamp(20px,5vw,64px) 16px;scrollbar-width:thin">
+        <sc-for list="{{ personas }}" as="p" hint-placeholder-count="3">
+          <article style="background:#ffffff;color:#0b0a09;border:1px solid #e6e6e6;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.04);border-radius:12px;overflow:hidden;display:flex;flex-wrap:wrap;flex:0 0 min(88%,1100px);scroll-snap-align:start">
+            <div style="flex:1 1 auto;min-width:0;padding:clamp(24px,3.2vw,44px);display:flex;flex-direction:column">
+              <h3 style="font-size:clamp(32px,3.6vw,52px);line-height:0.95;font-weight:700;letter-spacing:-0.045em;text-transform:uppercase;margin:0;color:#0b0a09">{{ p.person }}.</h3>
+              <p style="font-style:italic;font-size:17px;line-height:1.55;color:rgba(11,10,9,0.68);margin:6px 0 0;max-width:40ch">“{{ p.quote }}”</p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px clamp(28px,4vw,56px);margin-top:clamp(24px,3vw,36px)">
+                <div style="display:flex;flex-direction:column;gap:24px">
+                  <div style="display:flex;flex-direction:column;gap:2px">
+                    <sc-for list="{{ p.facts }}" as="fact" hint-placeholder-count="3">
+                      <div style="font-size:14.5px;line-height:1.55;color:rgba(11,10,9,0.68)">{{ fact.label }}: <span style="color:#0b0a09">{{ fact.value }}</span></div>
+                    </sc-for>
+                  </div>
+                  <div>
+                    <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0b0a09;margin:0 0 10px">Traits</div>
+                    <ul style="margin:0;padding:0 0 0 18px;font-size:14.5px;line-height:1.55;color:rgba(11,10,9,0.68)">
+                      <sc-for list="{{ p.traits }}" as="t" hint-placeholder-count="3"><li>{{ t }}</li></sc-for>
+                    </ul>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:24px">
+                  <div>
+                    <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0b0a09;margin:0 0 10px">Goals</div>
+                    <sc-for list="{{ p.goals }}" as="g" hint-placeholder-count="2"><div style="font-size:14.5px;line-height:1.55;color:rgba(11,10,9,0.68)">{{ g }}</div></sc-for>
+                  </div>
+                  <div>
+                    <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0b0a09;margin:0 0 10px">Where they buy</div>
+                    <div style="display:flex;flex-direction:column;gap:10px">
+                      <sc-for list="{{ p.channels }}" as="ch" hint-placeholder-count="3">
+                        <div style="display:flex;align-items:center;gap:12px">
+                          <span style="font-size:14.5px;line-height:1.55;color:rgba(11,10,9,0.68);flex:0 0 46px">{{ ch.label }}</span>
+                          <div style="flex:1 1 auto;height:12px;background:rgba(11,10,9,0.1);border-radius:9999px;overflow:hidden"><div style="{{ ch.barStyle }}"></div></div>
+                          <span style="font-size:14.5px;line-height:1.55;color:rgba(11,10,9,0.68);flex:0 0 34px;text-align:right">{{ ch.pct }}%</span>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0b0a09;margin:0 0 10px">Frustrations</div>
+                    <sc-for list="{{ p.frustrations }}" as="fr" hint-placeholder-count="2"><div style="font-size:14.5px;line-height:1.55;color:rgba(11,10,9,0.68)">{{ fr }}</div></sc-for>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-end;gap:20px;margin-top:auto;padding-top:clamp(28px,3vw,40px)">
+                <img src="{{ p.img }}" alt="{{ p.person }}" style="width:96px;height:96px;flex:0 0 auto;border-radius:9999px;object-fit:cover;display:block">
+                <div style="flex:1 1 auto;height:1px;background:#e6e6e6;margin-bottom:10px"></div>
+                <div style="font-size:clamp(36px,4vw,56px);line-height:0.9;font-weight:500;letter-spacing:-0.03em;color:#0b0a09">{{ p.num }}/{{ p.total }}</div>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="market" style="padding:clamp(40px,7vw,90px) 0 0" data-screen-label="08 competitors">
+      <div style="padding:0 clamp(20px,5vw,64px)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Competitor Analysis</h2>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">IDEATE</span>
+        </div>
+        <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:50ch;margin:20px 0 0">Six telecom and tech homepages, read for one thing: what they do at the moment a buyer hesitates.</p>
+      </div>
+      <div style="{{ compGridStyle }}">
+        <sc-for list="{{ competitors }}" as="c" hint-placeholder-count="0">
+          <div style="{{ c.tileStyle }}" onMouseEnter="{{ c.onEnter }}" onMouseLeave="{{ c.onLeave }}" onFocus="{{ c.onEnter }}" onBlur="{{ c.onLeave }}" tabindex="0">
+            <div style="{{ c.shotWrapStyle }}">
+              <div style="{{ c.imgStyle }}" role="img" aria-label="{{ c.name }}"></div>
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none">
+                <line x1="{{ c.lineX1 }}" y1="{{ c.lineY1 }}" x2="{{ c.lineX2 }}" y2="{{ c.lineY2 }}" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line>
+              </svg>
+              <div style="{{ c.ringStyle }}"></div>
+              <div style="{{ c.spotLabelStyle }}">{{ c.spotLabel }}</div>
+              <div style="{{ c.badgeStyle }}">{{ c.num }} · {{ c.name }}</div>
+            </div>
+            <div style="{{ c.panelStyle }}">
+              <div style="{{ c.panelInnerStyle }}">
+                <p style="font-size:15px;line-height:1.3;color:var(--text);margin:0;letter-spacing:-0.01em">{{ c.pattern }}</p>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      
+    </section>
+
+    <section id="iterations" style="padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px)" data-screen-label="09 iterations">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Lo-fi wireframes</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">&nbsp;ITERATIONS</span>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:48ch;margin:20px 0 0">Six decisions carried out of the audit and into the redesign, explored across the full wireframe board below.</p>
+      
+      <div ref="{{ boardRef }}" style="{{ boardStyle }}">
+        <sc-for list="{{ lanes }}" as="lane" hint-placeholder-count="3">
+          <div style="{{ lane.style }}">
+            <sc-for list="{{ lane.items }}" as="w" hint-placeholder-count="6">
+              <figure style="{{ w.style }}">
+                <img src="{{ w.src }}" alt="{{ w.alt }}" loading="lazy" style="width:100%;height:auto;display:block;background:#fff;border:1px solid var(--m10)">
+              </figure>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="further" style="padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px) 0" data-screen-label="10 further iterations">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Further Iterations</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">EXPLORATION</span>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:48ch;margin:20px 0 0">Homepage directions explored before the final layout.</p>
+      <div style="margin-top:clamp(24px,4vw,44px)" data-reveal="">
+        <img src="assets/dlg/j/iterations.jpg" alt="Further homepage iterations" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--m10)">
+      </div>
+    </section>
+
+    <section id="final" style="padding:clamp(40px,7vw,90px) clamp(12px,3vw,32px)" data-screen-label="11 final ui">
+      <div style="padding:0 clamp(8px,2vw,32px)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+          <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">The Final Interface</h2>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">FINAL UI</span>
+        </div>
+      </div>
+      <div style="padding:0 clamp(8px,2vw,32px)">
+        <p style="font-size:15px;line-height:1.5;color:var(--m45);margin:18px 0 0">Revamped User Flows are listed below. Click to open prototype in Figma</p>
+      </div>
+      
+      <div style="margin-top:clamp(24px,4vw,44px);padding:0 clamp(8px,2vw,32px)" data-reveal="">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px">
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=30-49942&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=30%3A49942&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M16 11l2 2 4-4"></path></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 01</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Exact match 1 number-Age more than 18</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=121-26597&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=121%3A26597&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 9.5-4-1.3-7-5-7-9.5V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 02</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Exact match-Age less than 18</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=121-26607&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=121%3A26607&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="13" height="13" rx="2"></rect><path d="M4 16V5a1 1 0 0 1 1-1h11"></path><path d="M10.5 13.5l2 2 4-4"></path></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 03</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Exact match- Multiple numbers</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26621&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26621&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"></path></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 04</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Partial match - 1 number</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26636&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26636&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 05</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Partial match -Multiple number</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26649&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26649&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.3-4.3"></path></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 06</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Matching number using customer via search</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26665&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26665&amp;show-proto-sidebar=1" target="_blank" rel="noopener" data-touch-card="true" style="display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card-bg);border:1px solid var(--m10);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,0.03);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform 220ms cubic-bezier(.2,.7,.2,1),box-shadow 220ms ease,border-color 220ms ease" style-hover="transform:translateY(-2px);border-color:var(--m20);box-shadow:0 2px 4px rgba(0,0,0,0.04),0 12px 28px rgba(0,0,0,0.07)">
+            <span style="flex:0 0 40px;width:40px;height:40px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:var(--accent-a);color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7"></path><path d="M20 4v5h-5"></path></svg></span>
+            <span style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m45)">FLOW 07</span>
+              <span style="font-size:15px;line-height:1.4;font-weight:600;color:var(--ink);text-wrap:pretty">Start with another number</span>
+            </span>
+            <span style="flex:0 0 auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent-a);white-space:nowrap">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="showcase" style="padding:clamp(40px,7vw,90px) clamp(20px,5vw,64px) clamp(20px,4vw,48px)" data-screen-label="12 final screens">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid var(--m10);padding-top:22px">
+        <h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:0">Final screens</h2>
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--m35)">SHOWCASE</span>
+      </div>
+      <p style="font-size:16px;line-height:1.5;color:var(--m60);max-width:48ch;margin:20px 0 0">Some of the key screens.</p>
+      <div style="margin-top:clamp(24px,4vw,44px);background:linear-gradient(115deg,#8a0f45 0%,#5a1160 48%,#1e2a72 100%);position:relative;padding:clamp(10px,2vw,24px) 0;overflow:hidden" data-reveal="">
+        <dc-import name="Button" variant="overlay" size="sm" label="Full view" icon="expand" onClick="{{ openShowcase }}" style="{{ overlayBtnPos }}" hint-size="112px,36px"></dc-import>
+        <div id="showcase-row" ref="{{ showcaseRef }}" onScroll="{{ onShowcaseScroll }}" style="scrollbar-width:none;-ms-overflow-style:none;display:flex;align-items:center;gap:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:2%;padding:clamp(60px,9vw,130px) 0;-webkit-overflow-scrolling:touch">
+          <img src="assets/dlg/j/final-landing.jpg" alt="Landing page — enter your details" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img src="assets/dlg/j/final-match.jpg" alt="Perfect matching number result" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img src="assets/dlg/j/final-multi.jpg" alt="Multiple matching numbers with bonus gift" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img src="assets/dlg/j/final-nomatch.jpg" alt="No matching number found" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img src="assets/dlg/j/final-package.jpg" alt="Package type and package selection" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:6px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 46px 84px -40px rgba(40,33,90,0.65)">
+          <img src="assets/dlg/j/final-prepaid.jpg" alt="Prepaid-only package selection" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img src="assets/dlg/j/final-cart.jpg" alt="Shopping cart" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img aria-hidden="true" src="assets/dlg/j/final-landing.jpg" alt="Landing page — enter your details" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img aria-hidden="true" src="assets/dlg/j/final-match.jpg" alt="Perfect matching number result" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img aria-hidden="true" src="assets/dlg/j/final-multi.jpg" alt="Multiple matching numbers with bonus gift" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img aria-hidden="true" src="assets/dlg/j/final-nomatch.jpg" alt="No matching number found" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img aria-hidden="true" src="assets/dlg/j/final-package.jpg" alt="Package type and package selection" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:6px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 46px 84px -40px rgba(40,33,90,0.65)">
+          <img aria-hidden="true" src="assets/dlg/j/final-prepaid.jpg" alt="Prepaid-only package selection" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+          <img aria-hidden="true" src="assets/dlg/j/final-cart.jpg" alt="Shopping cart" loading="lazy" style="flex:0 0 32%;width:32%;min-width:0;height:auto;display:block;background:#fff;border-radius:5px;position:relative;scroll-snap-align:center;will-change:transform;box-shadow:0 26px 52px -34px rgba(40,33,90,0.5)">
+        </div>
+      </div>
+      <div style="{{ showcaseOverlayStyle }}" onClick="{{ closeShowcase }}">
+        <dc-import name="Button" variant="overlay" size="sm" label="Close" icon="close" onClick="{{ closeShowcase }}" style="{{ closeBtnPos }}" hint-size="96px,36px"></dc-import>
+        <div style="display:flex;align-items:center;gap:3%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:2vh 11%;min-height:80vh;scrollbar-width:none">
+            <img src="assets/dlg/j/final-landing.jpg" alt="Landing page — enter your details" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+            <img src="assets/dlg/j/final-match.jpg" alt="Perfect matching number result" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+            <img src="assets/dlg/j/final-multi.jpg" alt="Multiple matching numbers with bonus gift" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+            <img src="assets/dlg/j/final-nomatch.jpg" alt="No matching number found" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+            <img src="assets/dlg/j/final-package.jpg" alt="Package type and package selection" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+            <img src="assets/dlg/j/final-prepaid.jpg" alt="Prepaid-only package selection" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+            <img src="assets/dlg/j/final-cart.jpg" alt="Shopping cart" loading="lazy" style="flex:0 0 78%;width:78%;height:auto;display:block;background:#fff;scroll-snap-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,0.8)">
+        </div>
+      </div>
+    </section>
+
+    <nav aria-label="Project navigation" data-screen-label="project-nav" style="margin-top:clamp(48px,8vw,96px);padding:0 clamp(20px,5vw,64px) clamp(56px,8vw,96px)">
+    <a href="./Qatar-Olympic-Committee.dc.html" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:24px 0;border-top:1px solid var(--hairline);color:var(--ink-2)" style-hover="{{ nextHover }}">
+      <span style="font-size:15px;line-height:1.33;color:var(--ink-muted)">Next project</span>
+      <span style="font-size:clamp(20px,2vw,26px);line-height:1.23;font-weight:500;letter-spacing:-0.4px;display:inline-flex;align-items:center;gap:10px">Qatar Olympic Committee<svg width="26" height="14" viewBox="0 0 26 14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    </a>
+  </nav>
+  </main>
+  </div>
+
+    
+  <dc-import name="SiteFooter" hint-size="100%,84px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}}">
+class Component extends DCLogic {
+  state = { light: (function(){ try { return localStorage.getItem('site-theme-v2') !== 'dark'; } catch(e){ return true; } })(), scrolled: false, hoverComp: null, vw: (typeof window !== 'undefined' ? window.innerWidth : 1440) };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > 8;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); this.io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+    // Elements start visible. Only those still below the fold get "armed"
+    // (hidden + transitioned); anything at or above the fold reveals outright,
+    // so hash jumps and fast scrolls can never strand a section at opacity 0.
+    this.scan = () => {
+      const vh = window.innerHeight || 800;
+      document.querySelectorAll('[data-reveal]:not(.in)').forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < vh * 0.94) { el.classList.add('armed', 'in'); this.io.unobserve(el); }
+        else if (!el.classList.contains('armed')) { el.classList.add('armed'); this.io.observe(el); }
+      });
+    };
+    this.scan();
+    this.onResize = () => { if (Math.abs(window.innerWidth - this.state.vw) > 2) this.setState({ vw: window.innerWidth }); };
+    window.addEventListener('resize', this.onResize);
+    this.sweep = () => { if (this._raf) return; this._raf = requestAnimationFrame(() => { this._raf = 0; this.scan(); }); };
+    window.addEventListener('scroll', this.sweep, { passive: true });
+    window.addEventListener('resize', this.sweep);
+    window.addEventListener('hashchange', () => setTimeout(this.scan, 60));
+    this.mo = new MutationObserver(() => { this.sweep(); this.renderJourneyPdf(); this.wireFlowLightbox(); });
+    this.mo.observe(document.body, { childList: true, subtree: true });
+    this.renderJourneyPdf();
+    this.wireFlowLightbox();
+  }
+
+  componentDidUpdate() { if (this.scan) this.scan(); }
+
+  wireFlowLightbox() {
+    const host = document.getElementById('flow-frame');
+    if (!host || host._wired) return;
+    host._wired = true;
+    const open = () => {
+      const ov = document.createElement('div');
+      ov.style.cssText = 'position:fixed;inset:0;z-index:200;background:rgba(11,10,9,0.94);padding:52px 16px 16px';
+      const frame = document.createElement('iframe');
+      frame.src = './assets/dialog/user-flow.html';
+      frame.title = 'Dialog user flow with UI screens';
+      frame.style.cssText = 'width:100%;height:100%;border:0;display:block;background:#f7f7f8';
+      const close = document.createElement('button');
+      close.textContent = 'Close ✕';
+      close.style.cssText = 'position:fixed;right:20px;top:14px;z-index:201;background:#f4efe8;color:#0b0a09;border:0;border-radius:8px;padding:9px 14px;font:600 12px/1 Switzer,system-ui,sans-serif;cursor:pointer';
+      const shut = () => { ov.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); };
+      const onKey = e => { if (e.key === 'Escape') shut(); };
+      close.onclick = shut;
+      document.addEventListener('keydown', onKey);
+      ov.appendChild(frame); ov.appendChild(close);
+      document.body.appendChild(ov);
+      document.body.style.overflow = 'hidden';
+    };
+    // hide the embedded diagram's own toolbar in the inline preview —
+    // controls only make sense in the interactive full view
+    const inline = host.querySelector('iframe');
+    const stripChrome = () => {
+      try {
+        const d = inline.contentDocument;
+        if (!d || !d.body) return false;
+        let hit = false;
+        d.querySelectorAll('div').forEach(el => {
+          const s = el.getAttribute('style') || '';
+          if (/right:\s*20px/.test(s) && /top:\s*20px/.test(s)) { el.style.display = 'none'; hit = true; }
+          if (/left:\s*20px/.test(s) && /bottom:\s*18px/.test(s)) { el.style.display = 'none'; }
+        });
+        return hit;
+      } catch (e) { return false; }
+    };
+    let tries = 0;
+    const t = setInterval(() => { stripChrome(); if (++tries > 300) clearInterval(t); }, 200);
+    inline.addEventListener('load', stripChrome);
+    host.onclick = open;
+    const trigger = document.getElementById('flow-expand');
+    if (trigger) trigger.onclick = e => { e.preventDefault(); open(); };
+  }
+
+  renderJourneyPdf() {
+    if (this._pdfStarted) return;
+    const host = document.getElementById('journey-pdf');
+    if (!host) return;
+    this._pdfStarted = true;
+    const draw = async () => {
+      const pdfjsLib = window.pdfjsLib;
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      try {
+        const pdf = await pdfjsLib.getDocument('./assets/dialog/user-journey-diagram.pdf').promise;
+        host.innerHTML = '';
+        const world = document.createElement('div');
+        world.style.cssText = 'display:flex;flex-direction:column;gap:12px';
+        host.appendChild(world);
+        for (let n = 1; n <= pdf.numPages; n++) {
+          const page = await pdf.getPage(n);
+          const base = page.getViewport({ scale: 1 });
+          const vp = page.getViewport({ scale: Math.min(2200 / base.width, 3) });
+          const canvas = document.createElement('canvas');
+          canvas.width = vp.width; canvas.height = vp.height;
+          canvas.style.cssText = 'display:block;width:100%;height:auto;background:#fff';
+          const ctx = canvas.getContext('2d');
+          await page.render({ canvasContext: ctx, viewport: vp }).promise;
+          // drop blank pages
+          let ink = 0;
+          const d = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+          for (let i = 0; i < d.length; i += 4 * 97) { if (d[i] < 245 || d[i + 1] < 245 || d[i + 2] < 245) { ink++; if (ink > 40) break; } }
+          if (ink > 40) world.appendChild(canvas);
+        }
+
+        const openLightbox = () => {
+          const src = world.querySelector('canvas');
+          if (!src) return;
+          const ov = document.createElement('div');
+          ov.style.cssText = 'position:fixed;inset:0;z-index:200;background:rgba(11,10,9,0.94);overflow:auto;padding:56px 20px 40px;display:block';
+          const img = document.createElement('img');
+          img.src = src.toDataURL('image/png');
+          img.style.cssText = 'display:block;margin:0 auto;max-width:none;width:min(2200px,max(100%,1400px));background:#fff';
+          ov.appendChild(img);
+          const close = document.createElement('button');
+          close.textContent = 'Close ✕';
+          close.style.cssText = 'position:fixed;right:20px;top:16px;z-index:201;background:#f4efe8;color:#0b0a09;border:0;border-radius:8px;padding:9px 14px;font:600 12px/1 Switzer,system-ui,sans-serif;cursor:pointer';
+          const shut = () => { ov.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); };
+          const onKey = e => { if (e.key === 'Escape') shut(); };
+          close.onclick = shut;
+          ov.onclick = e => { if (e.target === ov) shut(); };
+          document.addEventListener('keydown', onKey);
+          ov.appendChild(close);
+          document.body.appendChild(ov);
+          document.body.style.overflow = 'hidden';
+        };
+        host.onclick = openLightbox;
+        const trigger = document.getElementById('journey-expand');
+        if (trigger) trigger.onclick = e => { e.preventDefault(); openLightbox(); };
+      } catch (e) {
+        host.innerHTML = '<div style="padding:28px;font-size:12px;color:#6a6f7b">Diagram could not be rendered here — use the full-size link below.</div>';
+      }
+    };
+    if (window.pdfjsLib) { draw(); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+    s.onload = draw;
+    s.onerror = () => { host.innerHTML = '<div style="padding:28px;font-size:12px;color:#6a6f7b">Diagram could not be rendered here — use the full-size link below.</div>'; };
+    document.head.appendChild(s);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.sweep);
+    window.removeEventListener('resize', this.sweep);
+    window.removeEventListener('resize', this.onResize);
+    if (this.io) this.io.disconnect();
+    if (this.mo) this.mo.disconnect();
+  }
+
+  renderVals() {
+    const light = this.state.light;
+    const wide = this.state.vw >= 900;
+    const A = '#ff6b3d';
+    const mVal = null;
+    const T = light ? {
+      '--bg': '#f6f5f4', '--surface': '#ffffff', '--surface-hover': '#fbfaf9',
+      '--ink': 'rgba(0,0,0,0.95)', '--ink-2': '#31302e', '--ink-muted': '#615d59', '--ink-faint': '#a39e98',
+      '--hairline': '#e6e6e6', '--hairline-strong': '#dddddd', '--tint': 'rgba(0,0,0,0.05)', '--tint-2': 'rgba(0,0,0,0.03)',
+      '--primary': '#0075de', '--primary-hover': '#0068c7', '--primary-active': '#005bab', '--primary-tint': '#e8f2fc',
+      '--shadow-1': 'rgba(0,0,0,0.01) 0 0.175px 1.041px, rgba(0,0,0,0.02) 0 0.8px 2.925px, rgba(0,0,0,0.027) 0 2.025px 7.847px, rgba(0,0,0,0.04) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.01) 0 1px 3px, rgba(0,0,0,0.02) 0 3px 7px, rgba(0,0,0,0.02) 0 7px 15px, rgba(0,0,0,0.04) 0 14px 28px, rgba(0,0,0,0.05) 0 23px 52px'
+    } : {
+      '--bg': '#191919', '--surface': '#202020', '--surface-hover': '#262626',
+      '--ink': 'rgba(255,255,255,0.92)', '--ink-2': '#d3d1cd', '--ink-muted': '#9b9a97', '--ink-faint': '#6f6e69',
+      '--hairline': '#2f2f2f', '--hairline-strong': '#3a3a3a', '--tint': 'rgba(255,255,255,0.07)', '--tint-2': 'rgba(255,255,255,0.04)',
+      '--primary': '#2f8ae6', '--primary-hover': '#459aee', '--primary-active': '#1f6fc0', '--primary-tint': 'rgba(47,138,230,0.14)',
+      '--shadow-1': 'rgba(0,0,0,0.2) 0 1px 3px, rgba(0,0,0,0.25) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.3) 0 8px 24px, rgba(0,0,0,0.35) 0 23px 52px'
+    };
+    const rootStyle = {
+      minHeight: '100vh', overflowX: 'clip', fontFamily: "'Inter',-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif",
+      fontFeatureSettings: "'lnum','locl'", fontSize: 16, lineHeight: 1.5,
+      background: 'var(--bg)', color: 'var(--ink)', ...T,
+      '--text': 'var(--ink)', '--card-bg': 'var(--surface)', '--accent-a': 'var(--primary)', '--scrim': 'var(--surface)',
+      '--m10': 'var(--hairline)', '--m18': 'var(--hairline)', '--m20': 'var(--hairline-strong)',
+      '--m30': 'var(--ink-faint)', '--m35': 'var(--ink-faint)', '--m40': 'var(--ink-muted)', '--m45': 'var(--ink-muted)',
+      '--m50': 'var(--ink-muted)', '--m55': 'var(--ink-muted)', '--m60': 'var(--ink-muted)',
+      '--m70': 'var(--ink-2)', '--m75': 'var(--ink-2)', '--m85': 'var(--ink-2)'
+    };
+
+    const A_ = './assets/dialog/';
+    const sev = { critical: '#ff6b3d', high: '#ff6b3d', medium: light ? '#b8761f' : '#e0a74a' };
+
+    const findingsRaw = [
+      { severity: 'Critical', kind: 'critical', principle: 'User control & freedom', img: A_ + 'audit-pickNumberPartial.png', ratio: 1.2609, label: 'Below the bonus offer, the screen simply ends.', box: { x: 26, y: 61.5, w: 48, h: 7 }, note: 'the screen just ends here', ax: 30, ay: 62, arot: 18,
+        observation: 'Below the bonus offer, the screen simply ends.',
+        why: 'There is no button — the only exits are a small "search more" link or the browser back button. The same gap repeats on the exact-match screen and both "Congratulations" screens. Four screens, one missing button.',
+        response: 'Add one primary "Continue" action beneath the offer, styled like the pink CTA already used elsewhere in the flow.' },
+      { severity: 'Critical', kind: 'critical', principle: 'Visibility of system status', img: A_ + 'audit-congratsPartial.png', ratio: 1.2609, label: 'Same pill for either result', box: { x: 40, y: 21.5, w: 20, h: 9 }, note: 'same grey pill either way', ax: 26, ay: 28, arot: 8,
+        observation: 'The exact match and the approximate match are announced with the identical flat grey pill.',
+        why: 'A user who asked for one number and got a different one has no visual signal that a substitution happened — the interface treats a compromise the same as a win.',
+        response: 'Differentiate the result pill by match quality — a small status label or accent colour, not just the headline copy above it.' },
+      { severity: 'High', kind: 'high', principle: 'Recognition over recall', img: A_ + 'audit-numberGrid.png', ratio: 1.3859, label: 'Ten identical options', box: { x: 15.5, y: 26, w: 69, h: 19 }, note: 'ten identical options', ax: 24, ay: 34, arot: 12,
+        observation: 'All ten returned numbers are the same value with no distinguishing pattern, price, or tag.',
+        why: 'If every option looks and reads identically, the act of "choosing" carries no information.',
+        response: 'Surface what actually differs between numbers (pattern, tier, price) or, if nothing differs, say so and shorten the list.' },
+      { severity: 'High', kind: 'high', principle: 'Aesthetic & minimalist design', img: A_ + 'audit-homepage.png', ratio: 0.8370, label: 'Placeholder copy, live', box: { x: 9, y: 62, w: 84, h: 12 }, note: 'lorem ipsum, live', ax: 22, ay: 56, arot: 14,
+        observation: 'All three benefit tiles under the hero — coverage, voice & SMS, data — run the same block of lorem ipsum.',
+        why: 'Placeholder copy live on the homepage undercuts trust before the funnel even starts. It reads as unfinished, not as a deliberate design choice.',
+        response: 'Replace with real, specific benefit copy — coverage areas, minute and SMS allowances, data amounts — before this page ships.' },
+      { severity: 'Medium', kind: 'medium', principle: 'Choice architecture', img: A_ + 'audit-package.png', ratio: 0.9102, label: 'Three equal choices', box: { x: 18, y: 60.5, w: 64, h: 5.5 }, note: 'three equal buttons', ax: 20, ay: 46, arot: 10,
+        observation: 'Powerplan, Standard and Special all present a same-size SELECT button with no default emphasis.',
+        why: 'Without a recommended option, every comparison is left entirely to the user.',
+        response: 'Give one tier a "Recommended" treatment rather than three visually equal choices.' },
+      { severity: 'Medium', kind: 'medium', principle: 'Match between system & real world', img: A_ + 'audit-cart.png', ratio: 1.2743, label: 'Three zero lines stacked', box: { x: 18, y: 43.5, w: 64, h: 16 }, note: 'three zeroes in a row', ax: 22, ay: 32, arot: 10,
+        observation: 'Delivery, SIM and sub-total all show "Rs. 0.00" / "Free" stacked together.',
+        why: 'Three zero-value lines in a row reads like a broken calculation before it reads like a genuine promotion.',
+        response: 'Add one short line confirming the total is intentionally zero for this offer, near the total itself.' }
+    ];
+
+    const findings = findingsRaw.map((f, i) => {
+      const flip = false;
+      const bx = f.box || { x: 10, y: 30, w: 80, h: 30 };
+      return {
+        ...f,
+        rowStyle: {
+          display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
+          gap: 'clamp(24px,4vw,64px)', alignItems: 'center',
+          padding: 'clamp(36px,6vw,80px) clamp(20px,5vw,64px)',
+          borderTop: '1px solid var(--m10)',
+          background: i % 2 === 1 ? 'var(--card-bg)' : 'transparent', overflow: 'hidden'
+        },
+        tileStyle: {
+          breakInside: 'avoid', WebkitColumnBreakInside: 'avoid', pageBreakInside: 'avoid',
+          display: 'inline-block', width: '100%', marginBottom: 'clamp(16px,2vw,26px)',
+          background: 'var(--card-bg)', padding: 10
+        },
+        pinStyle: {
+          position: 'absolute', left: Math.min(bx.x, 60) + '%',
+          top: 'calc(' + (bx.y + bx.h) + '% + 6px)',
+          background: A, color: '#0b0a09', fontSize: 11, fontWeight: 600,
+          padding: '4px 9px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none'
+        },
+        boxStyle: {
+          position: 'absolute', left: bx.x + '%', top: bx.y + '%', width: bx.w + '%', height: bx.h + '%',
+          border: '1.5px solid ' + A, boxShadow: '0 0 0 3px rgba(255,107,61,0.12)', pointerEvents: 'none'
+        },
+        shotImgStyle: {
+          background: 'var(--card-bg) url(' + f.img + ') top center / 100% auto no-repeat',
+          border: '1px solid var(--m10)', width: '100%', aspectRatio: String(f.ratio || 1.5)
+        },
+        dotStyle: { width: 9, height: 9, borderRadius: '50%', background: sev[f.kind], flex: '0 0 auto' },
+        sevStyle: { fontSize: 11, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: sev[f.kind] }
+      };
+    });
+
+    const keeps = [
+      { title: 'Consistent chrome', reason: 'identical header, nav and footer keep the user oriented through a long purchase.' },
+      { title: 'Package card pattern', reason: 'segmented control, tabs and one primary action per card — clearest model in the flow.' },
+      { title: 'Cart layout', reason: 'standard item → sub-total → total → checkout ordering needs no relearning.' },
+      { title: 'Pink CTA convention', reason: 'already used correctly where it exists — extend it, don\u2019t replace it.' }
+    ];
+    const changes = [
+      { title: 'Missing continue actions', reason: 'four screens in the result path have no way to proceed.' },
+      { title: 'Invisible match quality', reason: 'exact and partial matches are presented identically.' },
+      { title: 'Undifferentiated number grid', reason: 'ten identical results carry no decision-making value.' },
+      { title: 'Flat result moment', reason: 'a "congratulations" screen with no visual distinction from a form field.' },
+      { title: 'Lorem ipsum on the homepage', reason: 'all three benefit tiles run placeholder copy live.' },
+      { title: 'Label-less entry fields', reason: 'mobile number and NIC number rely on placeholder text only.' }
+    ];
+
+    const stagePad = { flex: '0 0 auto', padding: '0 clamp(20px,3vw,40px) 0 0', borderRight: '1px solid rgba(244,239,232,0.12)', marginRight: 'clamp(20px,3vw,40px)' };
+    const flowStages = [
+      { num: '01', label: 'DISCOVER & VERIFY', screens: [
+          { img: A_ + 'flow-landing.png', title: 'Landing page' },
+          { img: A_ + 'flow-landingModal.png', title: 'Mobile number verification' }
+        ], decision: 'Matching type?', decisionNote: 'Five outcomes branch from here' },
+      { num: '02', label: 'NUMBER MATCH', screens: [
+          { img: A_ + 'flow-matchExactSingle.png', title: 'Exact match — single number' },
+          { img: A_ + 'flow-matchExactMulti.png', title: 'Exact match — multiple numbers' },
+          { img: A_ + 'flow-matchPartialSingle.png', title: 'Partial match — single number' },
+          { img: A_ + 'flow-matchPartialMulti.png', title: 'Partial match — multiple numbers' },
+          { img: A_ + 'flow-noMatch.png', title: 'No match found' }
+        ], decision: '', decisionNote: '' },
+      { num: '—', label: 'SEARCH FALLBACK', screens: [
+          { img: A_ + 'flow-searchNumber.png', title: 'Search for number' },
+          { img: A_ + 'flow-searchResults.png', title: 'Search results' },
+          { img: A_ + 'flow-selectedNumber.png', title: 'Selected number' }
+        ], decision: 'Age ≥ 18?', decisionNote: 'All paths reconverge' },
+      { num: '03', label: 'PACKAGE', screens: [
+          { img: A_ + 'flow-packagePostpaid.png', title: 'Select package — Postpaid' },
+          { img: A_ + 'flow-packagePrepaid.png', title: 'Select package — Postpaid restricted' }
+        ], decision: '', decisionNote: '' },
+      { num: '04', label: 'CHECKOUT', screens: [
+          { img: A_ + 'flow-cart.png', title: 'Shopping cart' }
+        ], decision: '', decisionNote: '' }
+    ].map((s, i, arr) => ({ ...s, stageStyle: i === arr.length - 1 ? { flex: '0 0 auto' } : stagePad }));
+
+    const screenGroups = [
+      { num: '01', title: 'Entry and verification', note: 'Two screens before anything branches.', items: [
+          { img: A_ + 'flow-landing.png', title: 'Landing page' },
+          { img: A_ + 'flow-landingModal.png', title: 'Mobile number verification' }
+        ] },
+      { num: '02', title: 'The five result states', note: 'Same layout, four different meanings, plus the empty case.', items: [
+          { img: A_ + 'flow-matchExactSingle.png', title: 'Exact match — single' },
+          { img: A_ + 'flow-matchExactMulti.png', title: 'Exact match — multiple' },
+          { img: A_ + 'flow-matchPartialSingle.png', title: 'Partial match — single' },
+          { img: A_ + 'flow-matchPartialMulti.png', title: 'Partial match — multiple' },
+          { img: A_ + 'flow-noMatch.png', title: 'No match found' }
+        ] },
+      { num: '03', title: 'Fallback, package and checkout', note: 'Where every path ends up.', items: [
+          { img: A_ + 'flow-searchNumber.png', title: 'Search for number' },
+          { img: A_ + 'flow-searchResults.png', title: 'Search results' },
+          { img: A_ + 'flow-selectedNumber.png', title: 'Selected number' },
+          { img: A_ + 'flow-packagePostpaid.png', title: 'Select package' },
+          { img: A_ + 'flow-cart.png', title: 'Shopping cart' }
+        ] }
+    ];
+
+    const compRaw = [
+      { name: 'Singtel — Fibre Broadband', img: A_ + 'c-singtel-reassurance.png', ratio: 1248/753, spot: { x: 50, y: 25, w: 72, h: 30, label: 'Support triad, right at the decision point', lx: 50, ly: 60, arrow: '↑' },
+        pattern: 'Reassurance strip planted right at the decision point',
+        desc: 'Directly beneath the three plan cards, before any FAQ or fine print, Singtel inserts a support triad — sign-up form, live chat, book a house visit — followed by a one-line trust headline and three reliability claims. It sits exactly where a buyer would start hesitating.',
+        forDialog: 'The number-matching flow has no equivalent anchor. Once a number is picked, placeholder-looking data and identical exact/partial states give the buyer nothing to hold onto.',
+        callout: 'The reassurance strip, outlined on the live page.' },
+      { name: 'AT&T — Internet', img: A_ + 'c-att.png', ratio: 1385/485, spot: { x: 50, y: 58, w: 84, h: 56, label: 'Named, verified reviews', lx: 50, ly: 12, arrow: '↓' },
+        pattern: 'Proof before the pitch',
+        desc: 'A one-field address check leads straight into three benefit cards, each anchored by a stat, then a full-width band of five-star reviews with named verified customers.',
+        forDialog: 'Dialog\u2019s results grid carries no proof or reliability signal at the moment a number is chosen — trust cues belong near number selection, not buried in footer copy.',
+        callout: 'The review band, cropped from the live page.' },
+      { name: 'T-Mobile — 5G', img: A_ + 'c-tmobile.png', ratio: 1473/516, spot: { x: 50, y: 92, w: 78, h: 14, label: 'Four in-page tabs instead of a long scroll', lx: 50, ly: 74, arrow: '↓' },
+        pattern: 'One concept, tabbed rather than scrolled',
+        desc: 'The hero commits to a single question — "What is 5G?" — and hands off to four in-page tabs instead of a long scroll of sections.',
+        forDialog: 'Less relevant to checkout itself, but useful if Dialog ever needs to explain matching rules or number tiers without stacking more scroll before the CTA.', callout: '' },
+      { name: 'Cricket Wireless', img: A_ + 'c-cricket.png', ratio: 1417/534, spot: { x: 50, y: 14, w: 66, h: 14, label: 'Task shortcuts above the hero', lx: 50, ly: 33, arrow: '↑' },
+        pattern: 'Shortcuts before the marketing message',
+        desc: 'A three-tile utility bar — Shop Smartphones, Browse Plans, View Deals — sits above the hero, letting a visitor who already knows their task skip straight past it.',
+        forDialog: 'The current flow has one path for every visitor. A returning user who already knows the number pattern they want has no way to jump past the intro screens into search.', callout: '' },
+      { name: 'Verizon — Unlimited plans', img: A_ + 'c-verizon.png', ratio: 1897/719, spot: { x: 50, y: 82, w: 78, h: 32, label: 'Real devices, not icons', lx: 50, ly: 58, arrow: '↓' },
+        pattern: 'Leads with real devices, not icons',
+        desc: 'Product photography — phone, watch, tablet, speaker — sits directly under the headline, giving a tangible sense of the catalog before any plan is explained.',
+        forDialog: 'The sharpest contrast with the results grid, where all ten numbers are placeholder duplicates. There is no tangible product to look at at the exact moment the buyer is choosing one.', callout: '' },
+      { name: 'Intel — Mobile & IoT', img: A_ + 'c-intel.png', ratio: 1665/584, spot: { x: 84, y: 55, w: 26, h: 68, label: 'Category list, detail beside it', lx: 55, ly: 16, arrow: '→' }, spot2: { x: 50, y: 58, w: 84, h: 68, label: 'Three tiers side by side', lx: 50, ly: 10, arrow: '↓' }, img2: A_ + 'c-singtel-plans.png', ratio2: 1245/967,
+        pattern: 'Selected category, detail pane beside it',
+        desc: 'Intel picks one category at a time and shows its detail beside it. Singtel, on the right, lays its three plan tiers out side by side instead — the same choice, two different shapes.',
+        forDialog: 'Dialog\u2019s package cards already use the side-by-side shape, which suits three simple tiers. Worth keeping as-is; shown here as a contrast, not a gap.',
+        callout: 'Top: Intel, one category at a time. Below: Singtel, three tiers side by side.' }
+    ];
+    const hoverC = this.state.hoverComp;
+    const tilesRaw = [];
+    compRaw.forEach(c => {
+      tilesRaw.push({ img: c.img, name: c.name, pattern: c.pattern, ratio: c.ratio, spot: c.spot });
+      if (c.img2) tilesRaw.push({
+        img: c.img2, name: 'Singtel — plan cards', ratio: c.ratio2,
+        pattern: 'Three tiers laid out side by side', spot: c.spot2
+      });
+    });
+    const competitors = tilesRaw.map((c, i) => {
+      const on = hoverC === i || (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: none)').matches);
+      return {
+        ...c,
+        num: String(i + 1).padStart(2, '0'),
+        onEnter: () => this.setState({ hoverComp: i }),
+        onLeave: () => this.setState({ hoverComp: null }),
+        tileStyle: {
+          position: 'relative', width: '100%', background: 'var(--card-bg)',
+          border: '1px solid var(--m10)', cursor: 'pointer', outline: 'none',
+          alignSelf: 'start', overflow: 'hidden'
+        },
+        shotWrapStyle: { position: 'relative', width: '100%' },
+        ringStyle: c.spot ? {
+          position: 'absolute', left: (c.spot.x - c.spot.w / 2) + '%', top: (c.spot.y - c.spot.h / 2) + '%',
+          width: c.spot.w + '%', height: c.spot.h + '%', border: '2px solid ' + A, borderRadius: '50%',
+          boxShadow: '0 0 0 1px rgba(255,107,61,0.22)', pointerEvents: 'none'
+        } : { display: 'none' },
+        spotLabel: c.spot ? c.spot.label : '',
+        lineX1: c.spot ? c.spot.lx : 0,
+        lineY1: c.spot ? c.spot.ly : 0,
+        lineX2: c.spot ? c.spot.x + (c.spot.lx > c.spot.x ? c.spot.w / 2 : c.spot.lx < c.spot.x ? -c.spot.w / 2 : 0) : 0,
+        lineY2: c.spot ? c.spot.y + (c.spot.ly > c.spot.y ? c.spot.h / 2 : c.spot.ly < c.spot.y ? -c.spot.h / 2 : 0) : 0,
+        spotLabelStyle: c.spot ? {
+          position: 'absolute', left: c.spot.lx + '%', top: c.spot.ly + '%', transform: 'translate(-50%,-50%)',
+          background: A, color: '#0b0a09', fontSize: 11.5, fontWeight: 600,
+          padding: '6px 11px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none'
+        } : { display: 'none' },
+        panelStyle: {
+          maxHeight: on ? 240 : 0, opacity: on ? 1 : 0, overflow: 'hidden',
+          transition: 'max-height 420ms cubic-bezier(.22,1,.36,1), opacity 260ms ease'
+        },
+        panelInnerStyle: { padding: 'clamp(12px,1.4vw,16px)' },
+        imgStyle: {
+          width: '100%', aspectRatio: String(c.ratio || 1.6),
+          backgroundImage: 'url(' + c.img + ')', backgroundSize: '100% auto',
+          backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'
+        },
+        badgeStyle: {
+          position: 'absolute', left: 10, bottom: 10, background: 'rgba(11,10,9,0.78)',
+          color: '#f4efe8', fontSize: 11, fontWeight: 500, letterSpacing: '0.04em',
+          padding: '5px 10px', borderRadius: 100, opacity: on ? 0 : 1,
+          transition: 'opacity 250ms ease', pointerEvents: 'none', maxWidth: 'calc(100% - 20px)',
+          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'
+        },
+        _unused: null
+      };
+    });
+
+    const takeaways = [
+      'Put a reassurance or help anchor at the point of hesitation — right after number selection, not in the footer.',
+      'Give the results grid a proof or reliability signal; ten identical placeholder numbers read as untrustworthy.',
+      'Make the chosen number feel like a real product, the way competitors lead with real device photography.',
+      'Consider a shortcut path for returning users who already know what they want, instead of one fixed sequence.'
+    ].map((text, i) => ({ text, num: String(i + 1).padStart(2, '0') }));
+
+    const decisions = [
+      { text: 'Add one primary Continue action to every result screen — no screen should be a dead end.', placeholder: 'Drop iteration — continue action' },
+      { text: 'Make match quality (exact vs. partial) visible at a glance, not implied by which screen loaded.', placeholder: 'Drop iteration — match states' },
+      { text: 'Differentiate the number-results grid with real distinguishing information, or shorten it.', placeholder: 'Drop iteration — results grid' },
+      { text: 'Give one package tier a recommended treatment instead of three equal options.', placeholder: 'Drop iteration — package tiers' },
+      { text: 'Reuse the package card and cart layout as-is — already the strongest patterns in the flow.', placeholder: 'Drop iteration — cart' },
+      { text: 'Replace the homepage placeholder benefit copy and give the mobile and NIC fields persistent labels.', placeholder: 'Drop iteration — homepage fields' }
+    ].map((d, i) => ({
+      ...d, num: String(i + 1).padStart(2, '0'), slotId: 'dialog-iter-' + i,
+      wrapStyle: { marginTop: i % 2 === 1 ? 'clamp(0px,3vw,44px)' : 0 }
+    }));
+
+    const wfNames = [
+      'assets/dlg/j/ps-53.jpg', 'assets/dlg/j/group-366.jpg', 'assets/dlg/j/identity.jpg', 'assets/dlg/j/ps.jpg', 'assets/dlg/j/ps-1.jpg', 'assets/dlg/j/ps-2.jpg', 'assets/dlg/j/ps-3.jpg', 'assets/dlg/j/ps-4.jpg', 'assets/dlg/j/ps-5.jpg', 'assets/dlg/j/ps-6.jpg', 'assets/dlg/j/ps-7.jpg', 'assets/dlg/j/ps-8.jpg', 'assets/dlg/j/ps-11.jpg', 'assets/dlg/j/ps-12.jpg', 'assets/dlg/j/ps-13.jpg', 'assets/dlg/j/ps-14.jpg', 'assets/dlg/j/ps-15.jpg', 'assets/dlg/j/ps-16.jpg', 'assets/dlg/j/ps-17.jpg', 'assets/dlg/j/ps-18.jpg', 'assets/dlg/j/ps-20.jpg', 'assets/dlg/j/ps-21.jpg', 'assets/dlg/j/ps-22.jpg', 'assets/dlg/j/ps-24.jpg', 'assets/dlg/j/ps-25.jpg', 'assets/dlg/j/ps-26.jpg', 'assets/dlg/j/ps-27.jpg', 'assets/dlg/j/ps-28.jpg', 'assets/dlg/j/ps-32.jpg', 'assets/dlg/j/ps-34.jpg', 'assets/dlg/j/ps-35.jpg', 'assets/dlg/j/ps-36.jpg', 'assets/dlg/j/ps-40.jpg', 'assets/dlg/j/ps-52.jpg', 'assets/dlg/j/ps-54.jpg', 'assets/dlg/j/select-offer.jpg'
+    ];
+
+    this.boardRef = this.boardRef || React.createRef();
+    if (!this._showcaseFit) {
+      this._showcaseFit = (el) => {
+        if (!el) return;
+        const cx = el.getBoundingClientRect().left + el.clientWidth / 2;
+        Array.prototype.forEach.call(el.children, (c) => {
+          const r = c.getBoundingClientRect();
+          const d = Math.min(1, Math.abs(r.left + r.width / 2 - cx) / (el.clientWidth / 2));
+          const e = (Math.cos(Math.PI * d) + 1) / 2;
+          c.style.transform = 'scale(' + (0.84 + e * 0.52).toFixed(3) + ')';
+          c.style.zIndex = String(Math.round(10 + e * 100));
+          c.style.boxShadow = '0 ' + (20 + e * 30).toFixed(0) + 'px ' + (44 + e * 50).toFixed(0) + 'px -30px rgba(0,0,0,' + (0.45 + e * 0.25).toFixed(2) + ')';
+        });
+      };
+      this._showcaseRef = (el) => {
+        if (!el || el._wired) return;
+        el._wired = true;
+        const run = () => this._showcaseFit(el);
+        el.addEventListener('scroll', run, { passive: true });
+        window.addEventListener('resize', run);
+        requestAnimationFrame(run);
+        setTimeout(run, 400);
+        el.style.scrollSnapType = 'none';
+        el.addEventListener('mouseenter', () => { el._paused = true; });
+        el.addEventListener('mouseleave', () => { el._paused = false; });
+        let acc = 0, last = 0;
+        const tick = (t) => {
+          const dt = last ? Math.min(t - last, 60) : 0;
+          last = t;
+          if (dt && !el._paused) {
+            acc += (72 * dt) / 1000;
+            const px = Math.floor(acc);
+            if (px) {
+              acc -= px;
+              el.scrollLeft += px;
+              const half = el.scrollWidth / 2;
+              if (el.scrollLeft >= half) el.scrollLeft -= half;
+            }
+          }
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      this._onShowcaseScroll = (e) => this._showcaseFit(e.currentTarget);
+    }
+    const boardStyle = {
+      marginTop: 'clamp(36px,6vw,72px)', display: 'flex', flexWrap: 'wrap',
+      alignItems: 'flex-start', gap: '20px', width: '100%'
+    };
+
+    const laneOffsets = ['0px', 'clamp(18px,3.5vw,64px)', 'clamp(6px,1.4vw,26px)'];
+    const laneCount = 3;
+    const lanes = Array.from({ length: laneCount }, (_, l) => ({
+      style: {
+        flex: '1 1 120px', minWidth: 0, display: 'block',
+        marginTop: laneOffsets[l]
+      },
+      items: []
+    }));
+    wfNames.forEach((name, i) => {
+      const lane = lanes[i % laneCount];
+      lane.items.push({
+        src: name,
+        alt: 'Lo-fi wireframe',
+        style: { display: 'block', width: '100%', margin: '0 0 24px' }
+      });
+    });
+
+    const lanePattern = [
+      { w: '100%', ml: '0%', mb: 26 },
+      { w: '88%', ml: '12%', mb: -16 },
+      { w: '94%', ml: '0%', mb: 34 },
+      { w: '82%', ml: '9%', mb: 22 },
+      { w: '100%', ml: '0%', mb: -12 },
+      { w: '90%', ml: '5%', mb: 32 }
+    ];
+
+    const wireframes = wfNames.map((name, i) => {
+      const p = lanePattern[i % lanePattern.length];
+      return {
+        src: name,
+        alt: 'Lo-fi wireframe'.replace(/\.png$/, ''),
+        figStyle: {
+          breakInside: 'avoid', pageBreakInside: 'avoid', position: 'relative',
+          width: p.w, marginLeft: p.ml, marginBottom: p.mb, zIndex: i + 1, margin: 0,
+          marginTop: 0, display: 'block'
+        },
+        wrapStyle: {
+          breakInside: 'avoid', position: 'relative', width: p.w, marginLeft: p.ml,
+          marginBottom: p.mb, zIndex: i + 1, display: 'block'
+        }
+      };
+    });
+
+    return {
+      rootStyle,
+      wireframes, lanes, boardStyle, boardRef: this.boardRef,
+      showcaseRef: this._showcaseRef, onShowcaseScroll: this._onShowcaseScroll,
+      openShowcase: () => this.setState({ showcaseOpen: true }),
+      closeShowcase: () => this.setState({ showcaseOpen: false }),
+      showcaseOverlayStyle: {
+        position: 'fixed', inset: 0, zIndex: 200, background: 'rgba(12,6,16,0.94)',
+        display: this.state.showcaseOpen ? 'block' : 'none', overflowY: 'auto',
+        padding: 'clamp(56px,7vw,96px) clamp(16px,5vw,80px)'
+      },
+      isLight: light, isDark: !light,
+      toggleTheme: () => {
+        const next = !light;
+        this.setState({ light: next });
+        try { localStorage.setItem('site-theme-v2', next ? 'light' : 'dark'); } catch (e) {}
+      },
+      headerStyle: {
+        position: 'sticky', top: 0, zIndex: 50, display: 'flex', alignItems: 'center',
+        justifyContent: 'space-between', gap: 20, padding: '22px clamp(20px,5vw,64px)',
+        background: this.state.scrolled ? 'var(--scrim)' : 'var(--bg)',
+        backdropFilter: this.state.scrolled ? 'blur(10px)' : 'none',
+        borderBottom: '1px solid var(--m10)', transition: 'background 400ms ease'
+      },
+      splitStyle: { display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start' },
+      railStyle: {
+        flex: '1 1 260px', maxWidth: wide ? 'calc(300px + clamp(20px,6vw,112px))' : 'none', minWidth: 240,
+        padding: wide ? '48px 40px 48px clamp(20px,6vw,112px)' : '32px clamp(20px,6vw,112px)',
+        borderRight: wide ? '1px solid var(--hairline)' : 'none',
+        borderBottom: wide ? 'none' : '1px solid var(--hairline)',
+        background: 'var(--surface)',
+        position: wide ? 'sticky' : 'static', top: wide ? 72 : 'auto', minHeight: wide ? 'calc(100vh - 72px)' : 'auto',
+        alignSelf: 'flex-start'
+      },
+      mainColStyle: { flex: '1 1 560px', minWidth: 0 },
+      nextHover: { color: 'var(--primary)' },
+      navCardHover: { boxShadow: 'var(--shadow-2)', transform: 'translateY(-2px)' },
+      overlayBtnPos: { position: 'absolute', top: 14, right: 14, zIndex: 20 },
+      closeBtnPos: { position: 'fixed', top: 18, right: 20, zIndex: 2 },
+      flowBandStyle: { background: '#213183', color: '#ffffff', borderRadius: wide ? '16px 0 0 16px' : 0 },
+      accent: A,
+      personas: [
+        { person: 'Chamath', quote: 'I have had that number since school.',
+          facts: [{ label: 'AGE', value: '34' }, { label: 'LIVES', value: 'Colombo' }, { label: 'WORK', value: 'Shop owner' }],
+          traits: ['Number-specific', 'Patient searcher', 'Compares options'],
+          channels: [{ label: 'Web', pct: 60 }, { label: 'App', pct: 30 }, { label: 'Store', pct: 10 }],
+          goals: ['Keep a number people already know', 'Find a pattern worth paying for'],
+          frustrations: ['Options that all look the same', 'No way to tell what differs'],
+          tint: '#ff6b3d' },
+        { person: 'Nadeesha', quote: 'I just need it working today.',
+          facts: [{ label: 'AGE', value: '26' }, { label: 'LIVES', value: 'Kandy' }, { label: 'WORK', value: 'Sales exec' }],
+          traits: ['Time-poor', 'Mobile-first', 'Price-aware'],
+          channels: [{ label: 'App', pct: 70 }, { label: 'Web', pct: 20 }, { label: 'Store', pct: 10 }],
+          goals: ['A SIM active the same day', 'A clear total before paying'],
+          frustrations: ['Extra steps she did not ask for', 'Charges that are not spelled out'],
+          tint: '#78b4ff' },
+        { person: 'Ishara', quote: 'It is my first connection.',
+          facts: [{ label: 'AGE', value: '17' }, { label: 'LIVES', value: 'Galle' }, { label: 'WORK', value: 'Student' }],
+          traits: ['First-time buyer', 'Needs guidance', 'Budget-led'],
+          channels: [{ label: 'App', pct: 50 }, { label: 'Store', pct: 35 }, { label: 'Web', pct: 15 }],
+          goals: ['Get connected without a guarantor', 'Know which plan applies to him'],
+          frustrations: ['Rules that are never explained', 'Too many similar plans'],
+          tint: '#96e6be' }
+      ].map((p, i) => ({
+        ...p, num: String(i + 1).padStart(2, '0'), total: '03', slotId: 'dialog-persona-' + (i + 1), img: './assets/personas/dialog-' + ['chamath', 'nadeesha', 'ishara'][i] + '.webp',
+        cardStyle: {
+          background: 'var(--card-bg)', border: '1px solid var(--m10)',
+          padding: 'clamp(14px,1.6vw,20px)', marginTop: i === 1 ? 'clamp(0px,3vw,40px)' : 0
+        },
+        headerStyle: {
+          display: 'flex', alignItems: 'center', gap: 16, padding: 'clamp(14px,1.6vw,18px)',
+          background: p.tint, margin: 'calc(-1 * clamp(14px,1.6vw,20px)) calc(-1 * clamp(14px,1.6vw,20px)) 0'
+        },
+        chipStyle: {
+          fontSize: 11.5, fontWeight: 500, color: 'var(--m85)', border: '1px solid var(--m18)',
+          borderRadius: 100, padding: '5px 10px'
+        },
+        channels: p.channels.map(ch => ({
+          ...ch, barStyle: { width: ch.pct + '%', height: '100%', background: '#0b0a09', borderRadius: 9999 }
+        }))
+      })),
+      findings, keeps,
+      compGridStyle: {
+        display: 'grid', gridTemplateColumns: 'minmax(0,1fr)',
+        gap: 'clamp(12px,1.4vw,18px)', alignItems: 'start',
+        padding: 'clamp(24px,4vw,44px) clamp(20px,5vw,64px) clamp(8px,2vw,20px)'
+      },
+      collageStyle: {
+        columns: 'clamp(260px,26vw,340px)', columnGap: 'clamp(16px,2vw,26px)',
+        padding: 'clamp(24px,4vw,44px) clamp(20px,5vw,64px) clamp(8px,2vw,20px)'
+      }, changes, flowStages, screenGroups, competitors, takeaways, decisions
+    };
+  }
+}
+</script>
+</body>
+</html>

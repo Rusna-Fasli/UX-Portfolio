@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Rusna Mohamed Fasli</title>
+  <meta name="description" content="About Rusna Fasli, a UX Specialist based in Qatar with 3+ years of experience across UX strategy, design direction and delivery.">
+  <script>
+    // Set the theme before first paint to avoid a flash.
+    try { if (localStorage.getItem('site-theme-v2') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">RF</span>
+        <span class="brand__text">
+          <span class="brand__name">Rusna Mohamed Fasli</span>
+          <span class="brand__role">UI/UX Portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="btn btn--sm btn--ghost" href="work.html">Work</a>
+        <a class="btn btn--sm btn--ghost" href="about.html" aria-current="page">About</a>
+      </nav>
+      <a class="btn btn--sm btn--utility header-contact" href="contact.html">Contact</a>
+      <button class="btn btn--icon theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5V5M12 19V21.5M4.2 4.2L6 6M18 18L19.8 19.8M2.5 12H5M19 12H21.5M4.2 19.8L6 18M18 6L19.8 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="btn btn--icon menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg class="icon-menu" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 6h12M3 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-close" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a class="mobile-nav__link" href="work.html">Work</a>
+      <a class="mobile-nav__link" href="about.html" aria-current="page">About</a>
+      <div class="mobile-nav__spacer"></div>
+      <a class="btn btn--primary btn--block" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 01 intro -->
+    <section class="wrap about-intro" data-no-reveal>
+      <div class="grid12 about-intro__grid">
+        <div class="about-intro__text">
+          <div>
+            <span class="eyebrow">About</span>
+            <h1>I design with <span class="serif">empathy</span> &amp;&nbsp;<span class="about-intro__plain">curiosity</span></h1>
+          </div>
+          <div class="about-intro__body">
+            <p class="lede">I'm Rusna Fasli, a UX Specialist based in Qatar, with 3+ years of experience across UX strategy, design direction &amp; delivery for government, private &amp; enterprise institutions across Qatar &amp; Kuwait.</p>
+            <div class="skill-tabs" role="tablist" aria-label="Skill areas">
+              <button class="skill-tab" type="button" role="tab" aria-selected="true">Research</button>
+              <button class="skill-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Strategy &amp; Structure</button>
+              <button class="skill-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Design &amp; Build</button>
+              <button class="skill-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Deliver</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-intro__portrait">
+          <div class="portrait-stack">
+            <div class="portrait-card portrait-card--back">
+              <img src="../assets/profile-card-hat.png" alt="Line illustration of Rusna wearing a sun hat and patterned scarf">
+            </div>
+            <div class="portrait-card portrait-card--front">
+              <img src="../assets/profile-card-conference.png" alt="Line illustration of Rusna as a delegate at the Gavel Conference Sri Lanka 2021">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 foundation -->
+    <section class="wrap about-foundation">
+      <div class="grid12">
+        <div class="about-foundation__text">
+          <h2 class="about-h2">A foundation that started with <span class="serif">design.</span></h2>
+          <p class="lede about-foundation__lede">It trained me to observe closely, understand people, question assumptions and approach problems from different perspectives.</p>
+        </div>
+        <div class="about-foundation__tiles">
+          <div class="info-tile lift">
+            <span class="ico ico--purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5zM7 11.2V16c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5v-4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="info-tile__label">Studied</span>
+            <span class="info-tile__title">Integrated Designing</span>
+            <span class="info-tile__note">Specialised in Media &amp; Communication Design.</span>
+          </div>
+          <div class="info-tile lift">
+            <span class="ico ico--teal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.3-6-11a6 6 0 0112 0c0 5.7-6 11-6 11zM12 12a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="info-tile__label">Roots</span>
+            <span class="info-tile__title">Raised in Colombo,<br>Sri Lanka</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 ai -->
+    <section class="wrap about-ai">
+      <div class="ai-band">
+        <div class="ai-band__left">
+          <span class="ai-band__kicker"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 05 — Outlook</span>
+          <h2 class="about-h2">I'm interested in the space where UX, technology and <span class="serif">intelligent systems</span> meet.</h2>
+        </div>
+        <div class="ai-band__right">
+          <p>I'm continuing to explore how AI can accelerate design workflows without replacing the human thinking behind them — from early exploration and research synthesis to prototyping and product experiences.</p>
+          <ul class="ai-band__tags">
+            <li>Human-centred</li>
+            <li>AI-assisted</li>
+            <li>Systems-minded</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 beyond -->
+    <section class="wrap about-beyond">
+      <div class="grid12 about-beyond__grid">
+        <div class="about-beyond__media">
+          <div class="carousel lift" aria-roledescription="carousel" aria-label="Photos from outside work">
+            <div class="carousel__track">
+              <img src="../assets/outside/outside-1.webp" alt="Souq Waqif at night">
+              <img src="../assets/outside/outside-2.webp" alt="Festival lights over Souq Waqif" loading="lazy">
+              <img src="../assets/outside/outside-3.webp" alt="National Museum of Qatar gallery" loading="lazy">
+              <img src="../assets/outside/outside-4.webp" alt="Oryx exhibit at the National Museum of Qatar" loading="lazy">
+              <img src="../assets/outside/outside-5.webp" alt="Traditional kitchen and meal from above" loading="lazy">
+              <img src="../assets/outside/outside-6.webp" alt="Doha hop-on hop-off bus" loading="lazy">
+            </div>
+            <div class="carousel__dots">
+              <button type="button" class="carousel__dot" aria-label="Show photo 1" aria-current="true"></button>
+              <button type="button" class="carousel__dot" aria-label="Show photo 2"></button>
+              <button type="button" class="carousel__dot" aria-label="Show photo 3"></button>
+              <button type="button" class="carousel__dot" aria-label="Show photo 4"></button>
+              <button type="button" class="carousel__dot" aria-label="Show photo 5"></button>
+              <button type="button" class="carousel__dot" aria-label="Show photo 6"></button>
+            </div>
+          </div>
+        </div>
+        <div class="about-beyond__text">
+          <div class="about-beyond__intro">
+            <h2 class="about-h2">Outside the <span class="serif">pixels</span></h2>
+            <p class="lede about-beyond__lede">When I'm not solving UX problems, you'll usually find me exploring visual inspiration, learning something new, or simply observing how people interact with the world around them.</p>
+          </div>
+          <div class="beyond-tiles">
+            <div class="beyond-tile lift">
+              <span class="ico ico--round ico--orange"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12zM12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="beyond-tile__label">Visual inspiration</span>
+            </div>
+            <div class="beyond-tile lift">
+              <span class="ico ico--round ico--green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5zM4 20.5V5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="beyond-tile__label">Learning something new</span>
+            </div>
+            <div class="beyond-tile lift">
+              <span class="ico ico--round ico--sky"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 11a4 4 0 100-8 4 4 0 000 8zM3 21v-1a6 6 0 0112 0v1M16 3.5a4 4 0 010 7M21 21v-1a6 6 0 00-4-5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="beyond-tile__label">Observing people</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 cta -->
+    <section class="wrap about-cta">
+      <div class="about-cta__card">
+        <h2 class="about-h2">Have a problem <span class="serif">worth solving</span>?</h2>
+        <div class="about-cta__actions">
+          <a class="btn btn--primary" href="contact.html">Let's talk</a>
+          <a class="btn btn--secondary" href="work.html">View work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© 2026 Rusna Mohamed Fasli</span>
+      <div class="site-footer__social">
+        <a class="btn btn--icon" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 015 0V17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--icon" href="#" target="_blank" rel="noopener" aria-label="Behance">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 6.5h4.8a2.6 2.6 0 010 5.2H2.5zM2.5 11.7h5.3a2.9 2.9 0 010 5.8H2.5zM2.5 6.5v11M14.5 14h7a3.5 3.5 0 10-1.2 2.7M15.5 7.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--icon" href="mailto:rusnafasli@outlook.com" aria-label="Email rusnafasli@outlook.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M4 7.5l8 5.5 8-5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <span>UI/UX Portfolio</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./link-map.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <script src="./reveal.js"></script>
+  <script src="./touch.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#f6f5f4;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{font-family:'Inter',system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}a:hover{color:inherit}@keyframes btnspin{to{transform:rotate(360deg)}}
+    ::selection{background:#cfe3f8;color:#000}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+</helmet>
+<template id="__bundler_thumbnail" data-bg-color="#f6f5f4"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#f6f5f4"></rect><rect x="480" y="280" width="240" height="240" rx="48" fill="#000"></rect><text x="600" y="440" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="110" font-weight="700" fill="#fff">RF</text></svg></template>
+
+
+<div style="{{ rootStyle }}">
+  <dc-import name="SiteHeader" active="about" isLight="{{ isLight }}" onToggleTheme="{{ toggleTheme }}" style="position:sticky;top:0;z-index:50;display:block" hint-size="100%,72px"></dc-import>
+
+  <main>
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,6vw,112px) clamp(32px,4vw,56px)" data-screen-label="01 intro">
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,24px);align-items:stretch">
+        <div style="grid-column:span {{ introSpan }};display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(20px,2vw,28px);animation:fadeUp 600ms cubic-bezier(.22,1,.36,1) both">
+          <div>
+            <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">About</span>
+            <h1 style="font-size:clamp(40px,5.4vw,96px);line-height:0.98;font-weight:700;letter-spacing:-0.045em;margin:20px 0 0;max-width:13ch;text-wrap:balance">I design with <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">empathy</span> &amp;&nbsp;<span style="font-size: clamp(40px, 5.4vw, 96px); letter-spacing: -0.045em; text-wrap-mode: initial; color: var(--ink);">curiosity</span></h1>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <p style="font-size:16px;line-height:1.5;color:var(--ink-2);margin:0;max-width:560px;text-wrap:pretty">I'm Rusna Fasli, a UX Specialist based in Qatar, with 3+ years of experience across UX strategy, design direction &amp; delivery for government, private &amp; enterprise institutions across Qatar &amp; Kuwait.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+            <div role="tablist" aria-label="Skill areas" style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ skillTabs }}" as="st" hint-placeholder-count="4">
+                <button type="button" role="tab" aria-selected="{{ st.active }}" onClick="{{ st.onClick }}" style="{{ st.style }}" onMouseEnter="{{ st.onEnter }}" onMouseLeave="{{ st.onLeave }}">{{ st.name }}</button>
+              </sc-for>
+            </div>
+            
+          </div>
+            
+          </div>
+        </div>
+        <div style="grid-column:span {{ portraitSpan }};position:relative;min-height:clamp(380px,34vw,560px);display:flex;align-items:center;justify-content:center;animation:fadeUp 700ms cubic-bezier(.22,1,.36,1) 80ms both">
+          <div style="position:relative;width:min(100%,460px);aspect-ratio:1/1.05">
+            <div style="position:absolute;left:0;top:10%;width:62%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;background:#ffffff;border:1px solid var(--hairline);box-shadow:var(--shadow-2);transform:rotate(-8deg);transform-origin:bottom right;transition:transform 400ms cubic-bezier(.22,1,.36,1)" style-hover="transform:rotate(-12deg) translateX(-6px) !important">
+              <img src="assets/profile-card-hat.png" alt="Line illustration of Rusna wearing a sun hat and patterned scarf" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+            </div>
+            <div style="position:absolute;right:0;top:0;width:62%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;background:#ffffff;border:1px solid var(--hairline);box-shadow:var(--shadow-2);transform:rotate(7deg);transform-origin:bottom left;transition:transform 400ms cubic-bezier(.22,1,.36,1)" style-hover="transform:rotate(10deg) translate(6px,-6px) !important">
+              <img src="assets/profile-card-conference.png" alt="Line illustration of Rusna as a delegate at the Gavel Conference Sri Lanka 2021" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+
+    
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,6vw,112px)" data-screen-label="02 foundation">
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,24px)">
+        <div style="grid-column:span {{ foundLeft }};display:flex;flex-direction:column;gap:20px">
+          
+          <h2 style="font-size:clamp(32px,3.6vw,54px);line-height:1.04;font-weight:700;letter-spacing:-1.5px;margin:0;text-wrap:balance">A foundation that started with <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">design.</span></h2>
+          <p style="font-size:16px;line-height:1.5;color:var(--ink-2);margin:0;max-width:460px">It trained me to observe closely, understand people, question assumptions and approach problems from different perspectives.</p>
+        </div>
+        <div style="grid-column:span {{ foundRight }};display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(16px,2vw,24px)">
+          <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms cubic-bezier(.2,.7,.2,1), border-color 320ms cubic-bezier(.2,.7,.2,1)" style-hover="box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hairline-strong) !important">
+            <span style="{{ tileStudied }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5zM7 11.2V16c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5v-4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)">Studied</span>
+            <span style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px">Integrated Designing</span>
+            <span style="font-size:15px;line-height:1.33;color:var(--ink-muted)">Specialised in Media &amp; Communication Design.</span>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms cubic-bezier(.2,.7,.2,1), border-color 320ms cubic-bezier(.2,.7,.2,1)" style-hover="box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hairline-strong) !important">
+            <span style="{{ tileRoots }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.3-6-11a6 6 0 0112 0c0 5.7-6 11-6 11zM12 12a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)">Roots</span>
+            <span style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px">Raised in Colombo,<br>Sri Lanka</span>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+
+    
+
+    
+
+    
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(16px,2vw,24px) clamp(20px,6vw,112px)" data-screen-label="05 ai">
+      <div style="background:#213183;color:#ffffff;border-radius:16px;padding:clamp(28px,4vw,64px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(24px,3vw,48px);align-items:end;position:relative;overflow:hidden">
+        <div style="grid-column:span {{ aiLeft }};display:flex;flex-direction:column;gap:16px">
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:0.125px;color:#62aef0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg> 05 — Outlook</span>
+          <h2 style="font-size:clamp(30px,3.4vw,54px);line-height:1.04;font-weight:700;letter-spacing:-1.5px;margin:0;color:#ffffff;text-wrap:balance">I'm interested in the space where UX, technology and <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em;color:#ffffff">intelligent systems</span> meet.</h2>
+        </div>
+        <div style="grid-column:span {{ aiRight }};display:flex;flex-direction:column;gap:20px">
+          <p style="font-size:16px;line-height:1.5;color:rgba(255,255,255,0.86);margin:0">I'm continuing to explore how AI can accelerate design workflows without replacing the human thinking behind them — from early exploration and research synthesis to prototyping and product experiences.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ aiTags }}" as="t" hint-placeholder-count="3">
+              <span style="font-size:14px;font-weight:500;color:#ffffff;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);border-radius:9999px;padding:5px 12px;white-space:nowrap">{{ t }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,6vw,112px)" data-screen-label="06 beyond">
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,24px);align-items:stretch">
+        <div style="grid-column:span {{ beyondImg }};position:relative;min-height:320px;margin-bottom:{{ illoOverhang }}">
+          <div style="position:absolute;inset:0;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--hairline);transition:transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms cubic-bezier(.2,.7,.2,1), border-color 320ms cubic-bezier(.2,.7,.2,1)" style-hover="box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hairline-strong) !important">
+            <div style="{{ outTrack }}">
+              <sc-for list="{{ outSlides }}" as="s" hint-placeholder-count="1">
+                <img src="{{ s.src }}" alt="{{ s.alt }}" style="flex:0 0 100%;width:100%;height:100%;object-fit:cover;display:block">
+              </sc-for>
+            </div>
+            <div style="position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:6px;z-index:1">
+              <sc-for list="{{ outDots }}" as="d" hint-placeholder-count="6">
+                <button type="button" aria-label="{{ d.label }}" onClick="{{ d.onClick }}" style="{{ d.style }}"></button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="{{ illoStyle }}">
+            
+          </div>
+        </div>
+        <div style="grid-column:span {{ beyondText }};display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            
+            <h2 style="font-size:clamp(32px,3.6vw,54px);line-height:1.04;font-weight:700;letter-spacing:-1.5px;margin:0">Outside the <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">pixels</span></h2>
+            <p style="font-size:16px;line-height:1.5;color:var(--ink-2);margin:0;max-width:520px">When I'm not solving UX problems, you'll usually find me exploring visual inspiration, learning something new, or simply observing how people interact with the world around them.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px">
+            <sc-for list="{{ beyond }}" as="b" hint-placeholder-count="3">
+              <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px;transition:transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms cubic-bezier(.2,.7,.2,1), border-color 320ms cubic-bezier(.2,.7,.2,1)" style-hover="box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hairline-strong) !important">
+                <span style="{{ b.tile }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="{{ b.d }}" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                <span style="font-size:15px;line-height:1.33;font-weight:600">{{ b.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(16px,3vw,32px) clamp(20px,6vw,112px) clamp(56px,8vw,96px)" data-screen-label="07 cta">
+      <div style-hover="box-shadow:var(--shadow-2);border-color:var(--hairline-strong) !important" style="transition:transform 320ms cubic-bezier(.2,.7,.2,1), box-shadow 320ms cubic-bezier(.2,.7,.2,1), border-color 320ms cubic-bezier(.2,.7,.2,1);background:var(--surface);border:1px solid var(--hairline);box-shadow:var(--shadow-1);border-radius:16px;padding:clamp(28px,4vw,48px) clamp(24px,4vw,56px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+        <h2 style="font-size:clamp(28px,3.4vw,54px);line-height:1.04;font-weight:700;letter-spacing:-1.5px;margin:0">Have a problem <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">worth solving</span>?</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <dc-import name="Button" variant="primary" label="Let's talk" href="./Contact.dc.html" hint-size="120px,44px"></dc-import>
+          <dc-import name="Button" variant="secondary" label="View work" href="./Work.dc.html" hint-size="120px,44px"></dc-import>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="SiteFooter" hint-size="100%,84px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}}">
+class Component extends DCLogic {
+  state = { light: (function(){ try { return localStorage.getItem('site-theme-v2') !== 'dark'; } catch(e){ return true; } })(), scrolled: false, vw: (typeof window !== 'undefined' ? window.innerWidth : 1440), skillTab: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > 8;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onResizeVw = () => this.setState({ vw: window.innerWidth });
+    window.addEventListener('resize', this.onResizeVw);
+    this.startOut();
+  }
+
+  startOut() {
+    clearInterval(this.outTimer);
+    this.outTimer = setInterval(() => this.setState(s => ({ outIdx: ((s.outIdx || 0) + 1) % 6 })), 3500);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResizeVw);
+    clearInterval(this.outTimer);
+  }
+
+  renderVals() {
+    const accent = '#ff6b3d';
+    const tile = (bg, fg, sz) => ({ width: sz || 40, height: sz || 40, borderRadius: sz ? 999 : 10, background: bg, color: fg, display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 auto' });
+    const D = {
+      sky: ['rgba(98,174,240,0.18)', '#8cc6f7'], purple: ['rgba(214,182,246,0.18)', '#d6b6f6'], orange: ['rgba(255,140,60,0.18)', '#ffb27a'],
+      teal: ['rgba(42,190,185,0.18)', '#7fd8d4'], green: ['rgba(60,200,90,0.18)', '#8ee29f'], pink: ['rgba(255,100,200,0.18)', '#ff9fdc'], brown: ['rgba(210,160,100,0.18)', '#e2bf94']
+    };
+    const C0 = {
+      sky: ['rgba(98,174,240,0.2)', '#1b5f9e'], purple: ['rgba(214,182,246,0.45)', '#391c57'], orange: ['rgba(221,91,0,0.12)', '#793400'],
+      teal: ['rgba(42,157,153,0.14)', '#1d6f6c'], green: ['rgba(26,174,57,0.13)', '#12752a'], pink: ['rgba(255,100,200,0.16)', '#9c2476'], brown: ['rgba(82,52,16,0.1)', '#523410']
+    };
+    const C = this.state.light ? C0 : D;
+    const I = {
+      search: 'M11 18a7 7 0 100-14 7 7 0 000 14zM20 20l-4-4', grid: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
+      bulb: 'M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z', pen: 'M4 20l4-1 11-11-3-3L5 16l-1 4zM14 6l3 3',
+      loop: 'M4 12a8 8 0 0114-5.3M20 4v4h-4M20 12a8 8 0 01-14 5.3M4 20v-4h4', spark: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z',
+      heart: 'M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z', layout: 'M4 5h16v14H4zM4 9h16M9 9v10',
+      book: 'M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5zM4 20.5V5.5', mic: 'M12 3a3 3 0 00-3 3v5a3 3 0 006 0V6a3 3 0 00-3-3zM6 11a6 6 0 0012 0M12 17v4',
+      eye: 'M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12zM12 15a3 3 0 100-6 3 3 0 000 6z', users: 'M9 11a4 4 0 100-8 4 4 0 000 8zM3 21v-1a6 6 0 0112 0v1M16 3.5a4 4 0 010 7M21 21v-1a6 6 0 00-4-5.6',
+      cube: 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12L4 7.5'
+    };
+    const vw = this.state.vw || 1440;
+    const lg = vw >= 1180, md = vw >= 720;
+    const traits = [['UX Designer', I.layout, C.sky], ['Passionate Teacher', I.book, C.orange], ['Public Speaker', I.mic, C.pink]].map(([label, d, c]) => ({ label, d, tile: tile(c[0], c[1], 28) }));
+    const facts = [{ value: '3+ years', label: 'UX strategy, design direction & delivery' }, { value: 'Qatar & Kuwait', label: 'Government, private & enterprise institutions' }, { value: 'Doha, Qatar', label: 'UX Specialist' }];
+    const steps = ['Curiosity', 'Design', 'Communication', 'Problem Solving', 'UX'];
+    const journey = steps.map((label, i) => {
+      const last = i === steps.length - 1;
+      return { label, num: String(i + 1).padStart(2, '0'), arrow: last ? '' : '→', style: { display: 'flex', flexDirection: 'column', gap: 18, padding: 16, borderRadius: 8, background: last ? 'var(--primary-tint)' : 'var(--bg)', color: last ? 'var(--primary)' : 'var(--ink)', border: '1px solid ' + (last ? 'transparent' : 'var(--hairline)') } };
+    });
+    const principles = [['Research', 'Understand', I.search, C.sky], ['Structure', 'Organise', I.grid, C.purple], ['Think', 'Solve', I.bulb, C.orange], ['Design', 'Communicate', I.pen, C.teal], ['Test', 'Improve', I.loop, C.green], ['AI', 'Accelerate', I.spark, C.pink], ['Humanity', 'Stay human', I.heart, C.brown]]
+      .map(([a, b, d, c], i) => ({ a, b, d, num: String(i + 1).padStart(2, '0'), tile: tile(c[0], c[1]) }));
+    const skillGroups = [
+      ['Research', I.search, C.sky, ['User Research', 'Usability Testing']],
+      ['Strategy & Structure', I.grid, C.purple, ['UX Strategy', 'Information Architecture']],
+      ['Design & Build', I.pen, C.teal, ['Interaction Design', 'Prototyping', 'Design Systems']],
+      ['Deliver', I.spark, C.pink, ['AI-Assisted Design']]
+    ].map(([name, d, c, items]) => ({ name, d, items, tile: tile(c[0], c[1], 32), chipTile: tile(c[0], c[1], 22) }));
+    const beyond = [['Visual inspiration', I.eye, C.orange], ['Learning something new', I.book, C.green], ['Observing people', I.users, C.sky]].map(([label, d, c]) => ({ label, d, tile: tile(c[0], c[1], 36) }));
+    const layout = {
+      introSpan: lg ? 8 : 12, portraitSpan: lg ? 4 : 12,
+      foundLeft: lg ? 5 : 12, foundRight: lg ? 7 : 12,
+      skillsLeft: lg ? 4 : 12, skillsRight: lg ? 8 : 12,
+      aiLeft: md ? 7 : 12, aiRight: md ? 5 : 12,
+      beyondImg: md ? 5 : 12, beyondText: md ? 7 : 12
+    };
+    const light = this.state.light;
+    const mVal = null;
+    const T = light ? {
+      '--bg': '#f6f5f4', '--surface': '#ffffff', '--surface-hover': '#fbfaf9',
+      '--ink': 'rgba(0,0,0,0.95)', '--ink-2': '#31302e', '--ink-muted': '#615d59', '--ink-faint': '#a39e98',
+      '--hairline': '#e6e6e6', '--hairline-strong': '#dddddd', '--tint': 'rgba(0,0,0,0.05)', '--tint-2': 'rgba(0,0,0,0.03)',
+      '--primary': '#0075de', '--primary-hover': '#0068c7', '--primary-active': '#005bab', '--primary-tint': '#e8f2fc',
+      '--shadow-1': 'rgba(0,0,0,0.01) 0 0.175px 1.041px, rgba(0,0,0,0.02) 0 0.8px 2.925px, rgba(0,0,0,0.027) 0 2.025px 7.847px, rgba(0,0,0,0.04) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.01) 0 1px 3px, rgba(0,0,0,0.02) 0 3px 7px, rgba(0,0,0,0.02) 0 7px 15px, rgba(0,0,0,0.04) 0 14px 28px, rgba(0,0,0,0.05) 0 23px 52px'
+    } : {
+      '--bg': '#191919', '--surface': '#202020', '--surface-hover': '#262626',
+      '--ink': 'rgba(255,255,255,0.92)', '--ink-2': '#d3d1cd', '--ink-muted': '#9b9a97', '--ink-faint': '#6f6e69',
+      '--hairline': '#2f2f2f', '--hairline-strong': '#3a3a3a', '--tint': 'rgba(255,255,255,0.07)', '--tint-2': 'rgba(255,255,255,0.04)',
+      '--primary': '#2f8ae6', '--primary-hover': '#459aee', '--primary-active': '#1f6fc0', '--primary-tint': 'rgba(47,138,230,0.14)',
+      '--shadow-1': 'rgba(0,0,0,0.2) 0 1px 3px, rgba(0,0,0,0.25) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.3) 0 8px 24px, rgba(0,0,0,0.35) 0 23px 52px'
+    };
+    const rootStyle = {
+      minHeight: '100vh', overflowX: 'clip', fontFamily: "'Inter',-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif",
+      fontFeatureSettings: "'lnum','locl'", fontSize: 16, lineHeight: 1.5,
+      background: 'var(--bg)', color: 'var(--ink)', ...T,
+      '--text': 'var(--ink)', '--card-bg': 'var(--surface)', '--accent-a': 'var(--primary)', '--scrim': 'var(--surface)',
+      '--m10': 'var(--hairline)', '--m18': 'var(--hairline)', '--m20': 'var(--hairline-strong)',
+      '--m30': 'var(--ink-faint)', '--m35': 'var(--ink-faint)', '--m40': 'var(--ink-muted)', '--m45': 'var(--ink-muted)',
+      '--m50': 'var(--ink-muted)', '--m55': 'var(--ink-muted)', '--m60': 'var(--ink-muted)',
+      '--m70': 'var(--ink-2)', '--m75': 'var(--ink-2)', '--m85': 'var(--ink-2)'
+    };
+    const toggleTheme = () => {
+      const next = !this.state.light;
+      this.setState({ light: next });
+      try { localStorage.setItem('site-theme-v2', next ? 'light' : 'dark'); } catch (e) {}
+    };
+
+
+    return {
+
+      rootStyle, toggleTheme, isLight: light, isDark: !light,
+      navHover: { color: 'var(--text)' },
+      navFocus: { outline: '1px solid ' + accent, outlineOffset: 3, borderRadius: 2 },
+      iconBtnHover: { borderColor: 'var(--m50)' },
+      pillHover: { borderColor: 'var(--m50)' },
+      solidBtnHover: { opacity: 0.85 },
+      skills: ['UX Strategy', 'User Research', 'Interaction Design', 'Information Architecture', 'Usability Testing', 'Design Systems', 'Prototyping', 'AI-Assisted Design'],
+      traits, facts, journey, principles, skillGroups, beyond, ...layout,
+      journeyGrid: { display: 'grid', gridTemplateColumns: md ? 'repeat(5,minmax(0,1fr))' : 'repeat(2,minmax(0,1fr))', gap: 12 },
+      principlesWrap: lg ? { display: 'grid', gridTemplateColumns: 'repeat(7,minmax(0,1fr))', gap: 16 } : { display: 'flex', gap: 12, overflowX: 'auto', scrollSnapType: 'x mandatory', scrollPaddingLeft: 'clamp(20px,6vw,112px)', margin: '0 calc(-1 * clamp(20px,6vw,112px))', padding: '4px clamp(20px,6vw,112px) 12px', scrollbarWidth: 'none' },
+      chipHover: { background: 'var(--surface)', borderColor: 'var(--ink-faint)', color: 'var(--ink)' },
+      skillTabs: skillGroups.map((g, i) => { const on = (this.state.skillTab || 0) === i; return { name: g.name, active: on, onClick: () => this.setState({ skillTab: i }),
+        style: { height: 36, padding: '0 12px', border: 'none', borderRadius: 5, fontFamily: 'inherit', fontSize: 15, fontWeight: 500, lineHeight: 1.33, whiteSpace: 'nowrap', cursor: 'pointer', background: on ? 'var(--ink)' : 'var(--tint)', color: on ? 'var(--bg)' : 'var(--ink-2)', transition: 'background-color 160ms ease, color 160ms ease' },
+        onEnter: () => { if (!(window.matchMedia && window.matchMedia('(hover: none)').matches)) this.setState({ skillHover: i }); }, onLeave: () => this.setState({ skillHover: null }), hoverStyle: (!on && this.state.skillHover === i) ? { background: 'var(--hairline-strong)', color: 'var(--ink)' } : {} }; }).map(t => ({ ...t, style: { ...t.style, transition: 'background-color 200ms cubic-bezier(.2,.7,.2,1), color 200ms cubic-bezier(.2,.7,.2,1)', ...t.hoverStyle } })),
+      activeSkill: skillGroups[this.state.skillTab || 0],
+      segH: { height: 32 },
+      skillTablist: md ? { display: 'flex', flexDirection: 'column', gap: 2, padding: 3, borderRadius: 8, background: 'var(--tint)', width: '100%', maxWidth: 320 } : { display: 'flex', flexWrap: 'nowrap', gap: 2, padding: 3, borderRadius: 8, background: 'var(--tint)', overflowX: 'auto', maxWidth: '100%', scrollbarWidth: 'none', alignSelf: 'flex-start' },
+      skillSeg: { height: 34, flex: '0 0 auto', padding: '0 14px' },
+      tileHover: { boxShadow: 'var(--shadow-2)', transform: 'translateY(-3px)', borderColor: 'var(--hairline-strong)' },
+      ctaHover: { boxShadow: 'var(--shadow-2)', borderColor: 'var(--hairline-strong)' },
+      aiTags: ['Human-centred', 'AI-assisted', 'Systems-minded'],
+      tileStudied: tile(C.purple[0], C.purple[1]),
+      tileRoots: tile(C.teal[0], C.teal[1]),
+      outSlides: ['Souq Waqif at night', 'Festival lights over Souq Waqif', 'National Museum of Qatar gallery', 'Oryx exhibit at the National Museum of Qatar', 'Traditional kitchen and meal from above', 'Doha hop-on hop-off bus'].map((alt, i) => ({ alt, src: `assets/outside/outside-${i + 1}.webp` })),
+      outTrack: { position: 'absolute', inset: 0, display: 'flex', transform: `translateX(-${(this.state.outIdx || 0) * 100}%)`, transition: 'transform 700ms cubic-bezier(.65,0,.35,1)' },
+      outDots: Array.from({ length: 6 }, (_, i) => { const on = (this.state.outIdx || 0) === i; return { label: `Show photo ${i + 1}`, onClick: () => { this.setState({ outIdx: i }); this.startOut(); },
+        style: { width: on ? 18 : 6, height: 6, padding: 0, border: 'none', borderRadius: 9999, cursor: 'pointer', background: on ? '#ffffff' : 'rgba(255,255,255,0.55)', boxShadow: '0 1px 3px rgba(0,0,0,0.3)', transition: 'width 250ms ease, background-color 250ms ease' } }; }),
+      cardBackHover: { transform: 'rotate(-12deg) translateX(-6px)' },
+      cardFrontHover: { transform: 'rotate(10deg) translate(6px,-6px)' },
+      illoOverhang: md ? '0px' : '40px',
+      illoStyle: md
+        ? { position: 'absolute', zIndex: 2, width: 'clamp(140px,14vw,230px)', aspectRatio: '3/4', left: 'calc(-1 * clamp(16px,3vw,56px))', top: 'calc(-1 * clamp(24px,3vw,40px))' }
+        : { position: 'absolute', zIndex: 2, width: 'clamp(112px,34vw,160px)', aspectRatio: '3/4', right: 12, bottom: -40 }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

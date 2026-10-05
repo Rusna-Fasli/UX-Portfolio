@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>*{box-sizing:border-box}html,body{margin:0;background:#f6f5f4;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{color:inherit}@keyframes btnspin{to{transform:rotate(360deg)}}</style>
+</helmet>
+<div style="{{ rootStyle }}">
+  <div style="max-width:1100px;margin:0 auto;padding:64px 40px 96px;display:flex;flex-direction:column;gap:48px">
+    <div>
+      <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--primary)">Design system</span>
+      <h1 style="font-size:54px;line-height:1.04;font-weight:700;letter-spacing:-1.875px;margin:16px 0 0">Portfolio UI kit</h1>
+      <p style="font-size:16px;line-height:1.5;color:var(--ink-muted);margin:12px 0 0;max-width:560px">The shared tokens and components used across every page. Hover, press and tab through the buttons to see their states.</p>
+    </div>
+
+    <section style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px">
+      <h2 style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0 0 20px">Buttons</h2>
+      <div style="display:grid;grid-template-columns:140px 1fr;gap:20px 24px;align-items:center">
+        <span style="font-size:14px;color:var(--ink-muted)">Primary</span>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <dc-import name="Button" variant="primary" label="Get in touch" hint-size="140px,44px"></dc-import>
+          <dc-import name="Button" variant="primary" label="All work" icon="arrow" hint-size="128px,44px"></dc-import>
+          <dc-import name="Button" variant="primary" label="Send message" loading="{{ true }}" loadingLabel="Sending…" hint-size="140px,44px"></dc-import>
+          <dc-import name="Button" variant="primary" label="Disabled" disabled="{{ true }}" hint-size="110px,44px"></dc-import>
+          <dc-import name="Button" variant="primary" size="lg" label="Large" hint-size="110px,52px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Secondary</span>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <dc-import name="Button" variant="secondary" label="View work" hint-size="120px,44px"></dc-import>
+          <dc-import name="Button" variant="secondary" label="Disabled" disabled="{{ true }}" hint-size="110px,44px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Utility</span>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <dc-import name="Button" variant="utility" size="sm" label="Contact" hint-size="84px,36px"></dc-import>
+          <dc-import name="Button" variant="utility" size="sm" label="Visit site" icon="external" hint-size="112px,36px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Ghost / nav</span>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center">
+          <dc-import name="Button" variant="ghost" size="sm" label="Work" active="{{ true }}" hint-size="64px,36px"></dc-import>
+          <dc-import name="Button" variant="ghost" size="sm" label="About" hint-size="68px,36px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Segmented</span>
+        <div style="display:flex;gap:2px;padding:3px;border-radius:8px;background:var(--tint);justify-self:start">
+          <dc-import name="Button" variant="segment" size="sm" label="All" active="{{ true }}" style="{{ segH }}" hint-size="56px,32px"></dc-import>
+          <dc-import name="Button" variant="segment" size="sm" label="Industry" style="{{ segH }}" hint-size="84px,32px"></dc-import>
+          <dc-import name="Button" variant="segment" size="sm" label="Academic" style="{{ segH }}" hint-size="90px,32px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Text link</span>
+        <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+          <dc-import name="Button" variant="text" label="Back to Work" icon="back" hint-size="130px,24px"></dc-import>
+          <dc-import name="Button" variant="text" label="LinkedIn" icon="external" hint-size="90px,24px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Icon</span>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <dc-import name="Button" variant="icon" size="sm" icon="moon" ariaLabel="Toggle theme" hint-size="36px,36px"></dc-import>
+          <dc-import name="Button" variant="icon" size="sm" icon="menu" ariaLabel="Menu" hint-size="36px,36px"></dc-import>
+          <dc-import name="Button" variant="icon" icon="close" ariaLabel="Close" hint-size="44px,44px"></dc-import>
+        </div>
+        <span style="font-size:14px;color:var(--ink-muted)">Overlay</span>
+        <div style="display:flex;gap:12px;align-items:center;background:#213183;border-radius:12px;padding:16px;justify-self:start">
+          <dc-import name="Button" variant="overlay" size="sm" label="Full view" icon="expand" hint-size="112px,36px"></dc-import>
+          <dc-import name="Button" variant="overlay" size="sm" label="Close" icon="close" hint-size="96px,36px"></dc-import>
+        </div>
+      </div>
+    </section>
+
+    <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px">
+        <h2 style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0 0 16px">Type</h2>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:40px;line-height:1.1;font-weight:700;letter-spacing:-1px">Heading 1</span>
+          <span style="font-size:26px;line-height:1.23;font-weight:700;letter-spacing:-0.625px">Heading 2</span>
+          <span style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px">Heading 3 · card title</span>
+          <span style="font-size:20px;line-height:1.4;font-weight:600;letter-spacing:-0.125px">Title</span>
+          <span style="font-size:16px;line-height:1.5">Body — default reading copy.</span>
+          <span style="font-size:14px;line-height:1.43;color:var(--ink-muted)">Caption — metadata and footnotes.</span>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-muted)">Eyebrow label</span>
+        </div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:20px">
+        <h2 style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px;margin:0">Tags, badges, inputs</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--primary)">Badge</span>
+          <span style="font-size:12px;font-weight:500;color:var(--ink-2);background:var(--tint);border-radius:4px;padding:4px 8px">UX Design Process</span>
+          <span style="font-size:12px;font-weight:500;color:var(--ink-2);background:var(--tint);border-radius:4px;padding:4px 8px">UI Design</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label style="font-size:14px;font-weight:500;color:var(--ink-2)">Email</label>
+          <input placeholder="you@email.com" style="width:100%;height:44px;background:var(--surface);border:1px solid var(--hairline-strong);border-radius:4px;padding:0 12px;font:inherit;font-size:15px;color:var(--ink);outline:none" style-focus="{{ inputFocus }}">
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ swatches }}" as="s" hint-placeholder-count="8">
+            <div style="display:flex;flex-direction:column;gap:4px;width:72px">
+              <div style="{{ s.style }}"></div>
+              <span style="font-size:12px;color:var(--ink-muted)">{{ s.name }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const T = {
+      '--bg': '#f6f5f4', '--surface': '#ffffff', '--surface-hover': '#fbfaf9',
+      '--ink': 'rgba(0,0,0,0.95)', '--ink-2': '#31302e', '--ink-muted': '#615d59', '--ink-faint': '#a39e98',
+      '--hairline': '#e6e6e6', '--hairline-strong': '#dddddd', '--tint': 'rgba(0,0,0,0.05)', '--tint-2': 'rgba(0,0,0,0.03)',
+      '--primary': '#0075de', '--primary-hover': '#0068c7', '--primary-active': '#005bab', '--primary-tint': '#e8f2fc',
+      '--shadow-1': 'rgba(0,0,0,0.01) 0 0.175px 1.041px, rgba(0,0,0,0.02) 0 0.8px 2.925px, rgba(0,0,0,0.027) 0 2.025px 7.847px, rgba(0,0,0,0.04) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.01) 0 1px 3px, rgba(0,0,0,0.02) 0 3px 7px, rgba(0,0,0,0.02) 0 7px 15px, rgba(0,0,0,0.04) 0 14px 28px, rgba(0,0,0,0.05) 0 23px 52px'
+    };
+    const sw = [['Canvas', '#f6f5f4'], ['Surface', '#ffffff'], ['Ink', '#000000'], ['Ink 2', '#31302e'], ['Muted', '#615d59'], ['Faint', '#a39e98'], ['Hairline', '#e6e6e6'], ['Primary', '#0075de']];
+    return {
+      rootStyle: { ...T, minHeight: '100vh', background: 'var(--bg)', color: 'var(--ink)', fontFamily: "'Inter',-apple-system,system-ui,sans-serif" },
+      segH: { height: 32 },
+      inputFocus: { borderColor: 'var(--primary)', boxShadow: 'var(--shadow-1), 0 0 0 3px var(--primary-tint)' },
+      swatches: sw.map(([name, c]) => ({ name, style: { height: 40, borderRadius: 8, background: c, border: '1px solid var(--hairline)' } }))
+    };
+  }
+}
+</script>
+</body>
+</html>

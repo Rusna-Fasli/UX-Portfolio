@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dialog.lk SIM Ordering — Rusna Mohamed Fasli</title>
+  <meta name="description" content="Dialog Axiata case study: reworking the Dialog.lk SIM number-selection flow around the way people actually move through it, from homepage entry to checkout.">
+  <script>
+    // Set the theme before first paint to avoid a flash.
+    try { if (localStorage.getItem('site-theme-v2') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/dialog.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark" aria-hidden="true">RF</span>
+        <span class="brand__text">
+          <span class="brand__name">Rusna Mohamed Fasli</span>
+          <span class="brand__role">UI/UX Portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="btn btn--sm btn--ghost" href="../work.html" aria-current="page">Work</a>
+        <a class="btn btn--sm btn--ghost" href="../about.html">About</a>
+      </nav>
+      <a class="btn btn--sm btn--utility header-contact" href="../contact.html">Contact</a>
+      <button class="btn btn--icon theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5V5M12 19V21.5M4.2 4.2L6 6M18 18L19.8 19.8M2.5 12H5M19 12H21.5M4.2 19.8L6 18M18 6L19.8 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="btn btn--icon menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg class="icon-menu" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 6h12M3 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-close" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a class="mobile-nav__link" href="../work.html" aria-current="page">Work</a>
+      <a class="mobile-nav__link" href="../about.html">About</a>
+      <div class="mobile-nav__spacer"></div>
+      <a class="btn btn--primary btn--block" href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+    <div class="cs-split">
+
+    <aside class="cs-rail" aria-label="Project details">
+      <div class="cs-rail__inner">
+        <div><a class="btn btn--sm btn--text" href="../work.html"><svg class="i-back" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Back</span></a></div>
+        <div><h1 class="cs-rail__title">Dialog.lk <br>SIM Ordering</h1></div>
+        <p class="cs-rail__lede">Reworking a SIM number-selection flow around the way people actually move through it — from homepage entry to checkout.</p>
+        <div>
+          <div class="cs-rail__label">Role</div>
+          <div class="cs-rail__value">UX / UI Designer</div>
+        </div>
+        <div>
+          <div class="cs-rail__label">Client</div>
+          <div class="cs-rail__value">Dialog Axiata PLC</div>
+        </div>
+        <div><a class="btn btn--sm btn--utility" href="https://www.dialog.lk" target="_blank" rel="noopener"><span>Visit site</span><svg class="i-ext" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+    </aside>
+
+  <main class="cs-main">
+
+    <section class="cs-hero" data-no-reveal>
+      <span class="eyebrow">Case study / 01</span>
+      <div class="cs-hero__frame">
+        <div class="cs-hero__img" role="img" aria-label="The live Dialog homepage"></div>
+      </div>
+      <p class="cs-caption">The live Dialog homepage — where the number-selection journey begins.</p>
+    </section>
+
+    <section id="context" class="cs-context">
+      <div class="cs-context__grid">
+        <div>
+          <span class="tag">01-PROJECT BRIEF</span>
+          <h2>Making SIM purchase simpler, starting with the number.</h2>
+        </div>
+        <div>
+          <p class="cs-context__lede">The SIM-buying journey is one of the platform’s key flows. The goal was to rethink the experience into a logical, easy-to-follow journey — helping customers choose a number, verify their details, select a package, and complete the purchase with minimal friction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="cs-flow" data-no-reveal>
+      <div class="cs-flow__intro">
+        <span class="cs-flow__tag">Empathize</span>
+        <h2>Existing User Flow</h2>
+        <p>Verification splits into five outcomes — one exact match, several exact matches, one partial, several partials, or none. The no-match path falls back to search. Everything reconverges at the age check.</p>
+      </div>
+      <div class="cs-flow__block">
+        <div class="cs-flow__tag cs-flow__tag--block">DIAGRAM</div>
+        <div id="journey-pdf" class="cs-flow__frame cs-flow__frame--pdf" role="button" tabindex="0" aria-label="Open the user journey diagram full size">
+          <div class="cs-flow__msg">Loading diagram…</div>
+        </div>
+        <p class="cs-flow__note">The journey mapped end to end, before it was broken into screens. <a id="journey-expand" href="#flow">View full size</a></p>
+      </div>
+      <div class="cs-flow__block cs-flow__block--last">
+        <div class="cs-flow__tag cs-flow__tag--block">UI SCREENS</div>
+        <div id="flow-frame" class="cs-flow__frame cs-flow__frame--screens" role="button" tabindex="0" aria-label="Open the user flow with UI screens full size">
+          <iframe src="../../assets/dialog/user-flow.html" title="Dialog user flow with UI screens" tabindex="-1"></iframe>
+          <div class="cs-flow__mask cs-flow__mask--tr" aria-hidden="true"></div>
+          <div class="cs-flow__mask cs-flow__mask--bl" aria-hidden="true"></div>
+        </div>
+        <p class="cs-flow__note">Pan, zoom and click a screen to trace its path in full size. <a id="flow-expand" href="#flow">View full size</a></p>
+      </div>
+    </section>
+
+    <section id="audit" class="cs-audit" data-no-reveal>
+      <div class="cs-pad">
+        <div class="sec-head">
+          <h2>What the audit found</h2>
+          <span class="tag">UX/UI Evaluation</span>
+        </div>
+      </div>
+      <div class="collage">
+        <figure class="finding">
+          <div class="finding__shot">
+            <div class="finding__img" role="img" aria-label="User control &amp; freedom" style="background-image:url('../../assets/dialog/audit-pickNumberPartial.png');aspect-ratio:1.2609"></div>
+            <div class="finding__box" style="left:26%;top:61.5%;width:48%;height:7%"></div>
+            <div class="finding__pin" style="left:26%;top:calc(68.5% + 6px)">Below the bonus offer, the screen simply ends.</div>
+          </div>
+          <figcaption class="finding__body">
+            <span class="finding__principle">User control &amp; freedom</span>
+            <p>Below the bonus offer, the screen simply ends.</p>
+          </figcaption>
+        </figure>
+        <figure class="finding">
+          <div class="finding__shot">
+            <div class="finding__img" role="img" aria-label="Visibility of system status" style="background-image:url('../../assets/dialog/audit-congratsPartial.png');aspect-ratio:1.2609"></div>
+            <div class="finding__box" style="left:40%;top:21.5%;width:20%;height:9%"></div>
+            <div class="finding__pin" style="left:40%;top:calc(30.5% + 6px)">Same pill for either result</div>
+          </div>
+          <figcaption class="finding__body">
+            <span class="finding__principle">Visibility of system status</span>
+            <p>The exact match and the approximate match are announced with the identical flat grey pill.</p>
+          </figcaption>
+        </figure>
+        <figure class="finding">
+          <div class="finding__shot">
+            <div class="finding__img" role="img" aria-label="Recognition over recall" style="background-image:url('../../assets/dialog/audit-numberGrid.png');aspect-ratio:1.3859"></div>
+            <div class="finding__box" style="left:15.5%;top:26%;width:69%;height:19%"></div>
+            <div class="finding__pin" style="left:15.5%;top:calc(45% + 6px)">Ten identical options</div>
+          </div>
+          <figcaption class="finding__body">
+            <span class="finding__principle">Recognition over recall</span>
+            <p>All ten returned numbers are the same value with no distinguishing pattern, price, or tag.</p>
+          </figcaption>
+        </figure>
+        <figure class="finding">
+          <div class="finding__shot">
+            <div class="finding__img" role="img" aria-label="Aesthetic &amp; minimalist design" style="background-image:url('../../assets/dialog/audit-homepage.png');aspect-ratio:0.837"></div>
+            <div class="finding__box" style="left:9%;top:62%;width:84%;height:12%"></div>
+            <div class="finding__pin" style="left:9%;top:calc(74% + 6px)">Placeholder copy, live</div>
+          </div>
+          <figcaption class="finding__body">
+            <span class="finding__principle">Aesthetic &amp; minimalist design</span>
+            <p>All three benefit tiles under the hero — coverage, voice &amp; SMS, data — run the same block of lorem ipsum.</p>
+          </figcaption>
+        </figure>
+        <figure class="finding">
+          <div class="finding__shot">
+            <div class="finding__img" role="img" aria-label="Choice architecture" style="background-image:url('../../assets/dialog/audit-package.png');aspect-ratio:0.9102"></div>
+            <div class="finding__box" style="left:18%;top:60.5%;width:64%;height:5.5%"></div>
+            <div class="finding__pin" style="left:18%;top:calc(66% + 6px)">Three equal choices</div>
+          </div>
+          <figcaption class="finding__body">
+            <span class="finding__principle">Choice architecture</span>
+            <p>Powerplan, Standard and Special all present a same-size SELECT button with no default emphasis.</p>
+          </figcaption>
+        </figure>
+        <figure class="finding">
+          <div class="finding__shot">
+            <div class="finding__img" role="img" aria-label="Match between system &amp; real world" style="background-image:url('../../assets/dialog/audit-cart.png');aspect-ratio:1.2743"></div>
+            <div class="finding__box" style="left:18%;top:43.5%;width:64%;height:16%"></div>
+            <div class="finding__pin" style="left:18%;top:calc(59.5% + 6px)">Three zero lines stacked</div>
+          </div>
+          <figcaption class="finding__body">
+            <span class="finding__principle">Match between system &amp; real world</span>
+            <p>Delivery, SIM and sub-total all show &quot;Rs. 0.00&quot; / &quot;Free&quot; stacked together.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="users" class="cs-sec">
+        <div class="sec-head">
+          <h2>Primary User Personas</h2>
+          <span class="tag">USER RESEARCH</span>
+        </div>
+      <div class="persona-rail">
+        <article class="persona">
+          <div class="persona__body">
+            <h3 class="persona__name">Chamath.</h3>
+            <p class="persona__quote">“I have had that number since school.”</p>
+            <div class="persona__grid">
+              <div class="persona__col">
+                <div class="persona__facts">
+                  <div>AGE: <span>34</span></div>
+                  <div>LIVES: <span>Colombo</span></div>
+                  <div>WORK: <span>Shop owner</span></div>
+                </div>
+                <div>
+                  <div class="persona__h">Traits</div>
+                  <ul class="persona__list">
+                    <li>Number-specific</li>
+                    <li>Patient searcher</li>
+                    <li>Compares options</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="persona__col">
+                <div>
+                  <div class="persona__h">Goals</div>
+                  <div class="persona__text">Keep a number people already know</div>
+                  <div class="persona__text">Find a pattern worth paying for</div>
+                </div>
+                <div>
+                  <div class="persona__h">Where they buy</div>
+                  <div class="persona__channels">
+                    <div class="channel"><span class="channel__label">Web</span><div class="channel__track"><div class="channel__bar" style="width:60%"></div></div><span class="channel__pct">60%</span></div>
+                    <div class="channel"><span class="channel__label">App</span><div class="channel__track"><div class="channel__bar" style="width:30%"></div></div><span class="channel__pct">30%</span></div>
+                    <div class="channel"><span class="channel__label">Store</span><div class="channel__track"><div class="channel__bar" style="width:10%"></div></div><span class="channel__pct">10%</span></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="persona__h">Frustrations</div>
+                  <div class="persona__text">Options that all look the same</div>
+                  <div class="persona__text">No way to tell what differs</div>
+                </div>
+              </div>
+            </div>
+            <div class="persona__foot">
+              <img src="../../assets/personas/dialog-chamath.webp" alt="Chamath" width="96" height="96" loading="lazy">
+              <div class="persona__rule"></div>
+              <div class="persona__num">01/03</div>
+            </div>
+          </div>
+        </article>
+        <article class="persona">
+          <div class="persona__body">
+            <h3 class="persona__name">Nadeesha.</h3>
+            <p class="persona__quote">“I just need it working today.”</p>
+            <div class="persona__grid">
+              <div class="persona__col">
+                <div class="persona__facts">
+                  <div>AGE: <span>26</span></div>
+                  <div>LIVES: <span>Kandy</span></div>
+                  <div>WORK: <span>Sales exec</span></div>
+                </div>
+                <div>
+                  <div class="persona__h">Traits</div>
+                  <ul class="persona__list">
+                    <li>Time-poor</li>
+                    <li>Mobile-first</li>
+                    <li>Price-aware</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="persona__col">
+                <div>
+                  <div class="persona__h">Goals</div>
+                  <div class="persona__text">A SIM active the same day</div>
+                  <div class="persona__text">A clear total before paying</div>
+                </div>
+                <div>
+                  <div class="persona__h">Where they buy</div>
+                  <div class="persona__channels">
+                    <div class="channel"><span class="channel__label">App</span><div class="channel__track"><div class="channel__bar" style="width:70%"></div></div><span class="channel__pct">70%</span></div>
+                    <div class="channel"><span class="channel__label">Web</span><div class="channel__track"><div class="channel__bar" style="width:20%"></div></div><span class="channel__pct">20%</span></div>
+                    <div class="channel"><span class="channel__label">Store</span><div class="channel__track"><div class="channel__bar" style="width:10%"></div></div><span class="channel__pct">10%</span></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="persona__h">Frustrations</div>
+                  <div class="persona__text">Extra steps she did not ask for</div>
+                  <div class="persona__text">Charges that are not spelled out</div>
+                </div>
+              </div>
+            </div>
+            <div class="persona__foot">
+              <img src="../../assets/personas/dialog-nadeesha.webp" alt="Nadeesha" width="96" height="96" loading="lazy">
+              <div class="persona__rule"></div>
+              <div class="persona__num">02/03</div>
+            </div>
+          </div>
+        </article>
+        <article class="persona">
+          <div class="persona__body">
+            <h3 class="persona__name">Ishara.</h3>
+            <p class="persona__quote">“It is my first connection.”</p>
+            <div class="persona__grid">
+              <div class="persona__col">
+                <div class="persona__facts">
+                  <div>AGE: <span>17</span></div>
+                  <div>LIVES: <span>Galle</span></div>
+                  <div>WORK: <span>Student</span></div>
+                </div>
+                <div>
+                  <div class="persona__h">Traits</div>
+                  <ul class="persona__list">
+                    <li>First-time buyer</li>
+                    <li>Needs guidance</li>
+                    <li>Budget-led</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="persona__col">
+                <div>
+                  <div class="persona__h">Goals</div>
+                  <div class="persona__text">Get connected without a guarantor</div>
+                  <div class="persona__text">Know which plan applies to him</div>
+                </div>
+                <div>
+                  <div class="persona__h">Where they buy</div>
+                  <div class="persona__channels">
+                    <div class="channel"><span class="channel__label">App</span><div class="channel__track"><div class="channel__bar" style="width:50%"></div></div><span class="channel__pct">50%</span></div>
+                    <div class="channel"><span class="channel__label">Store</span><div class="channel__track"><div class="channel__bar" style="width:35%"></div></div><span class="channel__pct">35%</span></div>
+                    <div class="channel"><span class="channel__label">Web</span><div class="channel__track"><div class="channel__bar" style="width:15%"></div></div><span class="channel__pct">15%</span></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="persona__h">Frustrations</div>
+                  <div class="persona__text">Rules that are never explained</div>
+                  <div class="persona__text">Too many similar plans</div>
+                </div>
+              </div>
+            </div>
+            <div class="persona__foot">
+              <img src="../../assets/personas/dialog-ishara.webp" alt="Ishara" width="96" height="96" loading="lazy">
+              <div class="persona__rule"></div>
+              <div class="persona__num">03/03</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="market" class="cs-market" data-no-reveal>
+      <div class="cs-pad">
+        <div class="sec-head">
+          <h2>Competitor Analysis</h2>
+          <span class="tag">IDEATE</span>
+        </div>
+        <p class="sec-lede sec-lede--50">Six telecom and tech homepages, read for one thing: what they do at the moment a buyer hesitates.</p>
+      </div>
+      <div class="comp-grid">
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="Singtel — Fibre Broadband" style="background-image:url('../../assets/dialog/c-singtel-reassurance.png');aspect-ratio:1248/753"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="60" x2="50" y2="40" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:14%;top:10%;width:72%;height:30%"></div>
+            <div class="comp__label" style="left:50%;top:60%">Support triad, right at the decision point</div>
+            <div class="comp__badge">01 · Singtel — Fibre Broadband</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>Reassurance strip planted right at the decision point</p></div>
+          </div>
+        </div>
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="AT&amp;T — Internet" style="background-image:url('../../assets/dialog/c-att.png');aspect-ratio:1385/485"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="12" x2="50" y2="30" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:8%;top:30%;width:84%;height:56%"></div>
+            <div class="comp__label" style="left:50%;top:12%">Named, verified reviews</div>
+            <div class="comp__badge">02 · AT&amp;T — Internet</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>Proof before the pitch</p></div>
+          </div>
+        </div>
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="T-Mobile — 5G" style="background-image:url('../../assets/dialog/c-tmobile.png');aspect-ratio:1473/516"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="74" x2="50" y2="85" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:11%;top:85%;width:78%;height:14%"></div>
+            <div class="comp__label" style="left:50%;top:74%">Four in-page tabs instead of a long scroll</div>
+            <div class="comp__badge">03 · T-Mobile — 5G</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>One concept, tabbed rather than scrolled</p></div>
+          </div>
+        </div>
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="Cricket Wireless" style="background-image:url('../../assets/dialog/c-cricket.png');aspect-ratio:1417/534"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="33" x2="50" y2="21" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:17%;top:7%;width:66%;height:14%"></div>
+            <div class="comp__label" style="left:50%;top:33%">Task shortcuts above the hero</div>
+            <div class="comp__badge">04 · Cricket Wireless</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>Shortcuts before the marketing message</p></div>
+          </div>
+        </div>
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="Verizon — Unlimited plans" style="background-image:url('../../assets/dialog/c-verizon.png');aspect-ratio:1897/719"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="58" x2="50" y2="66" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:11%;top:66%;width:78%;height:32%"></div>
+            <div class="comp__label" style="left:50%;top:58%">Real devices, not icons</div>
+            <div class="comp__badge">05 · Verizon — Unlimited plans</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>Leads with real devices, not icons</p></div>
+          </div>
+        </div>
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="Intel — Mobile &amp; IoT" style="background-image:url('../../assets/dialog/c-intel.png');aspect-ratio:1665/584"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="55" y1="16" x2="71" y2="21" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:71%;top:21%;width:26%;height:68%"></div>
+            <div class="comp__label" style="left:55%;top:16%">Category list, detail beside it</div>
+            <div class="comp__badge">06 · Intel — Mobile &amp; IoT</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>Selected category, detail pane beside it</p></div>
+          </div>
+        </div>
+        <div class="comp" tabindex="0">
+          <div class="comp__shot">
+            <div class="comp__img" role="img" aria-label="Singtel — plan cards" style="background-image:url('../../assets/dialog/c-singtel-plans.png');aspect-ratio:1245/967"></div>
+            <svg class="comp__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="10" x2="50" y2="24" stroke="#ff6b3d" stroke-width="0.4" vector-effect="non-scaling-stroke"></line></svg>
+            <div class="comp__ring" style="left:8%;top:24%;width:84%;height:68%"></div>
+            <div class="comp__label" style="left:50%;top:10%">Three tiers side by side</div>
+            <div class="comp__badge">07 · Singtel — plan cards</div>
+          </div>
+          <div class="comp__panel">
+            <div class="comp__panel-inner"><p>Three tiers laid out side by side</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iterations" class="cs-sec" data-no-reveal>
+        <div class="sec-head">
+          <h2>Lo-fi wireframes</h2>
+          <span class="tag">&nbsp;ITERATIONS</span>
+        </div>
+      <p class="sec-lede">Six decisions carried out of the audit and into the redesign, explored across the full wireframe board below.</p>
+      <div class="wf-board">
+        <div class="wf-lane wf-lane--1">
+          <figure><img src="../../assets/opt/dlg-ps-53.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-3.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-6.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-11.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-14.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-17.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-21.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-25.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-28.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-35.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-52.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+        </div>
+        <div class="wf-lane wf-lane--2">
+          <figure><img src="../../assets/opt/dlg-group-366.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-1.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-4.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-7.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-12.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-15.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-18.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-22.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-26.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-32.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-36.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-54.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+        </div>
+        <div class="wf-lane wf-lane--3">
+          <figure><img src="../../assets/opt/dlg-identity.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-2.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-5.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-8.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-13.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-16.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-20.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-24.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-27.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-34.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-ps-40.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+          <figure><img src="../../assets/opt/dlg-select-offer.webp" alt="Lo-fi wireframe" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="further" class="cs-sec cs-sec--nobottom" data-no-reveal>
+        <div class="sec-head">
+          <h2>Further Iterations</h2>
+          <span class="tag">EXPLORATION</span>
+        </div>
+      <p class="sec-lede">Homepage directions explored before the final layout.</p>
+      <div class="cs-further__img" data-reveal>
+        <img src="../../assets/opt/dlg-iterations.webp" alt="Further homepage iterations" loading="lazy">
+      </div>
+    </section>
+
+    <section id="final" class="cs-final" data-no-reveal>
+      <div class="cs-final__pad">
+        <div class="sec-head">
+          <h2>The Final Interface</h2>
+          <span class="tag">FINAL UI</span>
+        </div>
+      </div>
+      <div class="cs-final__pad">
+        <p class="cs-final__lede">Revamped User Flows are listed below. Click to open prototype in Figma</p>
+      </div>
+      <div class="cs-final__pad cs-final__cards" data-reveal>
+        <div class="flow-grid">
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=30-49942&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=30%3A49942&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M16 11l2 2 4-4"></path></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 01</span>
+              <span class="flow-card__title">Exact match 1 number-Age more than 18</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=121-26597&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=121%3A26597&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 9.5-4-1.3-7-5-7-9.5V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 02</span>
+              <span class="flow-card__title">Exact match-Age less than 18</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=121-26607&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=121%3A26607&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="13" height="13" rx="2"></rect><path d="M4 16V5a1 1 0 0 1 1-1h11"></path><path d="M10.5 13.5l2 2 4-4"></path></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 03</span>
+              <span class="flow-card__title">Exact match- Multiple numbers</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26621&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26621&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"></path></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 04</span>
+              <span class="flow-card__title">Partial match - 1 number</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26636&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26636&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 05</span>
+              <span class="flow-card__title">Partial match -Multiple number</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26649&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26649&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.3-4.3"></path></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 06</span>
+              <span class="flow-card__title">Matching number using customer via search</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+          <a class="flow-card" data-touch-card href="https://www.figma.com/proto/ZNoszE7v1J9Wg26pZXNIXk/Dialog-Case-Study?node-id=127-26665&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=27%3A15540&amp;starting-point-node-id=127%3A26665&amp;show-proto-sidebar=1" target="_blank" rel="noopener">
+            <span class="flow-card__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7"></path><path d="M20 4v5h-5"></path></svg></span>
+            <span class="flow-card__text">
+              <span class="flow-card__num">FLOW 07</span>
+              <span class="flow-card__title">Start with another number</span>
+            </span>
+            <span class="flow-card__cta">Figma <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="cs-sec cs-showcase" data-no-reveal>
+        <div class="sec-head">
+          <h2>Final screens</h2>
+          <span class="tag">SHOWCASE</span>
+        </div>
+      <p class="sec-lede">Some of the key screens.</p>
+      <div class="showcase" data-reveal>
+        <button class="btn btn--sm btn--overlay showcase__open" type="button" aria-haspopup="dialog" aria-controls="showcase-overlay"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5L9 7M2.5 13.5L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Full view</span></button>
+        <div id="showcase-row" class="showcase__row">
+          <img src="../../assets/opt/dlg-final-landing.webp" alt="Landing page — enter your details" loading="lazy">
+          <img src="../../assets/opt/dlg-final-match.webp" alt="Perfect matching number result" loading="lazy">
+          <img src="../../assets/opt/dlg-final-multi.webp" alt="Multiple matching numbers with bonus gift" loading="lazy">
+          <img src="../../assets/opt/dlg-final-nomatch.webp" alt="No matching number found" loading="lazy">
+          <img src="../../assets/opt/dlg-final-package.webp" alt="Package type and package selection" loading="lazy">
+          <img src="../../assets/opt/dlg-final-prepaid.webp" alt="Prepaid-only package selection" loading="lazy">
+          <img src="../../assets/opt/dlg-final-cart.webp" alt="Shopping cart" loading="lazy">
+          <img src="../../assets/opt/dlg-final-landing.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="../../assets/opt/dlg-final-match.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="../../assets/opt/dlg-final-multi.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="../../assets/opt/dlg-final-nomatch.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="../../assets/opt/dlg-final-package.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="../../assets/opt/dlg-final-prepaid.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="../../assets/opt/dlg-final-cart.webp" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+      <div id="showcase-overlay" class="showcase-overlay" role="dialog" aria-modal="true" aria-label="Final screens, full view" hidden>
+        <button class="btn btn--sm btn--overlay showcase-overlay__close" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Close</span></button>
+        <div class="showcase-overlay__row">
+          <img src="../../assets/opt/dlg-final-landing.webp" alt="Landing page — enter your details" loading="lazy">
+          <img src="../../assets/opt/dlg-final-match.webp" alt="Perfect matching number result" loading="lazy">
+          <img src="../../assets/opt/dlg-final-multi.webp" alt="Multiple matching numbers with bonus gift" loading="lazy">
+          <img src="../../assets/opt/dlg-final-nomatch.webp" alt="No matching number found" loading="lazy">
+          <img src="../../assets/opt/dlg-final-package.webp" alt="Package type and package selection" loading="lazy">
+          <img src="../../assets/opt/dlg-final-prepaid.webp" alt="Prepaid-only package selection" loading="lazy">
+          <img src="../../assets/opt/dlg-final-cart.webp" alt="Shopping cart" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <nav class="cs-next" aria-label="Project navigation">
+      <a href="qoc.html">
+        <span class="cs-next__label">Next project</span>
+        <span class="cs-next__title">Qatar Olympic Committee<svg width="26" height="14" viewBox="0 0 26 14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </nav>
+  </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© 2026 Rusna Mohamed Fasli</span>
+      <div class="site-footer__social">
+        <a class="btn btn--icon" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 015 0V17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--icon" href="#" target="_blank" rel="noopener" aria-label="Behance">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 6.5h4.8a2.6 2.6 0 010 5.2H2.5zM2.5 11.7h5.3a2.9 2.9 0 010 5.8H2.5zM2.5 6.5v11M14.5 14h7a3.5 3.5 0 10-1.2 2.7M15.5 7.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--icon" href="mailto:rusnafasli@outlook.com" aria-label="Email rusnafasli@outlook.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M4 7.5l8 5.5 8-5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <span>UI/UX Portfolio</span>
+    </div>
+  </footer>
+
+    <script src="../js/site.js"></script>
+  <script src="../js/dialog.js"></script>
+</body>
+</html>

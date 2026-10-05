@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QOC Website Revamp — Rusna Mohamed Fasli</title>
+  <meta name="description" content="QOC Website Revamp: a case study on the digital flagship for Qatar Olympic Committee's 2036 Olympic vision, by UX Specialist Rusna Mohamed Fasli.">
+  <script>
+    // Set the theme before first paint to avoid a flash.
+    try { if (localStorage.getItem('site-theme-v2') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/qoc.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark" aria-hidden="true">RF</span>
+        <span class="brand__text">
+          <span class="brand__name">Rusna Mohamed Fasli</span>
+          <span class="brand__role">UI/UX Portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="btn btn--sm btn--ghost" href="../work.html" aria-current="page">Work</a>
+        <a class="btn btn--sm btn--ghost" href="../about.html">About</a>
+      </nav>
+      <a class="btn btn--sm btn--utility header-contact" href="../contact.html">Contact</a>
+      <button class="btn btn--icon theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5V5M12 19V21.5M4.2 4.2L6 6M18 18L19.8 19.8M2.5 12H5M19 12H21.5M4.2 19.8L6 18M18 6L19.8 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="btn btn--icon menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg class="icon-menu" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 6h12M3 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-close" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a class="mobile-nav__link" href="../work.html" aria-current="page">Work</a>
+      <a class="mobile-nav__link" href="../about.html">About</a>
+      <div class="mobile-nav__spacer"></div>
+      <a class="btn btn--primary btn--block" href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="qoc-split">
+
+    <aside class="qoc-rail" aria-label="Project details">
+      <div class="qoc-rail__inner">
+        <div>
+          <a class="qoc-back" href="../work.html">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Back</span>
+          </a>
+        </div>
+        <div>
+          <h1 class="qoc-rail__title">QOC Website Revamp</h1>
+        </div>
+        <p class="qoc-rail__sub">Digital flagship for the 2036 Olympic vision</p>
+        <div>
+          <div class="qoc-rail__label">Role</div>
+          <div class="qoc-rail__value">UX Specialist&nbsp;</div>
+        </div>
+        <div>
+          <div class="qoc-rail__label">Timeline</div>
+          <div class="qoc-rail__value">7 Months</div>
+        </div>
+        <div>
+          <div class="qoc-rail__label">Client</div>
+          <div class="qoc-rail__value">Qatar Olympic Committee</div>
+        </div>
+        <div>
+          <a class="btn btn--sm btn--utility qoc-ext" href="https://www.olympic.qa" target="_blank" rel="noopener">
+            <span>Visit site</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="qoc-main">
+
+      <!-- 01 hero -->
+      <section class="qoc-hero">
+        <span class="eyebrow">Case study / 02</span>
+        <div class="qoc-hero__frame">
+          <img src="../../assets/opt/qoc-cover-desktop.webp" alt="QOC redesigned homepage — One Team. One Dream. Together for Glory. — shown on a desktop monitor" width="6143" height="4096">
+        </div>
+      </section>
+
+      <!-- 02 brief -->
+      <section id="brief" class="qoc-sec qoc-brief">
+        <div class="qoc-brief__grid">
+          <div>
+            <span class="qoc-tag">PROJECT BRIEF</span>
+            <h2 class="qoc-h2"><strong>Qatar to shine with pride and passion, inspiring the world as a visionary host of the 2036 Olympic Games.</strong></h2>
+          </div>
+          <div>
+            <p class="qoc-brief__body">A fully fledged, centralized digital sports hub — high-tech, user first, built with purpose, speed and precision.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 stakeholder map -->
+      <section id="stakeholders" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Stakeholder Map</h2>
+          <span class="qoc-tag">RESEARCH</span>
+        </div>
+        <p class="qoc-lead" style="max-width:48ch">Who the hub serves, who feeds it, and who signs it off.</p>
+        <div class="sm" data-tier="0">
+          <div class="sm__bar">
+            <div class="segmented" role="tablist" aria-label="Stakeholder tiers">
+              <button class="btn btn--segment" type="button" role="tab" data-sm-tab="0" aria-selected="true" aria-pressed="true">Primary</button>
+              <button class="btn btn--segment" type="button" role="tab" data-sm-tab="1" aria-selected="false" aria-pressed="false">Secondary</button>
+              <button class="btn btn--segment" type="button" role="tab" data-sm-tab="2" aria-selected="false" aria-pressed="false">Tertiary</button>
+            </div>
+          </div>
+
+          <div class="sm__diagram" role="img" aria-label="Stakeholder map: primary, secondary and tertiary stakeholders arranged in rings around the QOC website">
+            <div class="sm__ring sm__ring--1"></div>
+            <div class="sm__ring sm__ring--2"></div>
+            <div class="sm__ring sm__ring--3"></div>
+            <div class="sm__core">
+              <span class="sm__core-title">QOC Website</span>
+              <span class="sm__core-sub">Digital hub</span>
+            </div>
+            <!-- Primary -->
+            <div class="sm-pill" data-t="0" style="left:32.2%;top:76.2%;--k:0"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Fans &amp; residents</span></div>
+            <div class="sm-pill" data-t="0" style="left:35.3%;top:64.4%;--k:1"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Athletes</span></div>
+            <div class="sm-pill" data-t="0" style="left:48.4%;top:52.8%;--k:2"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>National federations</span></div>
+            <div class="sm-pill" data-t="0" style="left:63.2%;top:61.4%;--k:3"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>QOC content team</span></div>
+            <!-- Secondary -->
+            <div class="sm-pill" data-t="1" style="left:30.1%;top:44%;--k:0"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Media &amp; journalists</span></div>
+            <div class="sm-pill" data-t="1" style="left:66.4%;top:40.2%;--k:1"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Sponsors &amp; partners</span></div>
+            <div class="sm-pill" data-t="1" style="left:73.7%;top:49.8%;--k:2"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Volunteers</span></div>
+            <div class="sm-pill" data-t="1" style="left:80.5%;top:71.8%;--k:3"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Schools &amp; academies</span></div>
+            <!-- Tertiary -->
+            <div class="sm-pill" data-t="2" style="left:18.3%;top:33.7%;--k:0"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>International Olympic Committee</span></div>
+            <div class="sm-pill" data-t="2" style="left:26.7%;top:23.5%;--k:1"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Ministry of Sports &amp; Youth</span></div>
+            <div class="sm-pill" data-t="2" style="left:62.1%;top:15.9%;--k:2"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>International visitors</span></div>
+            <div class="sm-pill" data-t="2" style="left:75.2%;top:25.4%;--k:3"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Venue &amp; event operators</span></div>
+          </div>
+
+          <div class="sm__compact">
+            <div class="sm-tier" data-t="0">
+              <span class="sm-tier__label"><span class="sm-swatch"></span>Primary</span>
+              <div class="sm-tier__items">
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Fans &amp; residents</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Athletes</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>National federations</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>QOC content team</span>
+              </div>
+            </div>
+            <div class="sm-tier" data-t="1">
+              <span class="sm-tier__label"><span class="sm-swatch"></span>Secondary</span>
+              <div class="sm-tier__items">
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Media &amp; journalists</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Sponsors &amp; partners</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Volunteers</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Schools &amp; academies</span>
+              </div>
+            </div>
+            <div class="sm-tier" data-t="2">
+              <span class="sm-tier__label"><span class="sm-swatch"></span>Tertiary</span>
+              <div class="sm-tier__items">
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>International Olympic Committee</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Ministry of Sports &amp; Youth</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>International visitors</span>
+                <span class="sm-chip"><span class="sm-dot"><svg width="58%" height="58%" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M5.5 19.5a6.5 6.5 0 0113 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Venue &amp; event operators</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 personas -->
+      <section id="personas" class="qoc-sec">
+        <div class="pz">
+          <div class="pz__main">
+            <div class="pz__head">
+              <span class="qoc-tag qoc-tag--accent">RESEARCH</span>
+              <h2 class="pz__title">Primary User <span class="pz__serif">Personas</span></h2>
+            </div>
+            <div class="pz__tabs" role="tablist" aria-label="Personas">
+              <button class="pz-tab" type="button" role="tab" aria-selected="true" data-persona="0"><span class="pz-tab__ring" style="background:rgba(255,100,120,0.14)"><img src="../../assets/personas/ahmed.png" alt="Ahmed"></span></button>
+              <button class="pz-tab" type="button" role="tab" aria-selected="false" data-persona="1"><span class="pz-tab__ring" style="background:rgba(98,174,240,0.16)"><img src="../../assets/personas/saeed.png" alt="Saeed Hasan"></span></button>
+              <button class="pz-tab" type="button" role="tab" aria-selected="false" data-persona="2"><span class="pz-tab__ring" style="background:rgba(255,170,60,0.16)"><img src="../../assets/personas/zakir.png" alt="Zakir"></span></button>
+              <button class="pz-tab" type="button" role="tab" aria-selected="false" data-persona="3"><span class="pz-tab__ring" style="background:rgba(138,21,56,0.12)"><img src="../../assets/personas/thalal.png" alt="Thalal"></span></button>
+            </div>
+            <div class="pz__who" aria-live="polite">
+              <span class="pz__name" data-pz="name">Ahmed</span>
+              <span class="pz__role" data-pz="role">Media Personal</span>
+              <p class="pz__quote" data-pz="quote">“I manage press relations and official communications for the Qatar Olympic Committee, ensuring accurate and timely media coverage.”</p>
+            </div>
+            <div class="pz__constraint">
+              <span class="qoc-tag qoc-tag--accent">BIGGEST CONSTRAINT</span>
+              <span class="pz__constraint-text" data-pz="constraint">Scattered Information</span>
+            </div>
+          </div>
+          <div class="pz__side">
+            <div class="pz__block">
+              <span class="qoc-tag qoc-tag--accent">EXPECTATIONS ON REVAMP WEBSITE</span>
+              <div class="pz__needs" data-pz="needs">
+                <div class="pz-need"><span class="pz-need__v">7/10</span><span class="pz-need__l">News room</span></div>
+                <div class="pz-need"><span class="pz-need__v">90%</span><span class="pz-need__l">Requests Stats of Athletes</span></div>
+                <div class="pz-need"><span class="pz-need__v">10x</span><span class="pz-need__l">Online Registration saves time</span></div>
+                <div class="pz-need"><span class="pz-need__v">24/7</span><span class="pz-need__l">access to media accreditation info</span></div>
+                <div class="pz-need"><span class="pz-need__v">&lt;3 sec</span><span class="pz-need__l">Search for athlete, event, or news</span></div>
+                <div class="pz-need"><span class="pz-need__v">jpg, mp4, pdf</span><span class="pz-need__l">Assets downloadable in multiple formats</span></div>
+                <div class="pz-need"><span class="pz-need__v">1-click</span><span class="pz-need__l">Access to event &amp; athlete profiles</span></div>
+              </div>
+            </div>
+            <div class="pz__block">
+              <span class="qoc-tag qoc-tag--accent">PAIN POINTS</span>
+              <div class="pz__pains" data-pz="pains">
+                <span class="pz-pain">No press contact directory</span>
+                <span class="pz-pain">Lack of clear media accreditation guidelines</span>
+                <span class="pz-pain">Difficult to find archived material</span>
+                <span class="pz-pain">Lack of centralized media hub</span>
+                <span class="pz-pain">No central multimedia gallery with tagging by event/sport.</span>
+                <span class="pz-pain">No centralized calendar with filters for media planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 swot -->
+      <section id="swot" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">SWOT Analysis</h2>
+          <span class="qoc-tag">EVALUATE</span>
+        </div>
+        <div class="swot">
+          <span class="swot__axis swot__axis--corner" aria-hidden="true"></span>
+          <span class="swot__axis swot__axis--h" aria-hidden="true"><span class="swot__rule"></span>HELPFUL<span class="swot__rule"></span></span>
+          <span class="swot__axis swot__axis--h" aria-hidden="true"><span class="swot__rule"></span>HARMFUL<span class="swot__rule"></span></span>
+          <span class="swot__axis swot__axis--v swot__axis--internal" aria-hidden="true"><span class="swot__rule"></span><span class="swot__vlabel">INTERNAL</span><span class="swot__rule"></span></span>
+          <span class="swot__axis swot__axis--v swot__axis--external" aria-hidden="true"><span class="swot__rule"></span><span class="swot__vlabel">EXTERNAL</span><span class="swot__rule"></span></span>
+          <div class="swot__quads">
+            <div class="swot-q swot-q--s">
+              <div class="swot-q__head"><span class="swot-q__mark">S</span><h3 class="swot-q__name">Strengths</h3></div>
+              <div class="swot-q__rows">
+                <div class="swot-q__row"><span class="swot-q__num">01</span><span>Trusted &amp; Secure Platform</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">02</span><span>Bilingual Design with Accessibility Controls</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">03</span><span>Integrated Media Center</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">04</span><span>Dynamic Event Countdown</span></div>
+              </div>
+            </div>
+            <div class="swot-q swot-q--w">
+              <div class="swot-q__head"><span class="swot-q__mark">W</span><h3 class="swot-q__name">Weaknesses</h3></div>
+              <div class="swot-q__rows">
+                <div class="swot-q__row"><span class="swot-q__num">01</span><span>Content Depth Gaps</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">02</span><span>Limited Multimedia Engagement</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">03</span><span>User Experience on Mobile</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">04</span><span>Fragmented Resources</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">05</span><span>Search &amp; Filter Limitations</span></div>
+              </div>
+            </div>
+            <div class="swot-q swot-q--o">
+              <div class="swot-q__head"><span class="swot-q__mark">O</span><h3 class="swot-q__name">Opportunities</h3></div>
+              <div class="swot-q__rows">
+                <div class="swot-q__row"><span class="swot-q__num">01</span><span>Enhance Storytelling</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">02</span><span>Improve Accessibility</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">03</span><span>Consolidate Platform</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">04</span><span>SEO &amp; Analytics</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">05</span><span>Interactive Event Features</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">06</span><span>Leverage Upcoming Mega-Events</span></div>
+              </div>
+            </div>
+            <div class="swot-q swot-q--t">
+              <div class="swot-q__head"><span class="swot-q__mark">T</span><h3 class="swot-q__name">Threats</h3></div>
+              <div class="swot-q__rows">
+                <div class="swot-q__row"><span class="swot-q__num">01</span><span>High User Expectations</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">02</span><span>Content Stagnation Risk</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">03</span><span>Competition from Social Media</span></div>
+                <div class="swot-q__row"><span class="swot-q__num">04</span><span>Technical Risks</span></div>
+              </div>
+            </div>
+            <div class="swot__hub" aria-hidden="true"><div class="swot__hub-inner">SWOT</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 hotjar -->
+      <section id="hotjar" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Hot-jar Analysis</h2>
+          <span class="qoc-tag">OVERVIEW STATISTICS</span>
+        </div>
+
+        <div class="hj-top">
+          <p class="hj-top__intro">Engagement metrics and top pages from Jun – Aug show what matters most to the audience.</p>
+          <div class="hj-stats">
+            <div class="hj-card hj-stat">
+              <span class="hj-ico hj-ico--48 hj-c-a"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div class="hj-stat__body"><span class="hj-label">Total Session</span><span class="hj-value">5.8k</span></div>
+            </div>
+            <div class="hj-card hj-stat">
+              <span class="hj-ico hj-ico--48 hj-c-y"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div class="hj-stat__body"><span class="hj-label">Avg. pages</span><span class="hj-value">3.3</span></div>
+            </div>
+            <div class="hj-card hj-stat">
+              <span class="hj-ico hj-ico--48 hj-c-b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div class="hj-stat__body"><span class="hj-label">Avg. time on page</span><span class="hj-value">3.08M</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hj-grid">
+          <div class="hj-card hj-pages">
+            <span class="hj-cap">TOP PERFORMING PAGES</span>
+            <div class="hj-pages__head"><span>Page</span><span>Engagement</span></div>
+            <div class="hj-page">
+              <div class="hj-page__body"><span class="hj-page__name">Homepage</span><span class="hj-page__path">/</span><div class="hj-bar"><div class="hj-bar__fill hj-bg-a" style="width:100%"></div></div></div>
+              <span class="hj-page__value">100%</span>
+            </div>
+            <div class="hj-page">
+              <div class="hj-page__body"><span class="hj-page__name">Events</span><span class="hj-page__path">/events</span><div class="hj-bar"><div class="hj-bar__fill hj-bg-y" style="width:68%"></div></div></div>
+              <span class="hj-page__value">68%</span>
+            </div>
+            <div class="hj-page">
+              <div class="hj-page__body"><span class="hj-page__name">Arab Cup Football Championship</span><span class="hj-page__path">/arab-cup-football-championship</span><div class="hj-bar"><div class="hj-bar__fill hj-bg-b" style="width:58%"></div></div></div>
+              <span class="hj-page__value">58%</span>
+            </div>
+            <div class="hj-page">
+              <div class="hj-page__body"><span class="hj-page__name">Arabic Homepage</span><span class="hj-page__path">/ar</span><div class="hj-bar"><div class="hj-bar__fill hj-bg-a" style="width:51%;opacity:0.7"></div></div></div>
+              <span class="hj-page__value">51%</span>
+            </div>
+            <div class="hj-page">
+              <div class="hj-page__body"><span class="hj-page__name">Careers</span><span class="hj-page__path">/webform/careers</span><div class="hj-bar"><div class="hj-bar__fill hj-bg-b" style="width:37%;opacity:0.7"></div></div></div>
+              <span class="hj-page__value">37%</span>
+            </div>
+          </div>
+          <div class="hj-side">
+            <div class="hj-card">
+              <div class="hj-eng__head"><span class="hj-cap">ENGAGEMENT</span><span class="hj-eng__note">How visitors interact</span></div>
+              <div class="hj-eng">
+                <span class="hj-ico hj-ico--48 hj-c-y"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div class="hj-stat__body"><span class="hj-label">Scroll</span><span class="hj-value">52.4%</span><div class="hj-bar hj-bar--eng"><div class="hj-bar__fill hj-bg-y" style="width:52.4%"></div></div></div>
+              </div>
+              <div class="hj-eng">
+                <span class="hj-ico hj-ico--48 hj-c-a"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16c2-6 6-9 8-9s4 2 5 5M17 7v5h-5M4 20h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div class="hj-stat__body"><span class="hj-label">Bounce</span><span class="hj-value">36.4%</span><div class="hj-bar hj-bar--eng"><div class="hj-bar__fill hj-bg-a" style="width:36.4%"></div></div></div>
+              </div>
+              <div class="hj-eng">
+                <span class="hj-ico hj-ico--48 hj-c-b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 4H6a2 2 0 00-2 2v12a2 2 0 002 2h4M15 8l4 4-4 4M19 12H9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div class="hj-stat__body"><span class="hj-label">Drop-off</span><span class="hj-value">18.1%</span><div class="hj-bar hj-bar--eng"><div class="hj-bar__fill hj-bg-b" style="width:18.1%"></div></div></div>
+              </div>
+            </div>
+            <div class="hj-card hj-visitors">
+              <span class="hj-cap">VISITOR TYPE</span>
+              <div class="hj-visitors__grid">
+                <div class="hj-vis">
+                  <span class="hj-ico hj-ico--44 hj-c-y"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 11a4 4 0 100-8 4 4 0 000 8zM3 21v-1a6 6 0 0112 0v1M16 3.5a4 4 0 010 7M21 21v-1a6 6 0 00-4-5.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="hj-vis__value hj-vis__value--a">68.2%</span>
+                  <span class="hj-vis__label">Returning visitors</span>
+                  <div class="hj-bar hj-bar--8"><div class="hj-bar__fill hj-bg-a" style="width:68.2%"></div></div>
+                </div>
+                <div class="hj-vis hj-vis--2">
+                  <span class="hj-ico hj-ico--44 hj-c-b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 11a4 4 0 100-8 4 4 0 000 8zM5 21v-1a7 7 0 0114 0v1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="hj-vis__value">31.8%</span>
+                  <span class="hj-vis__label">New visitors</span>
+                  <div class="hj-bar hj-bar--8"><div class="hj-bar__fill hj-bg-b" style="width:31.8%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mouse-move heat map -->
+        <div class="hj-sub">
+          <div class="hj-sub__head">
+            <h3 class="qoc-h3">Mouse-move heat map</h3>
+            <span class="qoc-tag">SCROLL-THROUGH</span>
+          </div>
+          <div class="hm-row">
+            <div class="hm">
+              <img class="hm__img" src="../../assets/qoc-heat-move.jpg" alt="Hotjar mouse-movement heat map of the full homepage" loading="lazy">
+              <span class="hm__ring" aria-hidden="true" style="left:50%;top:2.2%;width:45.88%;height:3.4%"></span>
+              <span class="hm__ring" aria-hidden="true" style="left:50%;top:30%;width:38.44%;height:9%"></span>
+              <span class="hm__ring" aria-hidden="true" style="left:41.32%;top:56%;width:28.52%;height:13%"></span>
+              <span class="hm__ring" aria-hidden="true" style="left:48.76%;top:78%;width:45.88%;height:15%"></span>
+              <span class="hm__ring" aria-hidden="true" style="left:53.72%;top:95%;width:39.68%;height:8%"></span>
+              <span class="hm__pill" style="top:calc(3.9% + 6px);left:62%">Navigation is a key priority — About Us and the language toggle run hottest.</span>
+              <span class="hm__pill" style="top:calc(34.5% + 6px);right:62%">Clusters of activity around the upcoming event. Mouse focus is strong on navigating into specific sports.</span>
+              <span class="hm__pill" style="top:calc(62.5% + 6px);left:51.58%">High demand for news — users prioritise the main featured story, and "View all" pulls attention.</span>
+              <span class="hm__pill" style="top:calc(85.5% + 6px);right:62%">Unpopular due to a static experience.</span>
+              <span class="hm__pill" style="top:calc(99% + 6px);left:62%">Noticeable activity on Quick Links, About Us and the sponsor logo. X icon traction signals demand for live updates.</span>
+            </div>
+            <div class="hm-gallery" id="hm-gallery">
+              <figure class="qoc-fig">
+                <img src="../../assets/opt/qoc-final-hero.webp" alt="Redesigned homepage hero — One Nation. One Dream. Infinite Victories." loading="lazy">
+                <figcaption>Redesigned hero — navigation and language toggle kept front and centre</figcaption>
+              </figure>
+              <figure class="qoc-fig">
+                <img src="../../assets/qoc-final-menu.png" alt="Redesigned mega menu with About QOC expanded" loading="lazy">
+                <figcaption>Mega menu — About QOC expanded</figcaption>
+              </figure>
+              <figure class="qoc-fig hm-gallery__last">
+                <img src="../../assets/opt/qoc-final-gallery.webp" alt="Redesigned Gallery section with thumbnail rail" loading="lazy">
+                <figcaption>Gallery — reworked from a static grid into an interactive thumbnail rail</figcaption>
+              </figure>
+            </div>
+          </div>
+          <p class="hm-note">Movement on desktop — full homepage, Sep 2025.</p>
+        </div>
+
+        <!-- Scroll heat map -->
+        <div class="hj-sub">
+          <div class="hj-sub__head">
+            <h3 class="qoc-h3">Scroll Heat Map</h3>
+            <span class="qoc-tag">DEPTH &amp; DROP-OFF</span>
+          </div>
+          <div class="sh-row" id="sh-row">
+            <div class="sh" id="sh-heat">
+              <img class="sh__img" src="../../assets/qoc-heat-scroll.jpg" alt="Scroll depth heat map of the homepage" loading="lazy">
+              <span class="sh__line" aria-hidden="true" style="top:14%"></span>
+              <span class="sh__line" aria-hidden="true" style="top:27%"></span>
+              <span class="sh__line" aria-hidden="true" style="top:70%"></span>
+              <span class="sh__line" aria-hidden="true" style="top:96%"></span>
+              <span class="sh__arrow" aria-hidden="true" style="top:14%"></span>
+              <span class="sh__arrow" aria-hidden="true" style="top:27%"></span>
+              <span class="sh__arrow" aria-hidden="true" style="top:70%"></span>
+              <span class="sh__arrow" aria-hidden="true" style="top:96%"></span>
+              <div class="sh__label" style="top:14%"><span class="sh__value">84.6%</span><span class="sh__text">Average fold</span></div>
+              <div class="sh__label" style="top:27%"><span class="sh__value">58%</span><span class="sh__text">Scrolled this far</span></div>
+              <div class="sh__label" style="top:70%"><span class="sh__value">30%</span><span class="sh__text">Came up to News</span></div>
+              <div class="sh__label" style="top:96%"><span class="sh__value">18%</span><span class="sh__text">Viewed the full stretch</span></div>
+            </div>
+            <div class="sh-col" id="sh-col">
+              <figure class="qoc-fig">
+                <img src="../../assets/qoc-final-sports.png" alt="Redesigned Olympic Sports section with sport selector" loading="lazy">
+                <figcaption>Olympic Sports —<span class="qoc-cap-muted">Dynamic storytelling triggered by&nbsp;</span><span class="qoc-cap-accent">Micro-Animations</span></figcaption>
+              </figure>
+              <figure class="qoc-fig">
+                <img src="../../assets/opt/qoc-final-news.webp" alt="Redesigned Latest News carousel with newsletter signup" loading="lazy">
+                <figcaption>Latest News — moved higher, with newsletter signup alongside contributing to&nbsp;<span class="qoc-cap-accent">Contextual CTAs</span></figcaption>
+              </figure>
+              <figure class="qoc-fig">
+                <img src="../../assets/opt/qoc-final-spotlight.webp" alt="Spotlight Athletes section" loading="lazy">
+                <figcaption><span class="qoc-cap-muted"><span class="qoc-cap-accent qoc-cap-accent--inherit">Serial Position Effect&nbsp;</span>Reorder content to put high-value items at the start and end.</span></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 benchmark -->
+      <section id="benchmark" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Benchmark Activity</h2>
+          <span class="qoc-tag">Competitor Analysis</span>
+        </div>
+        <p class="qoc-lead" style="max-width:52ch">Six national committee sites, read for what each does better — and the return it earns.</p>
+
+        <div class="bm">
+          <!-- Team UAE -->
+          <details class="bm-team" open>
+            <summary class="bm-team__sum">
+              <h3 class="qoc-h3 bm-team__name">Team UAE</h3>
+              <span class="qoc-tag qoc-tag--accent">REGIONAL</span>
+              <span class="bm-team__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bm-list">
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/368.jpg" alt="Team UAE — Smart gallery — hover and the story unfolds" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:20%;top:13%;width:65%;height:75%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Smart gallery — hover and the story unfolds</p>
+                  <p class="bm-roi">ROI · Keeps users engaged and informed</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row bm-row--rev">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/367.jpg" alt="Team UAE — Favorite moments, powered by Instagram — likes and comments included" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:8%;top:2%;width:86%;height:32%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Favorite moments, powered by Instagram — likes and comments included</p>
+                  <p class="bm-roi">ROI · Boosting interaction and audience insight</p>
+                  <div class="bm-arrow"><span class="bm-arrow__line"></span><span class="bm-arrow__r"></span></div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/369.jpg" alt="Team UAE — Header leads with what matters: initiatives upfront" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:30%;top:4%;width:34%;height:38%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Header leads with what matters: initiatives upfront</p>
+                  <p class="bm-roi">ROI · Clear communication of priorities, conversion &amp; action boost, perceived credibility &amp; leadership</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Team Saudi -->
+          <details class="bm-team">
+            <summary class="bm-team__sum">
+              <h3 class="qoc-h3 bm-team__name">Team Saudi</h3>
+              <span class="qoc-tag qoc-tag--accent">REGIONAL</span>
+              <span class="bm-team__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bm-trio">
+              <div class="bm-shot bm-trio__a"><img src="../../assets/bench-jpg/366.jpg" alt="Team Saudi — Games page spotlights hosted events — showcasing legacy and impact" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:2%;top:27%;width:64%;height:60%"></span></div>
+              <div class="bm-trio__t1">
+                <div class="bm-trio__note">
+                  <p class="bm-find">Games page spotlights hosted events — showcasing legacy and impact</p>
+                  <p class="bm-roi">ROI · Highlighting the committee's legacy, emphasizes value at a glance</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-shot bm-trio__b"><img src="../../assets/bench-jpg/93.jpg" alt="Team Saudi — Gallery connected, shareable, and active across all social channels" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:8%;top:3%;width:86%;height:18%"></span></div>
+              <div class="bm-trio__t2">
+                <div class="bm-trio__note">
+                  <p class="bm-find">Gallery connected, shareable, and active across all social channels</p>
+                  <p class="bm-roi">ROI · Maximizes engagement and extends reach</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Team USA -->
+          <details class="bm-team">
+            <summary class="bm-team__sum">
+              <h3 class="qoc-h3 bm-team__name">Team USA</h3>
+              <span class="qoc-tag qoc-tag--accent">INTERNATIONAL</span>
+              <span class="bm-team__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bm-list">
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/12.jpg" alt="Team USA — Showcasing the human side — highlighting consistency &amp; sacrifice, mental resilience of athletes &amp; the constant support of the country" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:21%;top:32%;width:44%;height:66%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Showcasing the human side — highlighting consistency &amp; sacrifice, mental resilience of athletes &amp; the constant support of the country</p>
+                  <p class="bm-roi">ROI · Increased time on site, higher repeat visits &amp; stronger fan engagement</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row bm-row--rev">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/356.jpg" alt="Team USA — Dynamic, connected content instead of static galleries" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:0%;top:0%;width:75%;height:22%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Dynamic, connected content instead of static galleries</p>
+                  <p class="bm-roi">ROI · Increased time on site, higher repeat visits &amp; stronger fan engagement</p>
+                  <div class="bm-arrow"><span class="bm-arrow__line"></span><span class="bm-arrow__r"></span></div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/357.jpg" alt="Team USA — Well structured contact page — right support effortlessly" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:1%;top:17%;width:80%;height:38%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Well structured contact page — right support effortlessly</p>
+                  <p class="bm-roi">ROI · Higher conversion rates, improved user satisfaction &amp; retention, reduced support costs</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row bm-row--rev">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/13.jpg" alt="Team USA — Press updates, social buzz, media requests — handled effortlessly" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:3%;top:36%;width:92%;height:52%"></span></div>
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/14.jpg" alt="Team USA — Press updates, social buzz, media requests — handled effortlessly" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:3%;top:34%;width:95%;height:56%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Press updates, social buzz, media requests — handled effortlessly</p>
+                  <p class="bm-roi">ROI · Boost visibility and simplify press engagement</p>
+                  <div class="bm-arrow"><span class="bm-arrow__line"></span><span class="bm-arrow__r"></span></div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/11.jpg" alt="Team USA — Position committee as a catalyst for national progress and community growth" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:11%;top:17%;width:50%;height:22%"></span></div>
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/370.jpg" alt="Team USA — Position committee as a catalyst for national progress and community growth" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:4%;top:40%;width:46%;height:26%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Position committee as a catalyst for national progress and community growth</p>
+                  <p class="bm-roi">ROI · Boosts national impact and community engagement, maximizing the committee's ROI</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row bm-row--rev">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/364.jpg" alt="Team USA — Enhance fan interaction with engaging activities" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:9%;top:56%;width:46%;height:24%"></span></div>
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/363.jpg" alt="Team USA — Enhance fan interaction with engaging activities" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:8%;top:26%;width:86%;height:56%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Enhance fan interaction with engaging activities</p>
+                  <p class="bm-roi">ROI · Boost popularity &amp; attract more users</p>
+                  <div class="bm-arrow"><span class="bm-arrow__line"></span><span class="bm-arrow__r"></span></div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Team Australia -->
+          <details class="bm-team">
+            <summary class="bm-team__sum">
+              <h3 class="qoc-h3 bm-team__name">Team Australia</h3>
+              <span class="qoc-tag qoc-tag--accent">INTERNATIONAL</span>
+              <span class="bm-team__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bm-list">
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/60.jpg" alt="Team Australia — Embedding the partners contextually to create real impact" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:62%;top:3%;width:36%;height:20%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Embedding the partners contextually to create real impact</p>
+                  <p class="bm-roi">ROI · Create visibility &amp; boost popularity</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-pair">
+                <div class="bm-shot bm-pair__a"><img src="../../assets/bench-jpg/63.jpg" alt="Team Australia — Incorporate fan engagement activities" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:4%;top:32%;width:87%;height:60%"></span></div>
+                <div class="bm-shot bm-pair__b"><img src="../../assets/bench-jpg/62.jpg" alt="Team Australia — Incorporate fan engagement activities" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:4%;top:20%;width:48%;height:74%"></span></div>
+                <div class="bm-pair__note">
+                  <p class="bm-find">Incorporate fan engagement activities</p>
+                  <p class="bm-roi">ROI · Boost popularity &amp; attract more users</p>
+                  <div class="bm-arrow bm-arrow--start"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/92.jpg" alt="Team Australia — Segregation by sports type &amp; federation proximity" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:8%;top:55%;width:86%;height:34%"></span></div>
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/91.jpg" alt="Team Australia — Segregation by sports type &amp; federation proximity" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:52%;top:72%;width:30%;height:16%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Segregation by sports type &amp; federation proximity</p>
+                  <p class="bm-roi">ROI · Reduces search effort, saves time &amp; high visibility</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row bm-row--rev">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/17.jpg" alt="Team Australia — Expressing fandom through apparel, collectibles, and accessories" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:5%;top:56%;width:90%;height:42%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Expressing fandom through apparel, collectibles, and accessories</p>
+                  <p class="bm-roi">ROI · Revenue generation, fan engagement, brand visibility, community building</p>
+                  <div class="bm-arrow"><span class="bm-arrow__line"></span><span class="bm-arrow__r"></span></div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/16.jpg" alt="Team Australia — Latest to upcoming Olympic Games — a quick heads-up on what's happening now and what's next" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:41%;top:52%;width:42%;height:44%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Latest to upcoming Olympic Games — a quick heads-up on what's happening now and what's next</p>
+                  <p class="bm-roi">ROI · User engagement &amp; retention, time-saving value, content discoverability</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Team New Zealand -->
+          <details class="bm-team">
+            <summary class="bm-team__sum">
+              <h3 class="qoc-h3 bm-team__name">Team New Zealand</h3>
+              <span class="qoc-tag qoc-tag--accent">INTERNATIONAL</span>
+              <span class="bm-team__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bm-list">
+              <div class="bm-row">
+                <div class="bm-shots">
+                  <img class="bm-plain" src="../../assets/bench-jpg/21.jpg" alt="Team New Zealand — Smart structure, zero confusion — effortless navigation with powerful filters" loading="lazy">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/89.jpg" alt="Team New Zealand — Smart structure, zero confusion — effortless navigation with powerful filters" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:15%;top:12%;width:52%;height:62%"></span></div>
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/88.jpg" alt="Team New Zealand — Smart structure, zero confusion — effortless navigation with powerful filters" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:2%;top:4%;width:52%;height:32%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Smart structure, zero confusion — effortless navigation with powerful filters</p>
+                  <p class="bm-roi">ROI · Reduces bounce rates, boosts engagement, increases conversions, enhances user satisfaction</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-row bm-row--rev">
+                <div class="bm-shots">
+                  <div class="bm-shot"><img src="../../assets/bench-jpg/371.jpg" alt="Team New Zealand — Story telling through images — inspire young athletes, students, and fans to explore Qatar's sporting journey" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:75%;top:18%;width:24%;height:58%"></span></div>
+                </div>
+                <div class="bm-note">
+                  <p class="bm-find">Story telling through images — inspire young athletes, students, and fans to explore Qatar's sporting journey</p>
+                  <p class="bm-roi">ROI · Boosts engagement and inspires the next generation</p>
+                  <div class="bm-arrow"><span class="bm-arrow__line"></span><span class="bm-arrow__r"></span></div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Team Uzbekistan -->
+          <details class="bm-team">
+            <summary class="bm-team__sum">
+              <h3 class="qoc-h3 bm-team__name">Team Uzbekistan</h3>
+              <span class="qoc-tag qoc-tag--accent">INTERNATIONAL</span>
+              <span class="bm-team__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bm-trio">
+              <div class="bm-shot bm-trio__a"><img src="../../assets/bench-jpg/365.jpg" alt="Team Uzbekistan — Smart news hub — easy to print, share, and filter for what matters most" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:2%;top:58%;width:96%;height:11%"></span></div>
+              <div class="bm-trio__t1">
+                <div class="bm-trio__note">
+                  <p class="bm-find">Smart news hub — easy to print, share, and filter for what matters most</p>
+                  <p class="bm-roi">ROI · Boosts content reach and visibility, high user engagement</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+              <div class="bm-shot bm-trio__b"><img src="../../assets/bench-jpg/372.jpg" alt="Team Uzbekistan — Smart gallery — hover and the story unfolds" loading="lazy"><span class="bm-ring" aria-hidden="true" style="left:26%;top:40%;width:26%;height:38%"></span></div>
+              <div class="bm-trio__t2">
+                <div class="bm-trio__note">
+                  <p class="bm-find">Smart gallery — hover and the story unfolds</p>
+                  <p class="bm-roi">ROI · Keeps users engaged and informed</p>
+                  <div class="bm-arrow"><span class="bm-arrow__l"></span><span class="bm-arrow__line"></span></div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 10 references -->
+      <section id="references" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Design References</h2>
+          <span class="qoc-tag">MOODBOARD</span>
+        </div>
+        <div class="refs">
+          <figure class="qoc-fig">
+            <img src="../../assets/ref-other-sports.png" alt="Other Sports — Olympic sports listing and details references" loading="lazy">
+            <figcaption>Other Sports — UX refrences<br></figcaption>
+          </figure>
+          <figure class="qoc-fig">
+            <img src="../../assets/opt/ref-ui-design.webp" alt="UI design references by section" loading="lazy">
+            <figcaption>UI design references — by section</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 11 lo-fi wireframes -->
+      <section id="lofi" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Lo-fi Wireframes</h2>
+          <span class="qoc-tag">STRUCTURE</span>
+        </div>
+        <p class="qoc-lead" style="max-width:62ch">Covered the complete website structure, with low-fidelity wireframes developed for all pages to establish the overall information architecture, content hierarchy, and user flow.</p>
+        <div class="lofi" tabindex="0" aria-label="Lo-fi wireframes, scroll horizontally">
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:858px"><img src="../img/qoc/lofi-TheQOC.webp" alt="Lo-fi wireframe: The QOC — Our Story" loading="lazy" width="480" height="1715"></div><figcaption>The QOC — Our Story</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:858px"><img src="../img/qoc/lofi-LeadershipGovernance.webp" alt="Lo-fi wireframe: Leadership &amp; Governance" loading="lazy" width="480" height="1715"></div><figcaption>Leadership &amp; Governance</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:594px"><img src="../img/qoc/lofi-LeadershipDetailedPage.webp" alt="Lo-fi wireframe: Leadership — Detail" loading="lazy" width="480" height="1189"></div><figcaption>Leadership — Detail</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:488px"><img src="../img/qoc/lofi-ProgramsInitiatives.webp" alt="Lo-fi wireframe: Programs &amp; Initiatives" loading="lazy" width="480" height="976"></div><figcaption>Programs &amp; Initiatives</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:537px"><img src="../img/qoc/lofi-MajorEventsDetails.webp" alt="Lo-fi wireframe: Major Events — Detail" loading="lazy" width="480" height="1074"></div><figcaption>Major Events — Detail</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:526px"><img src="../img/qoc/lofi-OlympicGDetails.webp" alt="Lo-fi wireframe: Olympic Games — Detail" loading="lazy" width="480" height="1051"></div><figcaption>Olympic Games — Detail</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:584px"><img src="../img/qoc/lofi-Partner.webp" alt="Lo-fi wireframe: Partners" loading="lazy" width="480" height="1168"></div><figcaption>Partners</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:537px"><img src="../img/qoc/lofi-PartnerDetailed.webp" alt="Lo-fi wireframe: Partner — Detail" loading="lazy" width="480" height="1074"></div><figcaption>Partner — Detail</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:452px"><img src="../img/qoc/lofi-Awards.webp" alt="Lo-fi wireframe: Awards" loading="lazy" width="480" height="904"></div><figcaption>Awards</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:505px"><img src="../img/qoc/lofi-Policies.webp" alt="Lo-fi wireframe: Policies" loading="lazy" width="480" height="1009"></div><figcaption>Policies</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:308px"><img src="../img/qoc/lofi-Policies2.webp" alt="Lo-fi wireframe: Policies (alt)" loading="lazy" width="480" height="616"></div><figcaption>Policies (alt)</figcaption></figure>
+          <figure class="lofi__fig"><div class="lofi__frame" style="height:488px"><img src="../img/qoc/lofi-Screen.webp" alt="Lo-fi wireframe: Sports Facilities" loading="lazy" width="480" height="976"></div><figcaption>Sports Facilities</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- 12 final screens -->
+      <section id="final" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Inner Pages UI</h2>
+          <span class="qoc-tag">UI DESIGN</span>
+        </div>
+        <div class="inner">
+          <div class="inner__tilt">
+            <div class="inner__col">
+              <figure class="inner__fig"><img src="../../assets/opt/qoc-inner-our-story.webp" alt="Our Story page — history overview, presidents, milestones and Olympic glory" loading="lazy"></figure>
+              <figure class="inner__fig"><img src="../../assets/opt/qoc-inner-sport-detail.webp" alt="Sport detail — Basketball, with medals, federation contact and team accordion" loading="lazy"></figure>
+            </div>
+            <div class="inner__col" style="padding-top:18%">
+              <figure class="inner__fig"><img src="../img/qoc/inner-AboutQOC.webp" alt="About QOC page design" loading="lazy" width="672" height="2338"></figure>
+              <figure class="inner__fig"><img src="../../assets/opt/qoc-inner-major-events.webp" alt="Major Events listing with countdown and upcoming/past filter" loading="lazy"></figure>
+            </div>
+            <div class="inner__col" style="padding-top:6%">
+              <figure class="inner__fig"><img src="../img/qoc/inner-MeetOurLeadersQOCTeam.webp" alt="Meet Our Leaders — QOC team page design" loading="lazy" width="672" height="2463"></figure>
+              <figure class="inner__fig"><img src="../../assets/opt/qoc-inner-sports-commissions.webp" alt="Sports &amp; Commissions page with summer and winter sport cards" loading="lazy"></figure>
+            </div>
+            <div class="inner__col" style="padding-top:24%">
+              <figure class="inner__fig"><img src="../img/qoc/inner-MessageFromThePresident.webp" alt="Message from the President page design" loading="lazy" width="672" height="1750"></figure>
+              <figure class="inner__fig"><img src="../../assets/opt/qoc-inner-awards.webp" alt="Awards page with featured award hero and latest awards list" loading="lazy"></figure>
+            </div>
+            <div class="inner__col" style="padding-top:10%">
+              <figure class="inner__fig"><img src="../../assets/opt/qoc-inner-athletes.webp" alt="Meet Our Athletes listing with sport and gender filters" loading="lazy"></figure>
+              <figure class="inner__fig"><img src="../img/qoc/inner-NationalFederationsDetails.webp" alt="National Federations detail page design" loading="lazy" width="672" height="1538"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 landscape -->
+      <section id="landscape" class="qoc-sec">
+        <div class="qoc-head">
+          <h2 class="qoc-h2">Competitor Landscape</h2>
+          <span class="qoc-tag">POSITIONING</span>
+        </div>
+        <figure class="landscape">
+          <img src="../../assets/competitor-landscape.png" alt="Competitor landscape — national Olympic committees mapped from Traditional to Modern and Constrains to Accessible, with QOC moving from traditional and constrained toward modern and accessible" loading="lazy">
+        </figure>
+      </section>
+
+      <nav class="qoc-next" aria-label="Project navigation">
+        <a class="qoc-next__link" href="dialog.html">
+          <span class="qoc-next__label">Next project</span>
+          <span class="qoc-next__title">Dialog Axiata PLC<svg width="26" height="14" viewBox="0 0 26 14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© 2026 Rusna Mohamed Fasli</span>
+      <div class="site-footer__social">
+        <a class="btn btn--icon" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 015 0V17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--icon" href="#" target="_blank" rel="noopener" aria-label="Behance">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 6.5h4.8a2.6 2.6 0 010 5.2H2.5zM2.5 11.7h5.3a2.9 2.9 0 010 5.8H2.5zM2.5 6.5v11M14.5 14h7a3.5 3.5 0 10-1.2 2.7M15.5 7.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--icon" href="mailto:rusnafasli@outlook.com" aria-label="Email rusnafasli@outlook.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M4 7.5l8 5.5 8-5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <span>UI/UX Portfolio</span>
+    </div>
+  </footer>
+
+  <script src="../js/site.js"></script>
+  <script src="../js/qoc.js"></script>
+</body>
+</html>

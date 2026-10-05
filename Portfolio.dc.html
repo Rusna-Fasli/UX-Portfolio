@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./link-map.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <script src="./reveal.js"></script>
+  <script src="./touch.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#f6f5f4;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{font-family:'Inter',system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}a:hover{color:inherit}@keyframes btnspin{to{transform:rotate(360deg)}}
+    ::selection{background:#cfe3f8;color:#000}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-desk-photo.webp" data-resource-id="r_assets_macbook_desk_photo_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-screen-overlay.webp" data-resource-id="r_assets_macbook_screen_overlay_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/qoc-cover-flat.webp" data-resource-id="r_assets_qoc_cover_flat_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/nifty-kids-mockup.webp" data-resource-id="r_assets_nifty_kids_mockup_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/dialog-macbook-mockup.webp" data-resource-id="r_assets_dialog_macbook_mockup_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/telco-research-mock.webp" data-resource-id="r_assets_telco_research_mock_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/teyseer-mockup.webp" data-resource-id="r_assets_teyseer_mockup_png">
+  <meta name="ext-resource-dependency" content="./assets/cabinetdesk-mockup.webp" data-resource-id="r_assets_cabinetdesk_mockup_webp">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-wood-desk-photo.webp" data-resource-id="r_assets_macbook_wood_desk_photo_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-wood-screen-overlay.webp" data-resource-id="r_assets_macbook_wood_screen_overlay_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-front-photo.webp" data-resource-id="r_assets_macbook_front_photo_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-front-overlay.webp" data-resource-id="r_assets_macbook_front_overlay_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-devices-photo.webp" data-resource-id="r_assets_macbook_devices_photo_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/macbook-devices-overlay.webp" data-resource-id="r_assets_macbook_devices_overlay_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/imac-desk-photo.webp" data-resource-id="r_assets_imac_desk_photo_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/applab-hero.webp" data-resource-id="r_assets_applab_hero_png">
+  <meta name="ext-resource-dependency" content="./assets/opt/mora-startup.webp" data-resource-id="r_assets_mora_startup_png">
+</helmet>
+<template id="__bundler_thumbnail" data-bg-color="#f6f5f4"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#f6f5f4"></rect><rect x="480" y="280" width="240" height="240" rx="48" fill="#000"></rect><text x="600" y="440" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="110" font-weight="700" fill="#fff">RF</text></svg></template>
+
+
+<div style="{{ rootStyle }}">
+  <dc-import name="SiteHeader" active="" isLight="{{ isLight }}" onToggleTheme="{{ toggleTheme }}" style="position:sticky;top:0;z-index:50;display:block" hint-size="100%,72px"></dc-import>
+
+  <main>
+    <section style="max-width:2000px;margin:0 auto;padding:clamp(40px,7vw,120px) clamp(20px,6vw,112px) clamp(24px,4vw,56px);position:relative" data-screen-label="hero">
+      <sc-if value="{{ showSideTab }}" hint-placeholder-val="{{ false }}">
+        
+      </sc-if>
+
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:24px">
+        <div style="flex:1 1 0;min-width:0"></div>
+        <div style="flex:1 1 0;min-width:min(100%,300px);display:flex;flex-direction:column;gap:24px">
+          <p style="font-size:16px;line-height:1.5;color:var(--ink-2);margin:0;max-width:440px;text-wrap:pretty">I'm a UX Specialist based in Doha, Qatar.&nbsp; Designing seamless digital experiences — blending research, strategy, interaction design, and AI to turn complex challenges into intuitive solutions.</p>
+          
+        </div>
+      </div>
+      <h1 style="font-size:clamp(44px,calc((100vw - 2 * clamp(20px,6vw,112px)) / 16.2),132px);line-height:0.98;font-weight:700;letter-spacing:-0.045em;margin:clamp(56px,7vw,112px) 0 0 -0.055em">
+        <span style="display:block;text-wrap:balance">Research, Design &amp; AI-Workflows.</span>
+        <span style="display:block;color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em;line-height:0.92">UX Specialist.</span>
+      </h1>
+
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.2vw,16px);margin-top:clamp(48px,6vw,96px)">
+      <div data-screen-label="hero-reel" style="flex:2 1 560px;min-width:0;position:relative;aspect-ratio:3/2;border-radius:16px;overflow:hidden;background:#0e0d0c;border:1px solid var(--hairline);box-shadow:var(--shadow-1)">
+        <sc-for list="{{ reelSlides }}" as="s" hint-placeholder-count="0">
+          <div role="img" aria-label="{{ s.alt }}" style="{{ s.style }}"></div>
+        </sc-for>
+        <div style="position:absolute;right:16px;bottom:16px;display:flex;gap:6px;padding:6px 8px;border-radius:9999px;background:rgba(14,13,12,0.45);backdrop-filter:blur(8px)">
+          <sc-for list="{{ reelDots }}" as="d" hint-placeholder-count="5">
+            <button aria-label="{{ d.label }}" onClick="{{ d.onClick }}" style="{{ d.style }}"></button>
+          </sc-for>
+        </div>
+      </div>
+        <div style="flex:1 1 280px;min-width:0;min-height:320px;position:relative;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--hairline)">
+          <image-slot id="hero-secondary" shape="rect" placeholder="Drop an abstract / process visual" fit="cover"></image-slot>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,6vw,112px)" data-screen-label="client-work">
+      <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">Industry work</span>
+      <h2 style="font-size:clamp(32px,4.6vw,54px);line-height:1.04;font-weight:700;letter-spacing:-1.875px;margin:20px 0 0;max-width:20ch;text-wrap:balance">Client work shipped <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">end to end</span>, from Research to production build.</h2>
+
+      <div style="margin-top:clamp(32px,5vw,48px);position:relative;background:var(--surface);border:1px solid var(--hairline);border-radius:12px;overflow:hidden">
+        <sc-for list="{{ clientRows }}" as="row" hint-placeholder-count="4">
+          <a href="{{ row.href }}" data-touch-row="{{ row.touchRow }}" onMouseEnter="{{ row.onEnter }}" onMouseMove="{{ row.onMove }}" onMouseLeave="{{ row.onLeave }}" onFocus="{{ row.onFocus }}" onBlur="{{ row.onLeave }}" style="{{ row.rowStyle }}">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--ink-faint);width:28px;flex:0 0 auto">{{ row.num }}</span>
+            <span style="{{ row.titleStyle }}">{{ row.title }}</span>
+            <span style="font-size:15px;line-height:1.33;color:var(--ink-muted);flex:1 1 240px;min-width:0">{{ row.category }}</span>
+            <span style="font-size:14px;color:var(--ink-muted);flex:0 0 auto;font-variant-numeric:tabular-nums">{{ row.year }}</span>
+            <span style="{{ row.arrowStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+          </a>
+        </sc-for>
+      </div>
+
+      <div style="{{ hoverPreviewStyle }}">
+        <div style="{{ hoverPreviewInnerStyle }}">
+          <div style="{{ mockFrameStyle }}">
+            <div style="{{ photoMockStyle }}">
+              <div style="{{ screenDesignStyle }}">
+                <div style="{{ hoverImgStyle }}"></div>
+                <div style="{{ placeholderScreenStyle }}">In development</div>
+                <div style="{{ screenTintStyle }}"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;margin-top:24px">
+        <dc-import name="Button" variant="utility" size="sm" label="All work" icon="arrow" href="./Work.dc.html" hint-size="112px,36px"></dc-import>
+      </div>
+    </section>
+
+    <section id="projects" style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,6vw,112px)" data-screen-label="project-grid">
+      <div style="text-align:center;max-width:720px;margin:0 auto clamp(32px,5vw,48px)">
+        <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">Academic Projects</span>
+        <h2 style="font-size:clamp(28px,3.6vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:20px 0 0;text-wrap:balance">A collection of <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">student projects</span>, freelance work and <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">experiments</span>.</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,max(420px,calc((100% - 24px) / 2))),1fr));gap:24px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+          <a href="{{ p.href }}" style="{{ p.cardStyle }}">
+            <div style="{{ p.imgBoxStyle }}">
+              <sc-if value="{{ p.mock }}" hint-placeholder-val="{{ false }}">
+                <div style="{{ p.mock.frameStyle }}">
+                  <div style="{{ p.mock.photoStyle }}">
+                    <div style="{{ p.mock.screenStyle }}">
+                      <div style="{{ p.mock.imgStyle }}"></div>
+                      <div style="{{ p.mock.placeholderStyle }}">In development</div>
+                      <div style="{{ p.mock.tintStyle }}"></div>
+                    </div>
+                  </div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ p.noMock }}" hint-placeholder-val="{{ true }}">
+                <image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.placeholder }}" fit="cover"></image-slot>
+              </sc-if>
+              <sc-if value="{{ p.nda }}" hint-placeholder-val="{{ false }}">
+                <span style="position:absolute;top:12px;left:12px;padding:4px 8px;border-radius:9999px;background:var(--surface);font-size:12px;font-weight:600;letter-spacing:0.125px;color:var(--primary);pointer-events:none">Selected work · NDA</span>
+              </sc-if>
+            </div>
+            <div style="padding:24px;display:flex;flex-direction:column;gap:8px;flex:1 1 auto">
+              <span style="font-size:22px;line-height:1.27;font-weight:700;letter-spacing:-0.25px;text-wrap:balance">{{ p.title }}</span>
+              <span style="font-size:15px;line-height:1.33;color:var(--ink-muted)">{{ p.category }}</span>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:12px">
+                <sc-for list="{{ p.tags }}" as="tag" hint-placeholder-count="2">
+                  <span style="font-size:12px;font-weight:500;line-height:1.33;color:var(--ink-2);background:var(--tint);border-radius:4px;padding:4px 8px">{{ tag }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="about" style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,6vw,112px)" data-screen-label="about">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,80px);align-items:center">
+        <div style="min-width:0">
+          <span style="display:inline-flex;padding:4px 10px;border-radius:9999px;background:var(--surface);border:1px solid var(--hairline);font-size:12px;font-weight:600;line-height:1.33;letter-spacing:0.125px;color:var(--primary);white-space:nowrap">About</span>
+          <h2 style="font-size:clamp(28px,3.6vw,40px);line-height:1.1;font-weight:700;letter-spacing:-1px;margin:20px 0 0;text-wrap:balance">A <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">problem solver</span> by nature, with an integrated design foundation.</h2>
+          <p style="font-size:16px;line-height:1.5;color:var(--ink-muted);max-width:520px;margin:20px 0 0;text-wrap:pretty">A multidisciplinary education taught me to look beyond interfaces. To people, systems, and the challenges. Getting through a competitive design examination among thousands was an early reflection of my creativity, curiosity, and empathetic mindset.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:24px">
+            <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="3">
+              <span style="font-size:14px;font-weight:500;color:var(--ink-2);background:var(--tint);border-radius:4px;padding:4px 10px">{{ cap }}</span>
+            </sc-for>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+            <dc-import name="Button" variant="primary" label="Know More" icon="arrow" href="./Profile.dc.html" hint-size="140px,44px"></dc-import>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:3fr 2fr;gap:16px;align-items:end;min-width:0">
+          <div style="aspect-ratio:3/4;position:relative;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--hairline)">
+            <img src="assets/about-desk.webp" alt="Designer sketching wireframes at a desk with a laptop and printed user flows" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+          </div>
+          <div style="aspect-ratio:1/2;position:relative;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--hairline)">
+            <img src="assets/about-workspace.webp" alt="Wireframe sketches and user flow on a laptop" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="max-width:2000px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,6vw,112px) clamp(64px,10vw,120px)" data-screen-label="cta">
+      <div style="background:var(--surface);border:1px solid var(--hairline);border-radius:16px;box-shadow:var(--shadow-1);padding:clamp(32px,6vw,72px) clamp(24px,5vw,64px);text-align:center">
+        <h2 style="font-size:clamp(32px,4.6vw,54px);line-height:1.04;font-weight:700;letter-spacing:-1.875px;margin:0;text-wrap:balance">Want to work <span style="color:var(--ink);font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em">together</span>?</h2>
+        <p style="font-size:16px;line-height:1.5;color:var(--ink-muted);margin:16px auto 0;max-width:420px">Open to meaningful projects, UX audits, design collaborations, and conversations worth having.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px">
+          <dc-import name="Button" variant="primary" label="Get in touch" href="./Contact.dc.html" hint-size="140px,44px"></dc-import>
+          <dc-import name="Button" variant="secondary" label="View Work" href="./Work.dc.html" hint-size="128px,44px"></dc-import>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="SiteFooter" hint-size="100%,84px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}, &quot;&quot;showNdaTags&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { light: (function(){ try { return localStorage.getItem('site-theme-v2') !== 'dark'; } catch(e){ return true; } })(), scrolled: false, vw: (typeof window !== 'undefined' ? window.innerWidth : 1440), hoveredIndex: null, mouseX: 0, mouseY: 0 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > 8;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onResizeVw = () => this.setState({ vw: window.innerWidth });
+    window.addEventListener('resize', this.onResizeVw);
+    this.startReel();
+  }
+
+  startReel() {
+    clearInterval(this.reelTimer);
+    this.reelTimer = setInterval(() => this.setState(s => ({ reelPrev: s.reel || 0, reel: ((s.reel || 0) + 1) % 8, reelDir: -(s.reelDir || 1) })), 3800);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.reelTimer);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResizeVw);
+  }
+
+  renderVals() {
+    const accent = this.props.accentColor ?? '#ff6b3d';
+    const showNda = this.props.showNdaTags ?? true;
+    const rawProjects = [
+      { title: 'Mora Start-up', category: 'Web Application · Entrepreneurship', year: '', nda: false, tags: ['UX Design Process', 'UI Design', 'Concept Pitch'], placeholder: 'Drop Mora Start-up visual' },
+      { title: 'Customer perception on telco selfcare applications', category: 'Research & Publication · Telecommunication & Digital', year: '', nda: false, tags: ['UX Principles Evaluation', 'Usability'], placeholder: 'Drop research visual' },
+      { title: 'Nifty Kids', category: 'Mobile Application · Education & Creative Learning', year: '', nda: false, tags: ['UX Design Process', 'UI Design', 'Usability Testing'], placeholder: 'Drop Nifty Kids visual' },
+      { title: 'CabinetDesk', category: 'Dashboard · Government & Public Sector', year: '', nda: false, tags: ['Dashboard', 'Key Performance Indicator', 'Data Visualization'], placeholder: 'Drop CabinetDesk visual' }
+    ];
+    const projects = rawProjects.map((p, i) => ({
+      ...p,
+      slotId: 'project-' + i,
+      heroSrc: '',
+      nda: p.nda && showNda,
+      cardStyle: { display: 'flex', flexDirection: 'column', color: 'var(--ink)', background: 'var(--surface)', border: '1px solid var(--hairline)', borderRadius: 12, overflow: 'hidden', transition: 'box-shadow 320ms cubic-bezier(.2,.7,.2,1), transform 320ms cubic-bezier(.2,.7,.2,1), border-color 320ms cubic-bezier(.2,.7,.2,1)' },
+      imgBoxStyle: { position: 'relative', overflow: 'hidden', background: 'var(--bg)', borderBottom: '1px solid var(--hairline)', aspectRatio: '3/2' }
+    }));
+
+    const FRAMES = {
+      black: {
+        photo: './assets/macbook-desk-photo.png', overlay: './assets/macbook-screen-overlay.png',
+        clip: 'inset(0% 0% 0.4% 0% round 7% 7% 0 0)',
+        box: { left: 31.98, top: 42.95, width: 35.4, height: 34.02 }, matrix: null
+      },
+      qoc: {
+        photo: './assets/qoc-cover-flat.png', overlay: './assets/qoc-cover-flat.png', clip: 'none',
+        box: { left: 50, top: 50, width: 0, height: 0 }, matrix: null
+      },
+      nifty: {
+        photo: './assets/nifty-kids-mockup.png', overlay: './assets/nifty-kids-mockup.png', clip: 'none',
+        box: { left: 50, top: 50, width: 0, height: 0 }, matrix: null
+      },
+      dialog: {
+        photo: './assets/dialog-macbook-mockup.png', overlay: './assets/dialog-macbook-mockup.png', clip: 'none',
+        box: { left: 50, top: 50, width: 0, height: 0 }, matrix: null
+      },
+      research: {
+        photo: './assets/telco-research-mock.png', overlay: './assets/telco-research-mock.png', clip: 'none',
+        box: { left: 50, top: 50, width: 0, height: 0 }, matrix: null
+      },
+      cabinet: {
+        photo: './assets/cabinetdesk-mockup.webp', overlay: './assets/cabinetdesk-mockup.webp', clip: 'none',
+        box: { left: 50, top: 50, width: 0, height: 0 }, matrix: null
+      },
+      teyseer: {
+        photo: './assets/teyseer-mockup.png', overlay: './assets/teyseer-mockup.png', clip: 'none',
+        box: { left: 50, top: 50, width: 0, height: 0 }, matrix: null
+      },
+      wood: {
+        photo: './assets/macbook-wood-desk-photo.png', overlay: './assets/macbook-wood-screen-overlay.png',
+        clip: 'polygon(0% 4.24%, 86.4% 0%, 100% 74.9%, 17.11% 100%)',
+        box: { left: 21.238, top: 21.65, width: 36.947, height: 44.767 },
+        matrix: 'matrix(0.8641,-0.0343,0.2119,0.9576,0,5.08)'
+      },
+      front: {
+        photo: './assets/macbook-front-photo.png', overlay: './assets/macbook-front-overlay.png',
+        clip: 'polygon(0.673% 0%, 99.78% 0.308%, 100% 100%, 0% 99.46%)',
+        box: { left: 28.24, top: 22.8, width: 44.56, height: 43.27 }, matrix: null
+      },
+      desk2: {
+        photo: './assets/macbook-devices-photo.png', overlay: './assets/macbook-devices-overlay.png',
+        clip: 'polygon(0% 1.828%, 100% 0%, 99.54% 98.58%, 1.337% 100%)',
+        box: { left: 27.927, top: 17.275, width: 43.617, height: 42.4 }, matrix: null
+      },
+      imac: {
+        photo: './assets/imac-desk-photo.png', overlay: null,
+        clip: 'polygon(0% 0%, 99.29% 9.70%, 100% 100%, 0.368% 99.18%)',
+        box: { left: 18.038, top: 18.3375, width: 38.508, height: 35.175 },
+        matrix: 'matrix(0.9929,0.05908,0.006041,0.99183,0,0)'
+      }
+    };
+    const mockConfigs = {
+      'Qatar Olympic Committee': { img: null, tint: 'transparent', frame: 'qoc' },
+      'Applab Qatar': { img: './assets/applab-hero.png', tint: 'rgba(90,169,255,0.16)', frame: 'imac' },
+      'Teyseer Holding W.L.L.': { img: null, tint: 'transparent', frame: 'teyseer' },
+      'Nifty Kids': { img: null, tint: 'transparent', frame: 'nifty' },
+      'Dialog Axiata PLC': { img: null, tint: 'transparent', frame: 'dialog' },
+      'Mora Start-up': { img: './assets/mora-startup.png', tint: 'rgba(255,180,120,0.12)', frame: 'black', fit: 'cover' },
+      'Customer perception on telco selfcare applications': { img: null, tint: 'transparent', frame: 'research' },
+      'CabinetDesk': { img: null, tint: 'transparent', frame: 'cabinet' }
+    };
+    const buildMockStyles = (mock) => {
+      const f = mock && FRAMES[mock.frame] ? FRAMES[mock.frame] : null;
+      if (!f) return null;
+      const ox = f.box.left + f.box.width / 2, oy = f.box.top + f.box.height / 2;
+      const zoom = f.clip === 'none' ? (f.zoom || 1) : mock.frame === 'imac' ? 1.55 : mock.frame === 'black' ? 1.4 : 1.25;
+      const originY = mock.frame === 'imac' ? oy - 3 : oy;
+      return {
+        frameStyle: { position: 'relative', width: '100%', height: '100%', overflow: 'hidden' },
+        photoStyle: {
+          position: 'relative', width: '100%', height: '100%',
+          backgroundImage: 'url(' + f.photo + ')', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat',
+          transform: 'scale(' + zoom + ')', transformOrigin: ox + '% ' + originY + '%'
+        },
+        screenStyle: {
+          position: 'absolute', left: f.box.left + '%', top: f.box.top + '%', width: f.box.width + '%', height: f.box.height + '%',
+          overflow: 'hidden', clipPath: f.clip, background: '#0e0d0c'
+        },
+        imgStyle: {
+          width: '100%', height: '100%',
+          backgroundImage: mock.img ? 'url(' + mock.img + ')' : 'none',
+          backgroundSize: mock.fit || 'contain', backgroundPosition: 'top center', backgroundColor: '#0e0d0c', backgroundRepeat: 'no-repeat',
+          transform: f.matrix || 'none', transformOrigin: '0 0'
+        },
+        placeholderStyle: {
+          display: mock.img ? 'none' : 'flex',
+          position: 'absolute', inset: 0, alignItems: 'center', justifyContent: 'center',
+          fontSize: 9, fontWeight: 500, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.04em',
+          background: 'repeating-linear-gradient(135deg,#161311,#161311 6px,#1c1917 6px,#1c1917 12px)'
+        },
+        tintStyle: { position: 'absolute', inset: 0, mixBlendMode: 'soft-light', pointerEvents: 'none', background: mock.tint || 'transparent' }
+      };
+    };
+    projects.forEach(p => { p.href = p.title === 'Dialog Axiata PLC' ? './Dialog-Axiata.dc.html' : undefined; p.hover = p.href ? { boxShadow: 'var(--shadow-2)', transform: 'translateY(-3px)', borderColor: 'var(--hairline-strong)' } : {}; p.press = p.href ? { transform: 'translateY(-1px) scale(0.997)' } : {}; p.cardStyle = { ...p.cardStyle, cursor: p.href ? 'pointer' : 'default' }; p.mock = buildMockStyles(mockConfigs[p.title]); p.noMock = !p.mock; if (p.mock) p.imgBoxStyle = { ...p.imgBoxStyle, aspectRatio: '3/2' }; });
+    const touch = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: none)').matches;
+    const CASE = { 'Dialog Axiata PLC': 1, 'Qatar Olympic Committee': 1 };
+    const clientRows = [
+      { num: '01', title: 'Qatar Olympic Committee', category: 'Website · Sports Governance', year: '2025' },
+      { num: '02', title: 'Applab Qatar', category: 'Website & Kiosk · Technology & IT', year: '2026' },
+      { num: '03', title: 'Teyseer Holding W.L.L.', category: 'Website · Business & Corporate', year: '2026' },
+      { num: '04', title: 'Dialog Axiata PLC', category: 'Website & Mobile App · Telecommunications', year: '2022' }
+    ].map((row, i) => ({
+      ...row,
+      touchRow: CASE[row.title] ? 'true' : undefined,
+      href: row.title === 'Dialog Axiata PLC' ? './Dialog-Axiata.dc.html' : row.title === 'Qatar Olympic Committee' ? './Qatar-Olympic-Committee.dc.html' : undefined,
+      rowStyle: {
+        display: 'flex', flexWrap: 'wrap', alignItems: 'center', columnGap: 24, rowGap: 4, padding: '20px 24px',
+        borderTop: i === 0 ? 'none' : '1px solid var(--hairline)', color: 'var(--ink)',
+        background: this.state.hoveredIndex === i && CASE[row.title] ? 'var(--tint-2)' : 'transparent', outline: 'none', cursor: CASE[row.title] ? 'pointer' : 'default',
+        transition: 'background-color 240ms cubic-bezier(.2,.7,.2,1)'
+      },
+      arrowStyle: { display: 'flex', flex: '0 0 auto', visibility: CASE[row.title] ? 'visible' : 'hidden', color: (this.state.hoveredIndex === i || (touch && CASE[row.title])) ? 'var(--primary)' : 'var(--ink-faint)', transform: this.state.hoveredIndex === i ? 'translateX(4px)' : 'none', transition: 'transform 280ms cubic-bezier(.2,.7,.2,1), color 240ms cubic-bezier(.2,.7,.2,1)' },
+      titleStyle: { fontSize: 20, lineHeight: 1.4, fontWeight: 600, letterSpacing: '-0.125px', flex: '1 1 260px', minWidth: 0, transform: this.state.hoveredIndex === i && CASE[row.title] ? 'translateX(4px)' : 'none', transition: 'transform 280ms cubic-bezier(.2,.7,.2,1)' },
+      onFocus: (e) => {
+        if (touch) return;
+        const r = e.currentTarget.getBoundingClientRect();
+        this.setState({ hoveredIndex: i, hoveredRect: { top: r.top, left: r.left, width: r.width, height: r.height }, mouseX: r.left + r.width * 0.7 });
+      },
+      onEnter: (e) => {
+        if (window.matchMedia && !window.matchMedia('(hover: hover)').matches) return;
+        const r = e.currentTarget.getBoundingClientRect();
+        this.setState({ hoveredIndex: i, hoveredRect: { top: r.top, left: r.left, width: r.width, height: r.height }, mouseX: e.clientX });
+      },
+      onMove: (e) => {
+        if (Math.abs(e.clientX - this.state.mouseX) > 2) this.setState({ mouseX: e.clientX });
+      },
+      onLeave: () => this.setState({ hoveredIndex: null })
+    }));
+
+    const hoveredIndex = this.state.hoveredIndex;
+    const hoveredRow = hoveredIndex != null ? clientRows[hoveredIndex] : null;
+    const mock = hoveredRow ? mockConfigs[hoveredRow.title] : null;
+    const previewW = 400;
+    const previewH = 267;
+    const rect = this.state.hoveredRect;
+    let px = rect ? this.state.mouseX - previewW / 2 : 0;
+    let py = rect ? rect.top + rect.height / 2 - previewH / 2 + Math.sin(this.state.mouseX * 0.025) * 14 : 0;
+    if (typeof window !== 'undefined') {
+      if (px + previewW > window.innerWidth - 16) px = window.innerWidth - previewW - 16;
+      if (px < 16) px = 16;
+      if (py + previewH > window.innerHeight - 16) py = window.innerHeight - previewH - 16;
+      if (py < 16) py = 16;
+    }
+
+    const capabilities = ['UX Designer', 'Passionate Teacher', 'Public Speaker'];
+    const footerWork = clientRows.map(p => p.title);
+    const light = this.state.light;
+    const mVal = null;
+    const T = light ? {
+      '--bg': '#f6f5f4', '--surface': '#ffffff', '--surface-hover': '#fbfaf9',
+      '--ink': 'rgba(0,0,0,0.95)', '--ink-2': '#31302e', '--ink-muted': '#615d59', '--ink-faint': '#a39e98',
+      '--hairline': '#e6e6e6', '--hairline-strong': '#dddddd', '--tint': 'rgba(0,0,0,0.05)', '--tint-2': 'rgba(0,0,0,0.03)',
+      '--primary': '#0075de', '--primary-hover': '#0068c7', '--primary-active': '#005bab', '--primary-tint': '#e8f2fc',
+      '--shadow-1': 'rgba(0,0,0,0.01) 0 0.175px 1.041px, rgba(0,0,0,0.02) 0 0.8px 2.925px, rgba(0,0,0,0.027) 0 2.025px 7.847px, rgba(0,0,0,0.04) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.01) 0 1px 3px, rgba(0,0,0,0.02) 0 3px 7px, rgba(0,0,0,0.02) 0 7px 15px, rgba(0,0,0,0.04) 0 14px 28px, rgba(0,0,0,0.05) 0 23px 52px'
+    } : {
+      '--bg': '#191919', '--surface': '#202020', '--surface-hover': '#262626',
+      '--ink': 'rgba(255,255,255,0.92)', '--ink-2': '#d3d1cd', '--ink-muted': '#9b9a97', '--ink-faint': '#6f6e69',
+      '--hairline': '#2f2f2f', '--hairline-strong': '#3a3a3a', '--tint': 'rgba(255,255,255,0.07)', '--tint-2': 'rgba(255,255,255,0.04)',
+      '--primary': '#2f8ae6', '--primary-hover': '#459aee', '--primary-active': '#1f6fc0', '--primary-tint': 'rgba(47,138,230,0.14)',
+      '--shadow-1': 'rgba(0,0,0,0.2) 0 1px 3px, rgba(0,0,0,0.25) 0 4px 18px',
+      '--shadow-2': 'rgba(0,0,0,0.3) 0 8px 24px, rgba(0,0,0,0.35) 0 23px 52px'
+    };
+    const rootStyle = {
+      minHeight: '100vh', overflowX: 'clip', fontFamily: "'Inter',-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif",
+      fontFeatureSettings: "'lnum','locl'", fontSize: 16, lineHeight: 1.5,
+      background: 'var(--bg)', color: 'var(--ink)', ...T,
+      '--text': 'var(--ink)', '--card-bg': 'var(--surface)', '--accent-a': 'var(--primary)', '--scrim': 'var(--surface)',
+      '--m10': 'var(--hairline)', '--m18': 'var(--hairline)', '--m20': 'var(--hairline-strong)',
+      '--m30': 'var(--ink-faint)', '--m35': 'var(--ink-faint)', '--m40': 'var(--ink-muted)', '--m45': 'var(--ink-muted)',
+      '--m50': 'var(--ink-muted)', '--m55': 'var(--ink-muted)', '--m60': 'var(--ink-muted)',
+      '--m70': 'var(--ink-2)', '--m75': 'var(--ink-2)', '--m85': 'var(--ink-2)'
+    };
+    const toggleTheme = () => {
+      const next = !this.state.light;
+      this.setState({ light: next });
+      try { localStorage.setItem('site-theme-v2', next ? 'light' : 'dark'); } catch (e) {}
+    };
+
+
+    const REEL = [
+      { src: './assets/hero/hero-qoc.webp', alt: 'Qatar Olympic Committee website on a studio display' },
+      { src: './assets/hero/hero-whothrowin.webp', alt: 'WhoThrowin event app on two iPhones' },
+      { src: './assets/hero/hero-applab-display.webp', alt: 'Applab website on a studio display' },
+      { src: './assets/hero/hero-applab-venture.webp', alt: 'Applab Venture Studio on an iPad held in hands' },
+      { src: './assets/hero/hero-applab-devices-v2.webp', alt: 'Applab website on a MacBook and AI avatar on an iPad' },
+      { src: './assets/hero/hero-softui-metal.webp', alt: 'Soft UI dashboard on a MacBook resting on a chrome ring' },
+      { src: './assets/hero/hero-mora.webp', alt: 'Mora Start-up learning platform on a MacBook Pro' },
+      { src: './assets/hero/hero-teyseer.webp', alt: 'Teyseer Holding website on a studio display' }
+    ];
+    const cur = this.state.reel || 0, prev = this.state.reelPrev;
+    const dir = this.state.reelDir || 1; // 1: enters from top, -1: enters from bottom
+    const outPos = dir === 1 ? '100%' : '-100%';
+    const waitPos = -dir === 1 ? '-100%' : '100%';
+    const reelSlides = REEL.map((r, i) => {
+      const isCur = i === cur, isPrev = i === prev && prev !== cur;
+      return { ...r, style: {
+        position: 'absolute', inset: 0, backgroundImage: 'url(' + r.src + ')', backgroundSize: 'cover', backgroundPosition: 'center',
+        transform: isCur ? 'translateY(0)' : isPrev ? 'translateY(' + outPos + ')' : 'translateY(' + waitPos + ')',
+        transition: (isCur || isPrev) ? 'transform 1.1s cubic-bezier(0.77,0,0.18,1)' : 'none',
+        zIndex: isCur ? 2 : isPrev ? 1 : 0
+      } };
+    });
+    const reelDots = REEL.map((r, i) => ({
+      label: 'Show slide ' + (i + 1),
+      onClick: () => { if (i === cur) return; this.setState({ reelPrev: cur, reel: i, reelDir: -dir }); this.startReel(); },
+      style: { width: i === cur ? 18 : 6, height: 6, padding: 0, border: 0, borderRadius: 9999, cursor: 'pointer', background: i === cur ? '#fff' : 'rgba(255,255,255,0.5)', transition: 'width .3s ease, background .3s ease' }
+    }));
+
+    return {
+
+      reelSlides, reelDots,
+      rootStyle, toggleTheme, isLight: light, isDark: !light,
+      showSideTab: this.state.vw >= 1100,
+      sideTabHover: { width: 52 },
+      cardHover: { boxShadow: 'var(--shadow-2)', transform: 'translateY(-2px)', borderColor: 'var(--hairline-strong)' },
+      cardActive: { transform: 'translateY(0) scale(0.995)' },
+      hoverPreviewStyle: {
+        position: 'fixed', left: 0, top: 0, zIndex: 40, pointerEvents: 'none',
+        transform: 'translate3d(' + px + 'px,' + py + 'px,0) rotate(' + (Math.sin(this.state.mouseX * 0.025) * 1.6) + 'deg)',
+        transition: 'transform 700ms cubic-bezier(.22,0.9,.24,1)'
+      },
+      hoverPreviewInnerStyle: {
+        position: 'relative', width: previewW, height: previewH,
+        opacity: mock ? 1 : 0,
+        transform: mock ? 'translateY(0) scale(1)' : 'translateY(10px) scale(0.94)',
+        transformOrigin: 'top left',
+        transition: 'opacity 380ms cubic-bezier(.22,1,.36,1), transform 380ms cubic-bezier(.22,1,.36,1)'
+      },
+      mockFrameStyle: {
+        position: 'relative', width: '100%', height: '100%', borderRadius: 12, overflow: 'hidden', border: '1px solid var(--hairline)',
+        boxShadow: 'var(--shadow-2)'
+      },
+      photoMockStyle: (function () {
+        const f = mock && FRAMES[mock.frame] ? FRAMES[mock.frame] : FRAMES.black;
+        const ox = f.box.left + f.box.width / 2, oy = f.box.top + f.box.height / 2;
+        const zoom = f.clip === 'none' ? (f.zoom || 1) : mock && mock.frame === 'imac' ? 1.55 : mock && mock.frame === 'black' ? 1.4 : 1.25;
+        return {
+          position: 'relative', width: '100%', height: '100%',
+          backgroundImage: 'url(' + f.photo + ')', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat',
+          transform: 'scale(' + zoom + ')', transformOrigin: ox + '% ' + ((mock && mock.frame === 'imac') ? oy - 3 : oy) + '%'
+        };
+      })(),
+      screenDesignStyle: (function () {
+        const f = mock && FRAMES[mock.frame] ? FRAMES[mock.frame] : FRAMES.black;
+        return {
+          position: 'absolute', left: f.box.left + '%', top: f.box.top + '%', width: f.box.width + '%', height: f.box.height + '%',
+          overflow: 'hidden', clipPath: f.clip, background: '#0e0d0c'
+        };
+      })(),
+      hoverImgStyle: {
+        width: '100%', height: '100%',
+        backgroundImage: (mock && mock.img) ? 'url(' + mock.img + ')' : 'none',
+        backgroundSize: (mock && mock.fit) || 'contain', backgroundPosition: 'top center', backgroundColor: '#0e0d0c',
+        transform: (mock && FRAMES[mock.frame] && FRAMES[mock.frame].matrix) ? FRAMES[mock.frame].matrix : 'none',
+        transformOrigin: '0 0'
+      },
+      placeholderScreenStyle: {
+        display: (!!mock && !mock.img) ? 'flex' : 'none',
+        position: 'absolute', inset: 0, alignItems: 'center', justifyContent: 'center',
+        fontSize: 10, fontWeight: 500, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.04em',
+        background: 'repeating-linear-gradient(135deg,#161311,#161311 8px,#1c1917 8px,#1c1917 16px)'
+      },
+      screenTintStyle: {
+        position: 'absolute', inset: 0, mixBlendMode: 'soft-light', pointerEvents: 'none',
+        background: mock ? mock.tint : 'transparent'
+      },
+      screenOverlayStyle: {
+        position: 'absolute', inset: 0,
+        backgroundImage: 'url(' + (mock && FRAMES[mock.frame] ? FRAMES[mock.frame].overlay : FRAMES.black.overlay) + ')',
+        backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', pointerEvents: 'none'
+      },
+      navHover: { color: 'var(--text)' },
+      navFocus: { outline: '1px solid ' + accent, outlineOffset: 3, borderRadius: 2 },
+      iconBtnHover: { borderColor: 'var(--m50)' },
+      rowHover: { paddingLeft: 14 },
+      pillHover: { borderColor: 'var(--m50)' },
+      solidBtnHover: { opacity: 0.85 },
+      footerLinkHover: { color: 'var(--text)' },
+      projects,
+      clientRows,
+      capabilities,
+      footerWork
+    };
+  }
+}
+
+</script>
+</body>
+</html>
