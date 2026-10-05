@@ -1,7 +1,6 @@
 /* Contact page: copy-to-clipboard buttons and the contact form.
-   The site is static with no backend, so the form never sends data anywhere:
-   after native validation passes it shows the design's "Sending…" state briefly,
-   then resets and shows the success message. */
+   The form posts to FormSubmit (formsubmit.co), which forwards each message
+   to rusnafasli@outlook.com. */
 (function () {
   // ---------- Copy buttons ----------
   var status = document.querySelector('.copy-status');
@@ -58,7 +57,9 @@
   var submit = form.querySelector('.contact-submit');
   var label = submit.querySelector('.contact-submit__label');
   var spinner = submit.querySelector('.btn-spinner');
-  var note = form.querySelector('.contact-form__note');
+  var note = form.querySelector('.contact-form__note:not(.contact-form__error)');
+  var error = form.querySelector('.contact-form__error');
+  var ENDPOINT = 'https://formsubmit.co/ajax/rusnafasli@outlook.com';
   var sending = false;
 
   function setSending(on) {
@@ -73,11 +74,31 @@
     e.preventDefault();
     if (sending) return;
     note.hidden = true;
+    error.hidden = true;
     setSending(true);
-    setTimeout(function () {
-      form.reset();
-      setSending(false);
-      note.hidden = false;
-    }, 700);
+
+    var data = new FormData(form);
+    var name = data.get('name') || '';
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: data.get('email'),
+        message: data.get('message'),
+        _subject: 'Portfolio inquiry from ' + name,
+        _replyto: data.get('email'),
+        _template: 'table',
+        _captcha: 'false'
+      })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j || (j.success !== true && j.success !== 'true')) throw new Error('FormSubmit rejected the message');
+        form.reset();
+        note.hidden = false;
+      })
+      .catch(function () { error.hidden = false; })
+      .then(function () { setSending(false); });
   });
 })();
